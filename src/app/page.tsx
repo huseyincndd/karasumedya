@@ -1,103 +1,663 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="w-full">
+      {/* 1. Hero Section */}
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Background Video with Parallax Effect */}
+        <div className="absolute inset-0 w-full h-full z-0">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            className="absolute min-w-full min-h-full object-cover scale-110"
+            poster="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <source src="https://cdn.pixabay.com/vimeo/328880139/digital-31526.mp4?width=1280&hash=d13f5e9f00e76f25cd72cf27613949546932e37f" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Premium Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-black/50 to-indigo-900/80 z-10"></div>
+          
+          {/* Animated Particles/Shapes */}
+          <div className="absolute inset-0 z-20 opacity-30">
+            <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500 rounded-full mix-blend-screen filter blur-xl opacity-70 animate-float"></div>
+            <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-purple-500 rounded-full mix-blend-screen filter blur-xl opacity-70 animate-float animation-delay-2000"></div>
+            <div className="absolute bottom-1/4 left-1/3 w-28 h-28 bg-indigo-500 rounded-full mix-blend-screen filter blur-xl opacity-70 animate-float animation-delay-4000"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-20 h-20 bg-pink-500 rounded-full mix-blend-screen filter blur-xl opacity-70 animate-float animation-delay-3000"></div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* Hero Content */}
+        <div className="relative container mx-auto px-4 h-screen z-30 flex flex-col justify-center items-center text-center md:text-left md:items-start pt-20 md:pt-0">
+          <div className="max-w-4xl">
+            {/* Premium Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white mb-4 animate-fade-in">
+              <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse mr-2"></span>
+              <span className="text-sm font-medium uppercase tracking-wider">Dijital Pazarlamanın Lideri</span>
+            </div>
+            
+            {/* Dynamic Headline */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight animate-text-reveal">
+              Sosyal Medyada <span className="relative inline-block">
+                <span className="absolute -inset-1 w-full h-full bg-gradient-to-r from-blue-400 to-violet-500 rounded-lg blur-lg opacity-50"></span>
+                <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">Sınırları Aşın</span>
+              </span>
+            </h1>
+            
+            {/* Enhanced Description */}
+            <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed font-light animate-fade-in">
+              <span className="font-semibold text-blue-300">Karasu</span> ile markanızın dijital izini güçlendirin. 
+              Veri odaklı stratejiler ve yaratıcı içeriklerle rakiplerinizden öne geçin.
+            </p>
+            
+            {/* Premium CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-5 mb-12 animate-slide-up">
+              <Link
+                href="/hizmetler"
+                className="relative bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full font-medium overflow-hidden group focus:outline-none focus:ring-4 focus:ring-blue-300"
+              >
+                <span className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-600 to-indigo-700"></span>
+                <span className="relative flex items-center justify-center text-white px-8 py-3.5">
+                  Hizmetlerimizi Keşfedin
+                </span>
+              </Link>
+              <Link
+                href="/iletisim"
+                className="relative inline-flex h-[54px] overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-50"
+              >
+                <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,theme(colors.blue.400)_0%,theme(colors.purple.500)_50%,theme(colors.indigo.500)_100%)]" />
+                <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-transparent px-8 py-3 text-white backdrop-blur-3xl">
+                  Ücretsiz Analiz Alın
+                </span>
+              </Link>
+            </div>
+          </div>
+          
+          {/* Floating elements for visual interest */}
+          <div className="absolute right-10 top-1/3 hidden lg:block">
+            <div className="w-72 h-72 relative opacity-80">
+              <div className="absolute inset-0 rounded-full border border-white/20 animate-spin-slow"></div>
+              <div className="absolute inset-[15px] rounded-full border border-white/20 animate-spin-slow animation-delay-1000 animation-reverse"></div>
+              <div className="absolute inset-[30px] rounded-full border border-white/20 animate-spin-slow animation-delay-2000"></div>
+              <div className="w-2 h-2 absolute top-0 left-1/2 -translate-x-1/2 rounded-full bg-blue-400"></div>
+              <div className="w-2 h-2 absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-indigo-400"></div>
+              <div className="w-2 h-2 absolute top-1/2 -translate-y-1/2 left-0 rounded-full bg-purple-400"></div>
+              <div className="w-2 h-2 absolute top-1/2 -translate-y-1/2 right-0 rounded-full bg-pink-400"></div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Scroll down indicator */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center">
+          <span className="text-white text-xs font-light mb-2 opacity-80">Daha Fazlası</span>
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
+            <div className="w-1 h-2 bg-white rounded-full animate-scroll-down"></div>
+          </div>
+        </div>
+
+        {/* Wave Transition - Fixed positioning for all screen sizes */}
+        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden z-20">
+          <div className="w-[200%] relative">
+            <div className="w-full animate-wave">
+              <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-24 lg:h-32">
+                <path d="M0,0 L0,120 L1200,120 L1200,0 C1050,60 900,100 750,80 C600,60 450,20 300,40 C150,60 100,80 0,0 Z" className="fill-white"></path>
+              </svg>
+            </div>
+            <div className="w-full absolute top-0 left-0 animate-wave-slow opacity-60">
+              <svg viewBox="0 0 1400 120" preserveAspectRatio="none" className="w-[120%] h-24 md:h-32 lg:h-40" style={{marginLeft: '-10%'}}>
+                <path d="M0,0 L0,120 L1400,120 L1400,30 C1300,10 1200,50 1100,70 C1000,90 900,40 800,20 C700,0 600,40 500,60 C400,80 300,30 200,10 C100,0 50,20 0,0 Z" className="fill-white"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Karasu Hizmetleri Section */}
+      <section className="relative bg-white pt-16 pb-20">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-32 -left-32 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Markanızı Yukarı Taşıyoruz
+            </h2>
+            <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
+              Karasu Medya olarak, markanızın dijital dünyada parlayan bir yıldız olması için çalışıyoruz. Modern pazarlama stratejileri ve yaratıcı içerik üretimi ile işletmenizi bir üst seviyeye taşıyoruz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {/* Hizmet Kartları */}
+            {[
+              {
+                title: "Sosyal Medya Yönetimi",
+                description: "Profesyonel içerik üretimi ve topluluk yönetimi ile sosyal medya varlığınızı güçlendiriyoruz.",
+                image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                  </svg>
+                ),
+                tags: ["İçerik Yönetimi", "Topluluk Yönetimi", "Analitik Raporlama"],
+                link: "/hizmetler/sosyal-medya",
+                bgGradient: "from-blue-900/80",
+                iconBg: "bg-blue-100",
+                iconColor: "text-blue-600",
+                titleColor: "text-blue-600",
+                tagBg: "bg-blue-100",
+                tagColor: "text-blue-800",
+                buttonGradient: "from-blue-600 to-blue-700",
+                buttonHover: "hover:from-blue-700 hover:to-blue-800"
+              },
+              {
+                title: "İçerik Üretimi",
+                description: "Markanıza özel, etkileyici ve özgün içerikler üreterek hedef kitlenizle güçlü bağlar kuruyoruz.",
+                image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                ),
+                tags: ["Metin Yazarlığı", "Görsel İçerik", "Video Prodüksiyon"],
+                link: "/hizmetler/icerik-uretimi",
+                bgGradient: "from-purple-900/80",
+                iconBg: "bg-purple-100",
+                iconColor: "text-purple-600",
+                titleColor: "text-purple-600",
+                tagBg: "bg-purple-100",
+                tagColor: "text-purple-800",
+                buttonGradient: "from-purple-600 to-purple-700",
+                buttonHover: "hover:from-purple-700 hover:to-purple-800"
+              },
+              {
+                title: "Dijital Pazarlama",
+                description: "Veri odaklı stratejilerle dijital pazarlama kampanyalarınızı yönetiyor, ROI'nizi maksimize ediyoruz.",
+                image: "https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                ),
+                tags: ["SEO", "Google Ads", "Dönüşüm Optimizasyonu"],
+                link: "/hizmetler/dijital-pazarlama",
+                bgGradient: "from-pink-900/80",
+                iconBg: "bg-pink-100",
+                iconColor: "text-pink-600",
+                titleColor: "text-pink-600",
+                tagBg: "bg-pink-100",
+                tagColor: "text-pink-800",
+                buttonGradient: "from-pink-600 to-pink-700",
+                buttonHover: "hover:from-pink-700 hover:to-pink-800"
+              },
+              {
+                title: "Marka Danışmanlığı",
+                description: "Markanızın kimliğini güçlendiriyor, pazardaki konumunuzu sağlamlaştırıyoruz.",
+                image: "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                  </svg>
+                ),
+                tags: ["Marka Kimliği", "Stratejik Planlama", "Rekabet Analizi"],
+                link: "/hizmetler/marka-danismanligi",
+                bgGradient: "from-indigo-900/80",
+                iconBg: "bg-indigo-100",
+                iconColor: "text-indigo-600",
+                titleColor: "text-indigo-600",
+                tagBg: "bg-indigo-100",
+                tagColor: "text-indigo-800",
+                buttonGradient: "from-indigo-600 to-indigo-700",
+                buttonHover: "hover:from-indigo-700 hover:to-indigo-800"
+              }
+            ].map((service, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden relative flex flex-col h-full">
+                <div className="h-48 relative overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${service.bgGradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                </div>
+                <div className="p-6 flex flex-col flex-1 justify-between">
+                  <div>
+                    <div className={`w-12 h-12 rounded-full ${service.iconBg} flex items-center justify-center mb-4`}>
+                      <div className={service.iconColor}>
+                        {service.icon}
+                      </div>
+                    </div>
+                    <h3 className={`text-xl font-semibold mb-3 ${service.titleColor}`}>{service.title}</h3>
+                    <p className="text-gray-600 mb-4">{service.description}</p>
+                  </div>
+                  <div>
+                    <div className="flex flex-wrap gap-2 mb-4 min-h-[56px]">
+                      {service.tags.map((tag, tagIndex) => (
+                        <span 
+                          key={tagIndex} 
+                          className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${service.tagBg} ${service.tagColor} whitespace-nowrap h-6`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <Link 
+                      href={service.link} 
+                      className={`inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r ${service.buttonGradient} text-white rounded-lg ${service.buttonHover} transition-colors duration-300 w-full`}
+                    >
+                      <span>Detaylı Bilgi</span>
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="flex flex-col md:flex-row items-stretch bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 overflow-hidden relative">
+            <div className="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
+                <div className="w-2 h-2 rounded-full bg-blue-500 mr-2"></div>
+                Özel Çözümler
+              </div>
+              <h3 className="text-3xl font-bold text-gray-800 mb-6">Sizin İçin Neler Yapabiliriz?</h3>
+              <p className="text-gray-600 mb-8 text-lg">
+                Markanızın ihtiyaçlarına özel çözümler sunarak, dijital dünyada güçlü bir varlık göstermenize yardımcı oluyoruz. 
+                <span className="block mt-4">Stratejik yaklaşımımız ve yaratıcı bakış açımızla fark yaratıyoruz.</span>
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Link 
+                  href="/iletisim" 
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-colors duration-300 inline-flex items-center shadow-lg hover:shadow-blue-200/50"
+                >
+                  <span>Ücretsiz Danışmanlık Alın</span>
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link 
+                  href="/hizmetler" 
+                  className="px-6 py-3 bg-white text-blue-600 border border-blue-200 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-300 inline-flex items-center"
+                >
+                  <span>Tüm Hizmetlerimiz</span>
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="md:w-1/2 relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-90 mix-blend-multiply"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                alt="Profesyonel Ekip" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center p-8">
+                <div className="text-white text-center max-w-md">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-2xl font-bold mb-2">Yenilikçi Fikirler</h4>
+                  <p className="text-white/80 text-lg">
+                    Her markanın benzersiz olduğuna inanıyoruz. İhtiyaçlarınıza özel, yaratıcı çözümler geliştiriyoruz.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Instagram Latest Posts */}
+      <section className="py-24 bg-gradient-to-b from-white to-blue-50/50 relative overflow-hidden">
+        {/* Enhanced Background Design */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-purple-100/20 to-transparent"></div>
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-blue-100/20 to-transparent"></div>
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-32 h-96 bg-gradient-to-r from-pink-100/20 to-transparent"></div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-32 h-96 bg-gradient-to-l from-blue-100/20 to-transparent"></div>
+        </div>
+
+        {/* Animated Particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-100/50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-100/50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+          <div className="absolute bottom-1/2 left-1/2 w-64 h-64 bg-blue-100/50 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative">
+          {/* Header Section */}
+          <div className="text-center mb-16 relative">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm mb-6 border border-purple-500/20">
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-sm opacity-25 animate-pulse"></div>
+            <Image
+                  src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+                  alt="Instagram"
+                  width={24}
+                  height={24}
+                  className="relative"
+                />
+              </div>
+              <span className="text-gray-700 font-medium ml-3">@karasu</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4">
+              Instagram'da Bizi Takip Edin
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              En güncel projelerimiz ve dijital pazarlama trendleri için Instagram hesabımızı takip etmeyi unutmayın.
+            </p>
+          </div>
+          
+          {/* Instagram Posts Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Instagram Post 1 */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group">
+              <div className="h-[450px] md:h-[520px] w-full relative">
+                <iframe
+                  src="https://www.instagram.com/p/DIgm2K1ogan/embed"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  scrolling="no"
+                  allowTransparency={true}
+                ></iframe>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-white/10 backdrop-blur-md rounded-lg p-3">
+                      <p className="text-white text-sm">Dijital dünyada öne çıkmanız için yanınızdayız! 🚀</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Instagram Post 2 */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group">
+              <div className="h-[450px] md:h-[520px] w-full relative">
+                <iframe
+                  src="https://www.instagram.com/p/DIgm2K1ogan/embed"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  scrolling="no"
+                  allowTransparency={true}
+                ></iframe>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-white/10 backdrop-blur-md rounded-lg p-3">
+                      <p className="text-white text-sm">Markanızı bir üst seviyeye taşıyoruz! ✨</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Instagram Post 3 */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group">
+              <div className="h-[450px] md:h-[520px] w-full relative">
+                <iframe
+                  src="https://www.instagram.com/p/DIgm2K1ogan/embed"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  scrolling="no"
+                  allowTransparency={true}
+                ></iframe>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-white/10 backdrop-blur-md rounded-lg p-3">
+                      <p className="text-white text-sm">Sosyal medyada fark yaratın! 💫</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* CTA Section */}
+          <div className="text-center relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-blue-500/20 blur-3xl -z-10"></div>
+            <Link 
+              href="https://www.instagram.com/karasu/" 
+            target="_blank"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1"
+            >
+              <span className="text-lg">Instagram'da Takip Et</span>
+              <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. About Us Section */}
+      <section className="py-24 bg-gradient-to-br from-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-10"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold mb-8">Farklı Düşün, Fark Yarat</h2>
+            <p className="text-xl leading-relaxed mb-12">
+              Dijitalleşen dünyada sizin en büyük yardımcınız karasu ile markanızı zirveye taşıyoruz.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <AboutCard 
+              title="Biz Kimiz"
+              description="karasu Medya olarak, 10 yılı aşkın tecrübemiz ile markaların dijital dünyada güçlü bir şekilde var olmaları için çalışıyoruz."
+              icon={
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              }
+            />
+            <AboutCard 
+              title="Misyonumuz"
+              description="İşletmenizin dijital varlığını güçlendirerek, hedef kitlenizle anlamlı ve sürdürülebilir ilişkiler kurmanızı sağlamak."
+              icon={
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+              }
+            />
+            <AboutCard 
+              title="Vizyonumuz"
+              description="Türkiye'nin lider dijital pazarlama ajansı olarak, global standartlarda yenilikçi çözümler sunarak sektöre öncülük etmek."
+              icon={
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              }
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Referanslar */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Referanslarımız</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Birlikte çalıştığımız değerli markalar ve başarı hikayeleri.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+            {['Google', 'Amazon', 'Facebook', 'Twitter', 'LinkedIn', 'Shopify'].map((brand, index) => (
+              <div key={brand} className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <Image
+                  src={`https://www.vectorlogo.zone/logos/${brand.toLowerCase()}/${brand.toLowerCase()}-ar21.svg`}
+                  alt={`${brand} logo`}
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <Link
+              href="/referanslar"
+              className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800"
+            >
+              <span>Tüm referanslarımızı görüntüleyin</span>
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Teklif Al CTA */}
+      <section className="py-24 bg-gradient-to-r from-blue-600 to-indigo-700 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <svg className="absolute bottom-0 left-0 w-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ffffff" fillOpacity="0.05" d="M0,160L48,181.3C96,203,192,245,288,261.3C384,277,480,267,576,240C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
+        </div>
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Projeniz İçin Hemen Teklif Alın
+            </h2>
+            <p className="text-xl text-blue-100 mb-12">
+              Size özel çözümler için ekibimiz hızlıca dönüş yapacaktır.
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-white text-sm font-medium mb-2">İsim Soyisim</label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                      placeholder="İsim Soyisim"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-white text-sm font-medium mb-2">E-posta</label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                      placeholder="ornek@mail.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-white text-sm font-medium mb-2">Telefon</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    placeholder="0555 555 55 55"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-white text-sm font-medium mb-2">Mesaj</label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30"
+                    placeholder="Projeniz hakkında bilgi verin..."
+                  ></textarea>
+                </div>
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="px-8 py-4 bg-white text-blue-700 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-300"
+                  >
+                    Teklif Al
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
+
+// Instagram Post Component
+function InstagramPost({ imageUrl, caption, likes, date }: {
+  imageUrl: string;
+  caption: string;
+  likes: string;
+  date: string;
+}) {
+  return (
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+      <div className="p-4 border-b border-gray-100">
+        <div className="flex items-center">
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Instagram_logo.svg"
+            alt="Instagram"
+            width={20}
+            height={20}
+            className="mr-2"
+          />
+          <span className="font-medium text-gray-800">karasumedya</span>
+          <span className="ml-auto text-gray-500 text-sm">{date}</span>
+        </div>
+      </div>
+      <div className="relative aspect-square">
+          <Image
+          src={imageUrl}
+          alt="Instagram Post"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="p-4">
+        <div className="flex items-center mb-3">
+          <svg className="w-6 h-6 text-red-500 mr-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          <span className="text-gray-700">{likes} beğeni</span>
+        </div>
+        <p className="text-gray-700 text-sm line-clamp-3">{caption}</p>
+      </div>
+    </div>
+  );
+}
+
+// About Card Component
+function AboutCard({ title, description, icon }: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}) {
+  return (
+    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-colors duration-300">
+      <div className="bg-white/20 p-4 rounded-xl inline-block mb-6">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-bold mb-4">{title}</h3>
+      <p className="text-blue-100 leading-relaxed">{description}</p>
+    </div>
+  );
+}
+
