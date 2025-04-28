@@ -353,7 +353,7 @@ export default function Home() {
               <span className="text-gray-700 font-medium ml-3">@karasu</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent mb-4">
-              Instagram'da Bizi Takip Edin
+              Instagram&apos;da Bizi Takip Edin
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               En güncel projelerimiz ve dijital pazarlama trendleri için Instagram hesabımızı takip etmeyi unutmayın.
@@ -431,7 +431,7 @@ export default function Home() {
             target="_blank"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1"
             >
-              <span className="text-lg">Instagram'da Takip Et</span>
+              <span className="text-lg">Instagram&apos;da Takip Et</span>
               <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -502,7 +502,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {['Google', 'Amazon', 'Facebook', 'Twitter', 'LinkedIn', 'Shopify'].map((brand, index) => (
+            {['Google', 'Amazon', 'Facebook', 'Twitter', 'LinkedIn', 'Shopify'].map((brand) => (
               <div key={brand} className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                 <Image
                   src={`https://www.vectorlogo.zone/logos/${brand.toLowerCase()}/${brand.toLowerCase()}-ar21.svg`}
@@ -597,49 +597,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
-
-// Instagram Post Component
-function InstagramPost({ imageUrl, caption, likes, date }: {
-  imageUrl: string;
-  caption: string;
-  likes: string;
-  date: string;
-}) {
-  return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow duration-300">
-      <div className="p-4 border-b border-gray-100">
-        <div className="flex items-center">
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Instagram_logo.svg"
-            alt="Instagram"
-            width={20}
-            height={20}
-            className="mr-2"
-          />
-          <span className="font-medium text-gray-800">karasumedya</span>
-          <span className="ml-auto text-gray-500 text-sm">{date}</span>
-        </div>
-      </div>
-      <div className="relative aspect-square">
-          <Image
-          src={imageUrl}
-          alt="Instagram Post"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-      <div className="p-4">
-        <div className="flex items-center mb-3">
-          <svg className="w-6 h-6 text-red-500 mr-1" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-          <span className="text-gray-700">{likes} beğeni</span>
-        </div>
-        <p className="text-gray-700 text-sm line-clamp-3">{caption}</p>
-      </div>
     </div>
   );
 }
