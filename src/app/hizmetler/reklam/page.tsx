@@ -191,11 +191,12 @@ export default function DijitalReklam() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-indigo-100 rounded-2xl transform rotate-3"></div>
                 <div className="absolute -inset-4 bg-indigo-200 rounded-2xl transform -rotate-3 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl">
-                  <img 
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
+                  <Image 
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                     alt="Dijital Reklam Yönetimi" 
-                    className="w-full h-full object-cover"
+                    layout="fill" 
+                    objectFit="cover"
                   />
                 </div>
               </div>

@@ -187,11 +187,12 @@ export default function Hakkimizda() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-2"></div>
                 <div className="absolute -inset-4 bg-blue-200 rounded-2xl transform -rotate-2 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl">
-                  <img 
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
+                  <Image 
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                     alt="Karasu Medya Ekibi" 
-                    className="w-full h-full object-cover"
+                    layout="fill" 
+                    objectFit="cover"
                   />
                 </div>
               </div>
@@ -279,7 +280,7 @@ export default function Hakkimizda() {
                 Ekibimiz
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                Karasu Medya'nın başarısının arkasında, alanında uzman ve tutkulu bir ekip var.
+                Karasu Medya&apos;nın başarısının arkasında, alanında uzman ve tutkulu bir ekip var.
                 Her biri kendi alanında deneyimli olan ekip üyelerimiz, markanızın başarısı için çalışıyor.
               </p>
             </div>
@@ -288,10 +289,12 @@ export default function Hakkimizda() {
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                   <div className="h-64 relative overflow-hidden">
-                    <img 
+                    <Image 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      layout="fill" 
+                      objectFit="cover" 
+                      className="hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-6">

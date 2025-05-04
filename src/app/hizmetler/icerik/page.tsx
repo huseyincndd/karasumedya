@@ -211,11 +211,12 @@ export default function IcerikUretimi() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-purple-100 rounded-2xl transform rotate-3"></div>
                 <div className="absolute -inset-4 bg-purple-200 rounded-2xl transform -rotate-3 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl">
-                  <img 
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
+                  <Image 
                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                     alt="İçerik Üretimi" 
-                    className="w-full h-full object-cover"
+                    layout="fill" 
+                    objectFit="cover"
                   />
                 </div>
               </div>
@@ -338,10 +339,12 @@ export default function IcerikUretimi() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="h-48 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1551651653-c5186a1fbba2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                     alt="Blog İçeriği" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-0 right-0 p-2 bg-purple-600 text-white text-sm font-medium">
                     Blog
@@ -349,7 +352,7 @@ export default function IcerikUretimi() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    "Dijital Pazarlamada Başarının 10 Sırrı"
+                    &quot;Dijital Pazarlamada Başarının 10 Sırrı&quot;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Dijital pazarlama stratejileri, SEO teknikleri ve sosyal medya ipuçlarını içeren kapsamlı bir blog yazısı.
@@ -365,10 +368,12 @@ export default function IcerikUretimi() {
               
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="h-48 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                     alt="Sosyal Medya İçeriği" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-0 right-0 p-2 bg-pink-600 text-white text-sm font-medium">
                     Sosyal Medya
@@ -376,7 +381,7 @@ export default function IcerikUretimi() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    "Instagram Kampanya Serisi"
+                    &quot;Instagram Kampanya Serisi&quot;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Bir kozmetik markası için hazırladığımız hikaye, gönderi ve carousel içeriklerinden oluşan kampanya serisi.
@@ -392,10 +397,12 @@ export default function IcerikUretimi() {
               
               <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <div className="h-48 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1574717024079-a518649d56c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                     alt="Video İçeriği" 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-0 right-0 p-2 bg-blue-600 text-white text-sm font-medium">
                     Video
@@ -403,7 +410,7 @@ export default function IcerikUretimi() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    "Ürün Tanıtım Videosu"
+                    &quot;Ürün Tanıtım Videosu&quot;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     Bir teknoloji firması için hazırladığımız, yeni ürünün özelliklerini anlatan tanıtım videosu.

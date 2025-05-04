@@ -219,10 +219,12 @@ export default function Home() {
             ].map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden relative flex flex-col h-full">
                 <div className="h-48 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className={`absolute inset-0 bg-gradient-to-t ${service.bgGradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
                 </div>
@@ -296,10 +298,11 @@ export default function Home() {
             </div>
             <div className="md:w-1/2 relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-90 mix-blend-multiply"></div>
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                 alt="Profesyonel Ekip" 
-                className="w-full h-full object-cover"
+                layout="fill" 
+                objectFit="cover"
               />
               <div className="absolute inset-0 flex items-center justify-center p-8">
                 <div className="text-white text-center max-w-md">

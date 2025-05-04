@@ -225,11 +225,12 @@ export default function GrafikTasarim() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-pink-100 rounded-2xl transform rotate-3"></div>
                 <div className="absolute -inset-4 bg-pink-200 rounded-2xl transform -rotate-3 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl">
-                  <img 
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
+                  <Image 
                     src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                     alt="Grafik Tasarım" 
-                    className="w-full h-full object-cover"
+                    layout="fill" 
+                    objectFit="cover"
                   />
                 </div>
               </div>
@@ -323,10 +324,12 @@ export default function GrafikTasarim() {
               {portfolioItems.map((item, index) => (
                 <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
                   <div className="relative h-64 overflow-hidden">
-                    <img 
+                    <Image 
                       src={item.image} 
                       alt={item.title} 
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      layout="fill" 
+                      objectFit="cover" 
+                      className="group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -395,14 +398,15 @@ export default function GrafikTasarim() {
                 </svg>
               </div>
               <p className="text-lg md:text-xl text-gray-600 mb-8 italic">
-                "Karasu Medya ekibi, markamızın görsel kimliğini tamamen yeniledi. Yeni logo tasarımımız ve kurumsal kimlik çalışmalarımız sayesinde hem müşterilerimizden hem de çalışanlarımızdan çok olumlu geri dönüşler aldık. Profesyonel yaklaşımları ve yaratıcı çözümleri için teşekkür ederiz."
+                &quot;Karasu Medya ekibi, markamızın görsel kimliğini tamamen yeniledi. Yeni logo tasarımımız ve kurumsal kimlik çalışmalarımız sayesinde hem müşterilerimizden hem de çalışanlarımızdan çok olumlu geri dönüşler aldık. Profesyonel yaklaşımları ve yaratıcı çözümleri için teşekkür ederiz.&quot;
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <img 
+                <div className="w-12 h-12 rounded-full overflow-hidden mr-4 relative">
+                  <Image 
                     src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
                     alt="Müşteri" 
-                    className="w-full h-full object-cover"
+                    layout="fill" 
+                    objectFit="cover"
                   />
                 </div>
                 <div>
