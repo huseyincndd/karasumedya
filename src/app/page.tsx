@@ -644,7 +644,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed italic">
-                    "Karasu Medya ile çalışmaya başladıktan sonra sosyal medya etkileşimlerimiz %120 arttı. Profesyonel yaklaşımları ve stratejik önerileri sayesinde marka bilinirliğimiz önemli ölçüde gelişti."
+                    &quot;Karasu Medya ile çalışmaya başladıktan sonra sosyal medya etkileşimlerimiz %120 arttı. Profesyonel yaklaşımları ve stratejik önerileri sayesinde marka bilinirliğimiz önemli ölçüde gelişti.&quot;
                   </p>
                 </div>
                 <div className="flex items-center mt-6 pt-6 border-t border-gray-100">
@@ -675,7 +675,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed italic">
-                    "E-ticaret sitemiz için SEO ve dijital reklam çalışmaları yapan Karasu ekibi, satışlarımızı ilk 3 ayda %85 artırmayı başardı. Verimli bütçe kullanımı ve şeffaf raporlama anlayışları için teşekkür ederiz."
+                    &quot;E-ticaret sitemiz için SEO ve dijital reklam çalışmaları yapan Karasu ekibi, satışlarımızı ilk 3 ayda %85 artırmayı başardı. Verimli bütçe kullanımı ve şeffaf raporlama anlayışları için teşekkür ederiz.&quot;
                   </p>
                 </div>
                 <div className="flex items-center mt-6 pt-6 border-t border-gray-100">
@@ -706,7 +706,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 leading-relaxed italic">
-                    "Karasu Medya'nın içerik üretim ekibi, markamızın sesini mükemmel bir şekilde yakaladı. Blog ve sosyal medya içeriklerimizin etkileşimleri arttı, organik erişimimiz genişledi. Yaratıcı ve sonuç odaklı yaklaşımları için teşekkürler."
+                    &quot;Karasu Medya&apos;nın içerik üretim ekibi, markamızın sesini mükemmel bir şekilde yakaladı. Blog ve sosyal medya içeriklerimizin etkileşimleri arttı, organik erişimimiz genişledi. Yaratıcı ve sonuç odaklı yaklaşımları için teşekkürler.&quot;
                   </p>
                 </div>
                 <div className="flex items-center mt-6 pt-6 border-t border-gray-100">

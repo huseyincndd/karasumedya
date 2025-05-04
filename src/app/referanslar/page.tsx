@@ -194,9 +194,11 @@ export default function Referanslar() {
                     </div>
                     <div className="mb-4 relative">
                       <div className="w-24 h-24 rounded-full overflow-hidden mx-auto border-4 border-white">
-                        <img 
+                        <Image 
                           src={testimonial.image} 
                           alt={testimonial.person} 
+                          width={96}
+                          height={96}
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -280,10 +282,12 @@ export default function Referanslar() {
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full"
                 >
                   <div className="h-56 relative overflow-hidden">
-                    <img 
+                    <Image 
                       src={project.image} 
                       alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                      layout="fill"
+                      objectFit="cover"
+                      className="transition-transform duration-500 hover:scale-110"
                     />
                     {project.color === "blue" && (
                       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/90 to-transparent"></div>
@@ -344,7 +348,7 @@ export default function Referanslar() {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
               {clientLogos.map((logo, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-4 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
-                  <img src={logo} alt={`Client ${index + 1}`} className="max-h-12" />
+                  <Image src={logo} alt={`Client ${index + 1}`} width={72} height={36} className="max-h-12" />
                 </div>
               ))}
             </div>
