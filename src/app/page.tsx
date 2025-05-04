@@ -197,16 +197,16 @@ export default function Home() {
                 buttonHover: "hover:from-pink-700 hover:to-pink-800"
               },
               {
-                title: "Marka Danışmanlığı",
-                description: "Markanızın kimliğini güçlendiriyor, pazardaki konumunuzu sağlamlaştırıyoruz.",
-                image: "https://images.unsplash.com/photo-1589561084283-930aa7b1ce50?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                title: "Grafik Tasarım",
+                description: "Etkileyici ve profesyonel tasarımlarla markanızın görsel dilini oluşturuyor, akılda kalıcılığını artırıyoruz.",
+                image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
                 icon: (
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 ),
-                tags: ["Marka Kimliği", "Stratejik Planlama", "Rekabet Analizi"],
-                link: "/hizmetler/marka-danismanligi",
+                tags: ["Logo Tasarımı", "Sosyal Medya Görselleri", "Kurumsal Kimlik"],
+                link: "/hizmetler/grafik",
                 bgGradient: "from-indigo-900/80",
                 iconBg: "bg-indigo-100",
                 iconColor: "text-indigo-600",
@@ -366,60 +366,225 @@ export default function Home() {
           {/* Instagram Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Instagram Post 1 */}
-            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group">
-              <div className="h-[450px] md:h-[520px] w-full relative">
-                <iframe
-                  src="https://www.instagram.com/p/DIgm2K1ogan/embed"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  scrolling="no"
-                  allowFullScreen
-                ></iframe>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                      <p className="text-white text-sm">Dijital dünyada öne çıkmanız için yanınızdayız! 🚀</p>
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="flex flex-col h-full">
+                {/* Post Header */}
+                <div className="flex items-center p-4 border-b border-gray-100">
+                  <div className="w-10 h-10 rounded-full overflow-hidden mr-3 ring-2 ring-pink-500/20">
+                    <Image 
+                      src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                      alt="Karasu"
+                      width={40}
+                      height={40}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-gray-900">karasu</p>
+                    <p className="text-xs text-gray-500">Dijital Pazarlama Ajansı</p>
+                  </div>
+                  <div className="text-blue-500">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 1.5a.75.75 0 01.53.22l3.75 3.75a.75.75 0 01-1.06 1.06L12.75 4.06v11.19a.75.75 0 01-1.5 0V4.06L8.78 6.53a.75.75 0 01-1.06-1.06l3.75-3.75A.75.75 0 0112 1.5zm-8 8.75a.75.75 0 01.75-.75h3a.75.75 0 010 1.5H5.5v7.5h13v-7.5h-2.25a.75.75 0 010-1.5h3a.75.75 0 01.75.75v9a.75.75 0 01-.75.75h-15a.75.75 0 01-.75-.75v-9z" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Post Image */}
+                <div className="relative aspect-[4/5]">
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/SaveClip.App_485053068_17958647699907109_1601222877764803663_n.jpg"
+                    alt="Sosyal Medya Stratejisi"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-4 w-full">
+                      <p className="text-white text-sm font-medium">Dijital dünyada öne çıkmanız için yanınızdayız! 🚀</p>
                     </div>
+                  </div>
+                </div>
+                
+                {/* Post Actions */}
+                <div className="p-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-4">
+                      <button className="text-gray-700 hover:text-red-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </button>
+                      <button className="text-gray-700 hover:text-blue-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </button>
+                      <button className="text-gray-700 hover:text-blue-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                      </button>
+                    </div>
+                    <button className="text-gray-700 hover:text-gray-900 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900 mb-1">123 beğeni</p>
+                    <p className="text-sm text-gray-600"><span className="font-medium">karasu</span> Etkili sosyal medya stratejileriyle markanızı büyütün!</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Instagram Post 2 */}
-            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group">
-              <div className="h-[450px] md:h-[520px] w-full relative">
-                <iframe
-                  src="https://www.instagram.com/p/DIgm2K1ogan/embed"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  scrolling="no"
-                  allowFullScreen
-                ></iframe>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                      <p className="text-white text-sm">Markanızı bir üst seviyeye taşıyoruz! ✨</p>
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="flex flex-col h-full">
+                {/* Post Header */}
+                <div className="flex items-center p-4 border-b border-gray-100">
+                  <div className="w-10 h-10 rounded-full overflow-hidden mr-3 ring-2 ring-pink-500/20">
+                    <Image 
+                      src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                      alt="Karasu"
+                      width={40}
+                      height={40}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-gray-900">karasu</p>
+                    <p className="text-xs text-gray-500">Dijital Pazarlama Ajansı</p>
+                  </div>
+                  <div className="text-blue-500">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 1.5a.75.75 0 01.53.22l3.75 3.75a.75.75 0 01-1.06 1.06L12.75 4.06v11.19a.75.75 0 01-1.5 0V4.06L8.78 6.53a.75.75 0 01-1.06-1.06l3.75-3.75A.75.75 0 0112 1.5zm-8 8.75a.75.75 0 01.75-.75h3a.75.75 0 010 1.5H5.5v7.5h13v-7.5h-2.25a.75.75 0 010-1.5h3a.75.75 0 01.75.75v9a.75.75 0 01-.75.75h-15a.75.75 0 01-.75-.75v-9z" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Post Image */}
+                <div className="relative aspect-[4/5]">
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/SaveClip.App_482411591_17956245527907109_8442636842984988232_n.jpg"
+                    alt="Marka Bilinirliği"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-4 w-full">
+                      <p className="text-white text-sm font-medium">Markanızı bir üst seviyeye taşıyoruz! ✨</p>
                     </div>
+                  </div>
+                </div>
+                
+                {/* Post Actions */}
+                <div className="p-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-4">
+                      <button className="text-gray-700 hover:text-red-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </button>
+                      <button className="text-gray-700 hover:text-blue-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </button>
+                      <button className="text-gray-700 hover:text-blue-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                      </button>
+                    </div>
+                    <button className="text-gray-700 hover:text-gray-900 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900 mb-1">207 beğeni</p>
+                    <p className="text-sm text-gray-600"><span className="font-medium">karasu</span> Dijital pazarlamada fark yaratıyoruz!</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Instagram Post 3 */}
-            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group">
-              <div className="h-[450px] md:h-[520px] w-full relative">
-                <iframe
-                  src="https://www.instagram.com/p/DIgm2K1ogan/embed"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  scrolling="no"
-                  allowFullScreen
-                ></iframe>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/10 backdrop-blur-md rounded-lg p-3">
-                      <p className="text-white text-sm">Sosyal medyada fark yaratın! 💫</p>
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="flex flex-col h-full">
+                {/* Post Header */}
+                <div className="flex items-center p-4 border-b border-gray-100">
+                  <div className="w-10 h-10 rounded-full overflow-hidden mr-3 ring-2 ring-pink-500/20">
+                    <Image 
+                      src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                      alt="Karasu"
+                      width={40}
+                      height={40}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-medium text-gray-900">karasu</p>
+                    <p className="text-xs text-gray-500">Dijital Pazarlama Ajansı</p>
+                  </div>
+                  <div className="text-blue-500">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 1.5a.75.75 0 01.53.22l3.75 3.75a.75.75 0 01-1.06 1.06L12.75 4.06v11.19a.75.75 0 01-1.5 0V4.06L8.78 6.53a.75.75 0 01-1.06-1.06l3.75-3.75A.75.75 0 0112 1.5zm-8 8.75a.75.75 0 01.75-.75h3a.75.75 0 010 1.5H5.5v7.5h13v-7.5h-2.25a.75.75 0 010-1.5h3a.75.75 0 01.75.75v9a.75.75 0 01-.75.75h-15a.75.75 0 01-.75-.75v-9z" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Post Image */}
+                <div className="relative aspect-[4/5]">
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/SaveClip.App_485468072_17958647258907109_8430283204358700045_n.jpg"
+                    alt="İçerik Stratejisi"
+                    layout="fill"
+                    objectFit="cover"
+                    className="transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-4 w-full">
+                      <p className="text-white text-sm font-medium">Sosyal medyada fark yaratın! 💫</p>
                     </div>
+                  </div>
+                </div>
+                
+                {/* Post Actions */}
+                <div className="p-4 border-t border-gray-100">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-4">
+                      <button className="text-gray-700 hover:text-red-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </button>
+                      <button className="text-gray-700 hover:text-blue-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      </button>
+                      <button className="text-gray-700 hover:text-blue-500 transition-colors">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                        </svg>
+                      </button>
+                    </div>
+                    <button className="text-gray-700 hover:text-gray-900 transition-colors">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900 mb-1">349 beğeni</p>
+                    <p className="text-sm text-gray-600"><span className="font-medium">karasu</span> İçerik stratejinizi güçlendirin!</p>
                   </div>
                 </div>
               </div>
@@ -430,7 +595,7 @@ export default function Home() {
           <div className="text-center relative">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-blue-500/20 blur-3xl -z-10"></div>
             <Link 
-              href="https://www.instagram.com/karasu/" 
+              href="https://www.instagram.com/karasureklamajansi/" 
             target="_blank"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25 transform hover:-translate-y-1"
             >
@@ -439,6 +604,141 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Müşteri Yorumları Section */}
+      <section className="py-24 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+          <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 mb-6">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="font-medium">Müşteri Memnuniyeti</span>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Müşterilerimiz Ne Diyor?</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              Müşterilerimizle kurduğumuz güçlü iş birlikleri ve onlara sunduğumuz katma değerli hizmetler hakkında görüşleri.
+            </p>
+          </div>
+
+          {/* Testimonials Slider */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Testimonial 1 */}
+              <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+                <div className="flex-1">
+                  <div className="flex items-center gap-1 text-yellow-400 mb-6">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed italic">
+                    "Karasu Medya ile çalışmaya başladıktan sonra sosyal medya etkileşimlerimiz %120 arttı. Profesyonel yaklaşımları ve stratejik önerileri sayesinde marka bilinirliğimiz önemli ölçüde gelişti."
+                  </p>
+                </div>
+                <div className="flex items-center mt-6 pt-6 border-t border-gray-100">
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Ayşe Yılmaz"
+                      width={48}
+                      height={48}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Ayşe Yılmaz</h4>
+                    <p className="text-gray-500 text-sm">Pazarlama Direktörü, TechSoft</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+                <div className="flex-1">
+                  <div className="flex items-center gap-1 text-yellow-400 mb-6">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed italic">
+                    "E-ticaret sitemiz için SEO ve dijital reklam çalışmaları yapan Karasu ekibi, satışlarımızı ilk 3 ayda %85 artırmayı başardı. Verimli bütçe kullanımı ve şeffaf raporlama anlayışları için teşekkür ederiz."
+                  </p>
+                </div>
+                <div className="flex items-center mt-6 pt-6 border-t border-gray-100">
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Mehmet Kaya"
+                      width={48}
+                      height={48}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Mehmet Kaya</h4>
+                    <p className="text-gray-500 text-sm">Genel Müdür, ModaVista</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
+                <div className="flex-1">
+                  <div className="flex items-center gap-1 text-yellow-400 mb-6">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed italic">
+                    "Karasu Medya'nın içerik üretim ekibi, markamızın sesini mükemmel bir şekilde yakaladı. Blog ve sosyal medya içeriklerimizin etkileşimleri arttı, organik erişimimiz genişledi. Yaratıcı ve sonuç odaklı yaklaşımları için teşekkürler."
+                  </p>
+                </div>
+                <div className="flex items-center mt-6 pt-6 border-t border-gray-100">
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80"
+                      alt="Zeynep Demir"
+                      width={48}
+                      height={48}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Zeynep Demir</h4>
+                    <p className="text-gray-500 text-sm">İçerik Yöneticisi, HealthPlus</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* View More Testimonials Link */}
+            <div className="text-center mt-12">
+              <Link 
+                href="/referanslar"
+                className="inline-flex items-center px-6 py-3 bg-blue-50 text-blue-700 font-medium rounded-lg hover:bg-blue-100 transition-colors duration-300"
+              >
+                <span>Tüm Müşteri Yorumlarını Görüntüle</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

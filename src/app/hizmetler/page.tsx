@@ -26,8 +26,8 @@ export default function Hizmetler() {
       buttonColor: "bg-blue-600 hover:bg-blue-700"
     },
     {
-      id: "reklam",
-      title: "Dijital Reklam",
+      id: "dijital-pazarlama",
+      title: "Dijital Pazarlama",
       description: "Hedef kitlenize ulaşmanın en etkili yollarını buluyoruz. Google Ads, sosyal medya reklamları ve yeniden pazarlama stratejileri ile markanızın görünürlüğünü artırıyoruz.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

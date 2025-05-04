@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.pixabay.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'villaqrmenu.b-cdn.net',
+        pathname: '/**',
+      },
     ],
   },
 };

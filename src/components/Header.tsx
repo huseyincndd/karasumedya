@@ -63,8 +63,8 @@ export default function Header() {
                   <Link href="/hizmetler/sosyal-medya" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
                     Sosyal Medya Yönetimi
                   </Link>
-                  <Link href="/hizmetler/reklam" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
-                    Dijital Reklam
+                  <Link href="/hizmetler/dijital-pazarlama" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
+                    Dijital Pazarlama
                   </Link>
                   <Link href="/hizmetler/icerik" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
                     İçerik Üretimi
@@ -127,9 +127,9 @@ export default function Header() {
                 <div className="space-y-3 pl-2">
                   <MobileNavLink href="/hizmetler" text="Tüm Hizmetler" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/sosyal-medya" text="Sosyal Medya Yönetimi" onClick={() => setIsMenuOpen(false)} />
-                  <MobileNavLink href="/hizmetler/reklam" text="Dijital Reklam" onClick={() => setIsMenuOpen(false)} />
+                  <MobileNavLink href="/hizmetler/dijital-pazarlama" text="Dijital Pazarlama" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/icerik" text="İçerik Üretimi" onClick={() => setIsMenuOpen(false)} />
-                  <MobileNavLink href="/hizmetler/grafik" text="Grafik Tasarım" onClick={() => setIsMenuOpen(false)} />
+                  <MobileNavLink href="/hizmetler/grafik-tasarim" text="Grafik Tasarım" onClick={() => setIsMenuOpen(false)} />
                 </div>
               </div>
               <MobileNavLink href="/hakkimizda" text="Hakkımızda" onClick={() => setIsMenuOpen(false)} special={true} />

@@ -195,8 +195,8 @@ export default function DijitalReklam() {
                   <Image 
                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
                     alt="Dijital Reklam Yönetimi" 
-                    layout="fill" 
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
               </div>
