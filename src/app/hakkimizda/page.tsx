@@ -245,7 +245,7 @@ export default function Hakkimizda() {
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Kurulduğumuz günden bugüne, pek çok başarıya imza attık ve sürekli büyüdük.
-                İşte Karasu Medya'nın kilometre taşları.
+                İşte Karasu Medya&apos;nın kilometre taşları.
               </p>
             </div>
             
