@@ -228,7 +228,7 @@ export default function Referanslar() {
                           </svg>
                         </div>
                         <div className="text-gray-700 italic text-lg leading-relaxed">
-                          "{testimonial.quote}"
+                        &quot;{testimonial.quote}&quot;
                         </div>
                       </div>
                     </div>

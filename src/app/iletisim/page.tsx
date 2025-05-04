@@ -386,7 +386,7 @@ export default function Iletisim() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Bizi Ziyaret Edin</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Ofisimiz İstanbul'un merkezi konumunda, Kadıköy'de yer almaktadır. Bize ulaşmak için haritayı kullanabilir veya direkt olarak iletişime geçebilirsiniz.
+                Ofisimiz İstanbul&apos;un merkezi konumunda, Kadıköy&apos;de yer almaktadır. Bize ulaşmak için haritayı kullanabilir veya direkt olarak iletişime geçebilirsiniz.
               </p>
             </div>
             
