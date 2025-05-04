@@ -129,7 +129,7 @@ export default function Header() {
                   <MobileNavLink href="/hizmetler/sosyal-medya" text="Sosyal Medya Yönetimi" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/dijital-pazarlama" text="Dijital Pazarlama" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/icerik" text="İçerik Üretimi" onClick={() => setIsMenuOpen(false)} />
-                  <MobileNavLink href="/hizmetler/grafik-tasarim" text="Grafik Tasarım" onClick={() => setIsMenuOpen(false)} />
+                  <MobileNavLink href="/hizmetler/grafik" text="Grafik Tasarım" onClick={() => setIsMenuOpen(false)} />
                 </div>
               </div>
               <MobileNavLink href="/hakkimizda" text="Hakkımızda" onClick={() => setIsMenuOpen(false)} special={true} />

@@ -275,7 +275,7 @@ export default function Home() {
                 Markanızın ihtiyaçlarına özel çözümler sunarak, dijital dünyada güçlü bir varlık göstermenize yardımcı oluyoruz. 
                 <span className="block mt-4">Stratejik yaklaşımımız ve yaratıcı bakış açımızla fark yaratıyoruz.</span>
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8 md:mb-0">
                 <Link 
                   href="/iletisim" 
                   className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-colors duration-300 inline-flex items-center shadow-lg hover:shadow-blue-200/50"
@@ -296,7 +296,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="md:w-1/2 relative">
+            <div className="md:w-1/2 relative min-h-[250px] mt-8 md:mt-0">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-indigo-600 opacity-90 mix-blend-multiply"></div>
               <Image 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
@@ -304,15 +304,16 @@ export default function Home() {
                 layout="fill" 
                 objectFit="cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-8">
+              {/* Yenilikçi Fikirler bölümü - Mobil görünümde alttan başlayacak şekilde düzenlendi */}
+              <div className="absolute inset-0 flex items-end md:items-center justify-center p-8 pt-32 md:pt-8">
                 <div className="text-white text-center max-w-md">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                     </svg>
                   </div>
-                  <h4 className="text-2xl font-bold mb-2">Yenilikçi Fikirler</h4>
-                  <p className="text-white/80 text-lg">
+                  <h4 className="text-xl sm:text-2xl font-bold mb-2">Yenilikçi Fikirler</h4>
+                  <p className="text-white/80 text-base sm:text-lg">
                     Her markanın benzersiz olduğuna inanıyoruz. İhtiyaçlarınıza özel, yaratıcı çözümler geliştiriyoruz.
                   </p>
                 </div>
