@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 export default function Header() {
@@ -27,10 +28,16 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 z-10">
-            <div className={`w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-800 rounded-full flex items-center justify-center transition-all ${
+            <div className={`relative w-12 h-12 overflow-hidden rounded-full transition-all ${
               scrolled ? 'scale-90' : 'scale-100'
             }`}>
-              <span className="text-white font-bold text-xl">K</span>
+              <Image 
+                src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg"
+                alt="Karasu Logo"
+                width={48}
+                height={48}
+                className="object-cover"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-800 inline-block text-transparent bg-clip-text">KARASU</h1>
