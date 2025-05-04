@@ -57,6 +57,9 @@ export default function Header() {
               </button>
               <div className="absolute left-0 mt-1 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
                 <div className="bg-white shadow-lg rounded-md py-2 px-3 border border-gray-100">
+                  <Link href="/hizmetler" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md font-medium border-b border-gray-100 mb-1">
+                    Tüm Hizmetler
+                  </Link>
                   <Link href="/hizmetler/sosyal-medya" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
                     Sosyal Medya Yönetimi
                   </Link>
@@ -122,6 +125,7 @@ export default function Header() {
               <div className="py-4 px-4 rounded-xl bg-blue-50/70 border border-blue-100 shadow-sm">
                 <h3 className="font-semibold text-blue-700 text-sm mb-3 uppercase tracking-wider">Hizmetlerimiz</h3>
                 <div className="space-y-3 pl-2">
+                  <MobileNavLink href="/hizmetler" text="Tüm Hizmetler" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/sosyal-medya" text="Sosyal Medya Yönetimi" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/reklam" text="Dijital Reklam" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/icerik" text="İçerik Üretimi" onClick={() => setIsMenuOpen(false)} />
