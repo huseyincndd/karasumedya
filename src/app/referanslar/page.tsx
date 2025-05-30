@@ -61,29 +61,6 @@ export default function Referanslar() {
     },
   ];
 
-  // Hizmet avantajları
-  const serviceAdvantages = [
-    {
-      title: "Stratejik Planlama",
-      description: "Her marka için özel olarak hazırlanmış dijital pazarlama stratejileri geliştiriyoruz.",
-      icon: "chart-line"
-    },
-    {
-      title: "Yaratıcı Tasarım",
-      description: "Markanızın kimliğini yansıtan, etkileyici ve özgün tasarımlar oluşturuyoruz.",
-      icon: "palette"
-    },
-    {
-      title: "Veri Analizi",
-      description: "Kampanyalarınızın performansını sürekli analiz ederek, stratejilerinizi optimize ediyoruz.",
-      icon: "chart-pie"
-    },
-    {
-      title: "Sürekli Destek",
-      description: "Projelerinizin her aşamasında yanınızda olup, ihtiyaçlarınıza hızlı çözümler sunuyoruz.",
-      icon: "headset"
-    }
-  ];
 
   // Başarı metrikleri
   const successMetrics = [

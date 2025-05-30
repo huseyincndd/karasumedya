@@ -278,7 +278,7 @@ export default function Hakkimizda() {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">Ekibimiz</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                Karasu Medya'nın başarısının arkasındaki yetenekli ve tutkulu ekibimizle tanışın.
+                Karasu Medya&apos;nın başarısının arkasındaki yetenekli ve tutkulu ekibimizle tanışın.
               </p>
             </div>
             
@@ -349,7 +349,7 @@ export default function Hakkimizda() {
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Kurulduğumuz günden bugüne, pek çok başarıya imza attık ve sürekli büyüdük.
-                İşte Karasu Medya'nın kilometre taşları.
+                İşte Karasu Medya&apos;nın kilometre taşları.
               </p>
             </div>
             
