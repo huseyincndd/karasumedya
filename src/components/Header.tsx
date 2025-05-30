@@ -28,22 +28,22 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 z-10">
-            <div className={`relative w-12 h-12 overflow-hidden rounded-full transition-all ${
+            <div className={`relative w-16 h-16 overflow-hidden rounded-full transition-all ${
               scrolled ? 'scale-90' : 'scale-100'
             }`}>
               <Image 
                 src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg"
                 alt="Karasu Logo"
-                width={48}
-                height={48}
+                width={64}
+                height={64}
                 className="object-cover"
               />
             </div>
             <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-800 inline-block text-transparent bg-clip-text">KARASU</h1>
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-800 inline-block text-transparent bg-clip-text">KARASU</h1>
               <p className={`text-xs tracking-wider -mt-1 ${
                 scrolled ? 'text-gray-500' : 'text-white'
-              }`}>REKLAM & SOSYAL MEDYA</p>
+              }`}>REKLAM & TANITIM HİZMETLERİ</p>
             </div>
           </Link>
 
@@ -79,6 +79,12 @@ export default function Header() {
                   <Link href="/hizmetler/grafik" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
                     Grafik Tasarım
                   </Link>
+                  <Link href="/hizmetler/matbaa" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
+                    Matbaa Hizmetleri
+                  </Link>
+                  <Link href="/hizmetler/organizasyon" className="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md">
+                    Organizasyon Hizmetleri
+                  </Link>
                 </div>
               </div>
             </div>
@@ -88,19 +94,7 @@ export default function Header() {
             <NavLink href="/iletisim" text="İletişim" scrolled={scrolled} />
           </nav>
 
-          {/* Call to Action Button */}
-          <div className="hidden md:block">
-            <Link 
-              href="/iletisim" 
-              className={`${
-                scrolled 
-                  ? 'bg-gradient-to-r from-blue-600 to-indigo-800 text-white' 
-                  : 'bg-white text-blue-600 hover:bg-blue-50'
-              } px-6 py-2 rounded-full hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5`}
-            >
-              Ücretsiz Danışmanlık
-            </Link>
-          </div>
+          {/* Call to Action Button Removed */}
 
           {/* Mobile Menu Button */}
           <button 
@@ -137,21 +131,15 @@ export default function Header() {
                   <MobileNavLink href="/hizmetler/dijital-pazarlama" text="Dijital Pazarlama" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/icerik" text="İçerik Üretimi" onClick={() => setIsMenuOpen(false)} />
                   <MobileNavLink href="/hizmetler/grafik" text="Grafik Tasarım" onClick={() => setIsMenuOpen(false)} />
+                  <MobileNavLink href="/hizmetler/matbaa" text="Matbaa Hizmetleri" onClick={() => setIsMenuOpen(false)} />
+                  <MobileNavLink href="/hizmetler/organizasyon" text="Organizasyon Hizmetleri" onClick={() => setIsMenuOpen(false)} />
                 </div>
               </div>
               <MobileNavLink href="/hakkimizda" text="Hakkımızda" onClick={() => setIsMenuOpen(false)} special={true} />
               <MobileNavLink href="/referanslar" text="Referanslar" onClick={() => setIsMenuOpen(false)} special={true} />
               <MobileNavLink href="/iletisim" text="İletişim" onClick={() => setIsMenuOpen(false)} special={true} />
               
-              <div className="mt-8">
-                <Link 
-                  href="/iletisim" 
-                  className="inline-block bg-gradient-to-r from-blue-600 to-indigo-800 text-white px-6 py-4 rounded-xl text-center w-full shadow-lg hover:shadow-blue-200/50 transition-all duration-300 hover:-translate-y-1 font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Ücretsiz Danışmanlık
-                </Link>
-              </div>
+              {/* Mobile Call to Action Button Removed */}
             </nav>
           </div>
         </div>

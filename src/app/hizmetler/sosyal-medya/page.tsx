@@ -55,24 +55,9 @@ export default function SosyalMedya() {
       color: "bg-blue-600"
     },
     {
-      name: "Twitter",
-      icon: "/images/twitter.svg",
-      color: "bg-blue-400"
-    },
-    {
-      name: "LinkedIn",
-      icon: "/images/linkedin.svg",
-      color: "bg-blue-700"
-    },
-    {
       name: "TikTok",
       icon: "/images/tiktok.svg",
       color: "bg-black"
-    },
-    {
-      name: "YouTube",
-      icon: "/images/youtube.svg",
-      color: "bg-red-600"
     }
   ];
 
@@ -136,17 +121,6 @@ export default function SosyalMedya() {
               Markanızın sosyal medya platformlarında etkin bir şekilde temsil edilmesini sağlayarak, 
               hedef kitlenizle güçlü bağlar kuruyoruz.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/iletisim" 
-                className="px-5 py-2.5 bg-white text-blue-700 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-300 inline-flex items-center shadow-lg"
-              >
-                <span>Ücretsiz Danışmanlık Alın</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -317,7 +291,7 @@ export default function SosyalMedya() {
               href="/iletisim" 
               className="px-8 py-4 bg-white text-blue-700 font-medium rounded-xl hover:bg-blue-50 transition-colors duration-300 inline-flex items-center shadow-lg"
             >
-              <span>Ücretsiz Danışmanlık Alın</span>
+              <span>Hemen iletişime geçin</span>
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

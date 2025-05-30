@@ -28,17 +28,6 @@ export default function DijitalReklam() {
       textColor: "text-blue-600"
     },
     {
-      title: "LinkedIn Ads",
-      description: "B2B pazarlamada doğru profesyonellere ve karar vericilere ulaşın.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-      color: "bg-blue-100",
-      textColor: "text-blue-700"
-    },
-    {
       title: "TikTok Ads",
       description: "Genç kullanıcılara yaratıcı içeriklerle ulaşın ve markanızı tanıtın.",
       icon: (
@@ -149,7 +138,7 @@ export default function DijitalReklam() {
                 href="/iletisim" 
                 className="px-5 py-2.5 bg-white text-indigo-700 font-medium rounded-lg hover:bg-indigo-50 transition-colors duration-300 inline-flex items-center shadow-lg"
               >
-                <span>Ücretsiz Danışmanlık Alın</span>
+                <span>Hemen Teklif Alın</span>
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -360,7 +349,7 @@ export default function DijitalReklam() {
               href="/iletisim" 
               className="px-8 py-4 bg-white text-indigo-700 font-medium rounded-xl hover:bg-indigo-50 transition-colors duration-300 inline-flex items-center shadow-lg"
             >
-              <span>Ücretsiz Danışmanlık Alın</span>
+              <span>Hemen iletişime geçin</span>
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

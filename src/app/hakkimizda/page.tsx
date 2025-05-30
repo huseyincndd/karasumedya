@@ -5,41 +5,105 @@ import Image from 'next/image';
 
 export default function Hakkimizda() {
   const teamMembers = [
+    // Patron - CEO
     {
-      name: "Ahmet Yılmaz",
+      name: "Mehmet Enes Karasu",
       position: "Kurucu ve CEO",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Dijital pazarlama alanında 15 yıllık deneyime sahip olan Ahmet, sektördeki bilgi birikimi ve vizyoner yaklaşımıyla Karasu Medya'yı kurumuştur."
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/1.png",
+      description: "Dijital pazarlama alanında 15 yıllık deneyime sahip olan Ahmet, sektördeki bilgi birikimi ve vizyoner yaklaşımıyla Karasu Medya'yı kurumuştur.",
+      isCEO: true
+    },
+    // Yönetim Ekibi
+    {
+      name: "Kader Karasu",
+      position: "Muhasabe Sorumlusu",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/2.png",
+      description: ""
     },
     {
-      name: "Zeynep Kaya",
-      position: "Kreatif Direktör",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Yaratıcı tasarım ve içerik stratejileri konusunda uzman olan Zeynep, markaların hikayelerini etkileyici bir şekilde anlatmalarına yardımcı olmaktadır."
+      name: "İlayda Sarı",
+      position: "Takım Lider Yardımcısı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/3.png",
+      description: ""
     },
     {
-      name: "Burak Demir",
-      position: "Dijital Pazarlama Uzmanı",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "SEO, SEM ve sosyal medya reklamcılığı konularında uzmanlaşmış olan Burak, veri odaklı stratejilerle maksimum dönüşüm sağlamaktadır."
+      name: "Samiye Öztürk",
+      position: "Yapay Zeka Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/4.png",
+      description: ""
     },
+    // Uzman Ekip
     {
-      name: "Elif Şahin",
+      name: "Meleknur Akay",
       position: "Sosyal Medya Yöneticisi",
-      image: "https://images.unsplash.com/photo-1507101105822-7472b28e22ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Sosyal medya trendleri ve içerik yönetimi konusunda deneyimli olan Elif, markaların sosyal platformlarda etkili bir şekilde var olmalarını sağlamaktadır."
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/5.png",
+      description: ""
     },
     {
-      name: "Mert Özkan",
-      position: "Grafik Tasarımcı",
-      image: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "Görsel iletişim ve kullanıcı deneyimi tasarımı konusunda uzmanlaşmış olan Mert, markaların görsel kimliklerini güçlendirmektedir."
+      name: "Yeliz Güngör",
+      position: "Çağrı Merkezi",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/6.png",
+      description: ""
     },
     {
-      name: "Ayşe Yıldız",
-      position: "İçerik Uzmanı",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-      description: "SEO uyumlu içerik üretimi ve içerik stratejisi geliştirme konusunda deneyimli olan Ayşe, markaların mesajlarını etkili bir şekilde iletmelerini sağlamaktadır."
+      name: "Sunay Bilici",
+      position: "Grafik Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/7.png",
+      description: ""
+    },
+    {
+      name: "Metehan Dereköy",
+      position: "Grafik Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/8.png",
+      description: ""
+    },
+    {
+      name: "Mehmet Bekin",
+      position: "Fotoğrafçı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/9.png",
+      description: ""
+    },
+    {
+      name: "Eren Ünlüfıstıkçı",
+      position: "Grafik Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/10.png",
+      description: ""
+    },
+    {
+      name: "Yusuf Emir Kara",
+      position: "Sosyal Medya Yöneticisi",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/11.png",
+      description: ""
+    },
+    {
+      name: "Gürol Akpıbar",
+      position: "Sosyal Medya Yöneticisi",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/12.png",
+      description: ""
+    },
+    {
+      name: "Serkan Erdoğan",
+      position: "Yapay Zeka Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/14.png",
+      description: ""
+    },
+    {
+      name: "Baran Sarı",
+      position: "Videographer",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/15.png",
+      description: ""
+    },
+    {
+      name: "Hüseyin Cuneydioğlu",
+      position: "Web Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/16.png",
+      description: ""
+    },
+    {
+      name: "Azatcan Köroğlu",
+      position: "Videographer",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/13.png",
+      description: ""
     }
   ];
 
@@ -201,28 +265,68 @@ export default function Hakkimizda() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Team Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Değerlerimiz
-              </h2>
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 mb-6">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span className="font-medium">Profesyonel Ekip</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">Ekibimiz</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
-                Karasu Medya olarak, her projede bizi yönlendiren temel değerlerimiz vardır.
-                Bu değerler, müşterilerimize sunduğumuz hizmetin kalitesini ve yaklaşımımızı şekillendirir.
+                Karasu Medya'nın başarısının arkasındaki yetenekli ve tutkulu ekibimizle tanışın.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
-                    {value.icon}
+            {/* CEO Section */}
+            {teamMembers.filter(member => member.isCEO).map((ceo, index) => (
+              <div key={index} className="mb-20">
+                <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-10 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col md:flex-row gap-10 items-center">
+                  <div className="w-48 h-48 rounded-full overflow-hidden flex-shrink-0 border-4 border-white shadow-lg">
+                    <Image 
+                      src={ceo.image} 
+                      alt={ceo.name} 
+                      width={192} 
+                      height={192} 
+                      className="object-cover w-full h-full"
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{ceo.name}</h3>
+                    <p className="text-blue-600 font-medium mb-4">{ceo.position}</p>
+                    <div className="flex gap-3">
+                      <a href="#" className="text-pink-600 hover:text-pink-800">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* Team Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {teamMembers.filter(member => !member.isCEO).map((member, index) => (
+                <div key={index} className="bg-gradient-to-b from-white to-blue-50 p-6 rounded-xl shadow-md hover:shadow-xl hover:translate-y-[-5px] transition-all duration-300 flex flex-col items-center group">
+                  <div className="relative w-32 h-32 rounded-full overflow-hidden mb-5 border-4 border-white shadow-md group-hover:shadow-lg group-hover:scale-105 transition-all duration-300">
+                    <Image 
+                      src={member.image} 
+                      alt={member.name} 
+                      width={128} 
+                      height={128} 
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                    <p className="text-blue-600 font-medium">{member.position}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -245,7 +349,7 @@ export default function Hakkimizda() {
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Kurulduğumuz günden bugüne, pek çok başarıya imza attık ve sürekli büyüdük.
-                İşte Karasu Medya&apos;nın kilometre taşları.
+                İşte Karasu Medya'nın kilometre taşları.
               </p>
             </div>
             
@@ -271,43 +375,7 @@ export default function Hakkimizda() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Ekibimiz
-              </h2>
-              <p className="text-gray-600 max-w-3xl mx-auto">
-                Karasu Medya&apos;nın başarısının arkasında, alanında uzman ve tutkulu bir ekip var.
-                Her biri kendi alanında deneyimli olan ekip üyelerimiz, markanızın başarısı için çalışıyor.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
-                  <div className="h-64 relative overflow-hidden">
-                    <Image 
-                      src={member.image} 
-                      alt={member.name} 
-                      layout="fill" 
-                      objectFit="cover" 
-                      className="hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">{member.name}</h3>
-                    <p className="text-blue-600 font-medium text-sm mb-4">{member.position}</p>
-                    <p className="text-gray-600">{member.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
@@ -330,6 +398,35 @@ export default function Hakkimizda() {
                 <p className="text-blue-600 text-4xl font-bold mb-2">8</p>
                 <p className="text-gray-700 font-medium">Yıllık Deneyim</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Değerlerimiz
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Karasu Medya olarak, her projede bizi yönlendiren temel değerlerimiz vardır.
+                Bu değerler, müşterilerimize sunduğumuz hizmetin kalitesini ve yaklaşımımızı şekillendirir.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+                    {value.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

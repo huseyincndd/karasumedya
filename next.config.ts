@@ -38,6 +38,26 @@ const nextConfig: NextConfig = {
         hostname: 'www.vectorlogo.zone',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.instagram.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'berkmatbaa.com.tr',
+        pathname: '/**',
+      },
     ],
   },
 };

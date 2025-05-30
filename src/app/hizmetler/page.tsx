@@ -87,6 +87,48 @@ export default function Hizmetler() {
       bgColor: "bg-pink-50",
       accentColor: "text-pink-600",
       buttonColor: "bg-pink-600 hover:bg-pink-700"
+    },
+    {
+      id: "matbaa",
+      title: "Matbaa Hizmetleri",
+      description: "Markanızın fiziksel materyallerini en yüksek kalitede üretiyoruz. Kartvizit, broşür, katalog, afiş ve davetiye gibi tüm basılı materyallerinizi profesyonel olarak hazırlıyoruz.",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        </svg>
+      ),
+      features: [
+        "Kartvizit ve Kurumsal Kimlik",
+        "Broşür ve Katalog Tasarımı",
+        "Afiş ve Poster Baskı",
+        "Davetiye ve Özel Baskılar",
+        "Promosyon Ürünleri"
+      ],
+      image: "https://berkmatbaa.com.tr/assets/uploads/66544393001fd171679835555.jpg",
+      bgColor: "bg-teal-50",
+      accentColor: "text-teal-600",
+      buttonColor: "bg-teal-600 hover:bg-teal-700"
+    },
+    {
+      id: "organizasyon",
+      title: "Organizasyon Hizmetleri",
+      description: "Cinsiyet partisi, evlilik teklifi, balayı tatili, doğum günü ve iş toplantıları gibi özel anlarınızı unutulmaz kılıyoruz. Her detayı düşünen profesyonel ekibimizle yanınızdayız.",
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+        </svg>
+      ),
+      features: [
+        "Cinsiyet Partisi Organizasyonu",
+        "Evlilik Teklifi Planlama",
+        "Balayı Tatili Organizasyonu",
+        "Doğum Günü Kutlamaları",
+        "İş Toplantıları ve Kurumsal Etkinlikler"
+      ],
+      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      bgColor: "bg-amber-50",
+      accentColor: "text-amber-600",
+      buttonColor: "bg-amber-600 hover:bg-amber-700"
     }
   ];
 
@@ -117,17 +159,6 @@ export default function Hizmetler() {
               Markanızın dijital dünyada başarılı olması için ihtiyaç duyduğu tüm hizmetleri tek bir çatı altında sunuyoruz. 
               Stratejik yaklaşımımız ve yaratıcı çözümlerimiz ile işletmenizi bir adım öne taşıyoruz.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/iletisim" 
-                className="px-5 py-2.5 bg-white text-blue-700 font-medium rounded-lg hover:bg-blue-50 transition-colors duration-300 inline-flex items-center shadow-lg"
-              >
-                <span>Ücretsiz Danışmanlık Alın</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

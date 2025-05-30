@@ -170,7 +170,7 @@ export default function IcerikUretimi() {
                 href="/iletisim" 
                 className="px-5 py-2.5 bg-white text-purple-700 font-medium rounded-lg hover:bg-purple-50 transition-colors duration-300 inline-flex items-center shadow-lg"
               >
-                <span>Ücretsiz Danışmanlık Alın</span>
+                <span>Hemen Teklif Alın</span>
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -454,7 +454,7 @@ export default function IcerikUretimi() {
               href="/iletisim" 
               className="px-8 py-4 bg-white text-purple-700 font-medium rounded-xl hover:bg-purple-50 transition-colors duration-300 inline-flex items-center shadow-lg"
             >
-              <span>Ücretsiz Danışmanlık Alın</span>
+              <span>Hemen iletişime geçin</span>
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
