@@ -128,8 +128,8 @@ export default function Iletisim() {
   ];
 
   const workingHours = [
-    { day: "Pazartesi - Cuma", hours: "09:00 - 18:00" },
-    { day: "Cumartesi", hours: "10:00 - 14:00" },
+    { day: "Pazartesi - Cuma", hours: "09:30 - 19:00" },
+    { day: "Cumartesi", hours: "09:30 - 15:00" },
     { day: "Pazar", hours: "Kapalı" }
   ];
 

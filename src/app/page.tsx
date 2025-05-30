@@ -850,43 +850,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Referanslar */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Referanslarımız</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Birlikte çalıştığımız değerli markalar ve başarı hikayeleri.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {['Google', 'Amazon', 'Facebook', 'Twitter', 'LinkedIn', 'Shopify'].map((brand) => (
-              <div key={brand} className="grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                <Image
-                  src={`https://www.vectorlogo.zone/logos/${brand.toLowerCase()}/${brand.toLowerCase()}-ar21.svg`}
-                  alt={`${brand} logo`}
-                  width={120}
-                  height={60}
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
-          
-          <div className="mt-16 text-center">
-            <Link
-              href="/referanslar"
-              className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800"
-            >
-              <span>Tüm referanslarımızı görüntüleyin</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* 6. Teklif Al CTA */}
       <section className="py-24 bg-gradient-to-r from-blue-600 to-indigo-700 relative overflow-hidden">
