@@ -54,8 +54,8 @@ export default function Iletisim() {
         </svg>
       ),
       title: "Telefon",
-      content: "+90 (212) 123 45 67",
-      link: "tel:+902121234567"
+      content: "+90 (531) 473 23 77",
+      link: "tel:+905314732377"
     },
     {
       icon: (
@@ -64,8 +64,8 @@ export default function Iletisim() {
         </svg>
       ),
       title: "E-posta",
-      content: "info@karasu.com",
-      link: "mailto:info@karasu.com"
+      content: "info@karasureklamajansi.com.tr",
+      link: "mailto:info@karasureklamajansi.com.tr"
     },
     {
       icon: (
