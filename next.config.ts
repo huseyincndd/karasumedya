@@ -65,6 +65,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'www.veraevent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
         hostname: 'tasdemirbelgelendirme.com',
         pathname: '/**',
       },
