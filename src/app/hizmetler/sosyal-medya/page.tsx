@@ -43,23 +43,6 @@ export default function SosyalMedya() {
     }
   ];
 
-  const platforms = [
-    {
-      name: "Instagram",
-      icon: "/images/instagram.svg",
-      color: "bg-pink-500"
-    },
-    {
-      name: "Facebook",
-      icon: "/images/facebook.svg",
-      color: "bg-blue-600"
-    },
-    {
-      name: "TikTok",
-      icon: "/images/tiktok.svg",
-      color: "bg-black"
-    }
-  ];
 
   const processSteps = [
     {

@@ -16,7 +16,6 @@ function PotentialSimulator() {
   
   // Potansiyel skorunu hesapla
   useEffect(() => {
-    let baseMultiplier = 1.5;
     
     // Büyüme hedefine göre çarpan
     const growthMultiplier = 
