@@ -197,7 +197,7 @@ export default function Matbaa() {
                 <div className="absolute -inset-4 bg-teal-200 rounded-2xl transform -rotate-2 opacity-70"></div>
                 <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
                   <Image 
-                    src="https://images.unsplash.com/photo-1589996448606-27d38c70dd4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                    src="https://berkmatbaa.com.tr/assets/uploads/66544393001fd171679835555.jpg" 
                     alt="Matbaa Hizmetleri" 
                     layout="fill" 
                     objectFit="cover" 

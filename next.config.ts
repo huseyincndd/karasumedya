@@ -58,6 +58,16 @@ const nextConfig: NextConfig = {
         hostname: 'berkmatbaa.com.tr',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'veraevent.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tasdemirbelgelendirme.com',
+        pathname: '/**',
+      },
     ],
   },
 };

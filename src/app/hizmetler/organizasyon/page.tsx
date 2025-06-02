@@ -197,7 +197,7 @@ export default function Organizasyon() {
                 <div className="absolute -inset-4 bg-amber-200 rounded-2xl transform -rotate-2 opacity-70"></div>
                 <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
                   <Image 
-                    src="https://images.unsplash.com/photo-1470753323753-3f8091bb0232?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                    src="https://www.veraevent.com/media/vera/services/ceremony.jpg" 
                     alt="Organizasyon Hizmetleri" 
                     layout="fill" 
                     objectFit="cover" 

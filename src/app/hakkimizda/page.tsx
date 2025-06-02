@@ -9,7 +9,7 @@ export default function Hakkimizda() {
     {
       name: "Mehmet Enes Karasu",
       position: "Kurucu ve CEO",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/1.png",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/ceo.png",
       description: "Dijital pazarlama alanında 15 yıllık deneyime sahip olan Ahmet, sektördeki bilgi birikimi ve vizyoner yaklaşımıyla Karasu Medya'yı kurumuştur.",
       isCEO: true
     },
@@ -46,8 +46,8 @@ export default function Hakkimizda() {
       description: ""
     },
     {
-      name: "Sunay Bilici",
-      position: "Grafik Tasarım Uzmanı",
+      name: "Ece Yücesoy",
+      position: "Model",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/7.png",
       description: ""
     },

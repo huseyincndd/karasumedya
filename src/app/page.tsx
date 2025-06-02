@@ -1,5 +1,337 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+
+// Potansiyel Simülatörü Bileşeni
+function PotentialSimulator() {
+  // State'ler
+  const [currentEngagement, setCurrentEngagement] = useState(20);
+  const [growthGoal, setGrowthGoal] = useState('moderate');
+  const [industryType, setIndustryType] = useState('retail');
+  const [showResults, setShowResults] = useState(false);
+  const [potentialScore, setPotentialScore] = useState(0);
+  const [animateValue, setAnimateValue] = useState(0);
+  
+  // Potansiyel skorunu hesapla
+  useEffect(() => {
+    let baseMultiplier = 1.5;
+    
+    // Büyüme hedefine göre çarpan
+    const growthMultiplier = 
+      growthGoal === 'conservative' ? 1.2 :
+      growthGoal === 'moderate' ? 1.5 :
+      growthGoal === 'aggressive' ? 1.8 : 1.5;
+    
+    // Sektöre göre çarpan
+    const industryMultiplier = 
+      industryType === 'retail' ? 1.3 :
+      industryType === 'services' ? 1.5 :
+      industryType === 'tech' ? 1.7 :
+      industryType === 'food' ? 1.4 : 1.3;
+    
+    // Mevcut etkileşime göre potansiyel hesaplama
+    const calculatedPotential = Math.round(currentEngagement * growthMultiplier * industryMultiplier);
+    setPotentialScore(calculatedPotential > 100 ? 100 : calculatedPotential);
+  }, [currentEngagement, growthGoal, industryType]);
+  
+  // Sonuç animasyonu
+  useEffect(() => {
+    if (showResults) {
+      let startValue = 0;
+      const duration = 1500; // ms cinsinden animasyon süresi
+      const increment = potentialScore / (duration / 16); // 60fps için yaklaşık değer
+      
+      const timer = setInterval(() => {
+        startValue += increment;
+        if (startValue >= potentialScore) {
+          setAnimateValue(potentialScore);
+          clearInterval(timer);
+        } else {
+          setAnimateValue(Math.floor(startValue));
+        }
+      }, 16);
+      
+      return () => clearInterval(timer);
+    }
+  }, [showResults, potentialScore]);
+  
+  // Sonuçları göster/gizle
+  const handleCalculate = () => {
+    setShowResults(true);
+  };
+  
+  const handleReset = () => {
+    setShowResults(false);
+    setAnimateValue(0);
+  };
+  
+  return (
+    <div className="p-6 md:p-10 bg-white rounded-2xl shadow-xl relative overflow-hidden">
+      {/* Arkaplan Süslemeleri */}
+      <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-full opacity-30 blur-xl -mr-10 -mt-10"></div>
+      <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-purple-100 to-pink-200 rounded-full opacity-30 blur-xl -ml-10 -mb-10"></div>
+      
+      {/* Başlık */}
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent inline-block">Dijital Potansiyelinizi Keşfedin</h2>
+        <p className="text-gray-600 mt-2">Markanızın dijital dünyada ne kadar büyüyebileceğini hesaplayın</p>
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {/* Sol Taraf - Giriş Formu */}
+        <div className={`transition-all duration-500 bg-gradient-to-br from-white to-blue-50 rounded-xl p-6 shadow-md ${showResults ? 'lg:pr-10 border-r border-blue-100' : ''}`}>
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+            <span className="bg-blue-100 text-blue-600 p-2 rounded-lg mr-3">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </span>
+            Markanızın Profilini Oluşturun
+          </h3>
+          
+          {/* Mevcut Etkileşim Kaydırgacı - Tamamen Yeniden Tasarlandı */}
+          <div className="mb-8 bg-gradient-to-r from-blue-50 via-white to-indigo-50 p-6 rounded-2xl shadow-sm border border-blue-100 overflow-hidden relative">
+            {/* Dekoratif arka plan elementleri */}
+            <div className="absolute -right-10 -top-10 w-32 h-32 bg-blue-100 rounded-full opacity-30 blur-xl"></div>
+            <div className="absolute -left-10 -bottom-10 w-32 h-32 bg-indigo-100 rounded-full opacity-30 blur-xl"></div>
+            
+            <div className="flex justify-between items-center mb-6 relative z-10">
+              <div className="flex items-center">
+                <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-2 rounded-lg shadow-md mr-3">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="text-gray-800 font-semibold">Mevcut Sosyal Medya Etkileşiminiz</h4>
+                  <p className="text-xs text-gray-500 mt-0.5">Markanızın mevcut sosyal medya performansını seçin</p>
+                </div>
+              </div>
+              <div className="flex items-center justify-center min-w-[60px] h-10 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-lg shadow-md">
+                {currentEngagement}%
+              </div>
+            </div>
+            
+            {/* Özel Tasarım Kaydırıcı */}
+            <div className="relative mb-6 px-1">
+              {/* Arka plan çizgisi */}
+              <div className="absolute top-1/2 left-0 right-0 h-1.5 bg-gray-200 rounded-full transform -translate-y-1/2"></div>
+              
+              {/* Doluluk çizgisi - Gradient */}
+              <div 
+                className="absolute top-1/2 left-0 h-1.5 rounded-full transform -translate-y-1/2 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 transition-all duration-300 ease-out"
+                style={{ width: `${currentEngagement * 2}%` }}
+              ></div>
+              
+              {/* Doluluk noktaları - Dekoratif */}
+              <div className="relative h-10">
+                {/* Düşük noktası */}
+                <div className={`absolute top-1/2 left-0 w-3 h-3 rounded-full transform -translate-y-1/2 transition-all duration-300 ${currentEngagement >= 5 ? 'bg-blue-500' : 'bg-gray-300'}`}></div>
+                
+                {/* Orta nokta */}
+                <div className={`absolute top-1/2 left-1/2 w-3 h-3 rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${currentEngagement >= 25 ? 'bg-indigo-500' : 'bg-gray-300'}`}></div>
+                
+                {/* Yüksek nokta */}
+                <div className={`absolute top-1/2 right-0 w-3 h-3 rounded-full transform -translate-y-1/2 transition-all duration-300 ${currentEngagement >= 45 ? 'bg-purple-500' : 'bg-gray-300'}`}></div>
+                
+                {/* Hareketli işaretleyici */}
+                <div 
+                  className="absolute top-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center cursor-grab transform -translate-y-1/2 transition-all duration-300 ease-out z-20 border-2 border-indigo-100"
+                  style={{ left: `calc(${currentEngagement * 2}% - 20px)` }}
+                >
+                  <div className="w-5 h-5 rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500"></div>
+                </div>
+              </div>
+              
+              {/* Görünmez input */}
+              <input 
+                type="range" 
+                min="5" 
+                max="50" 
+                step="1"
+                value={currentEngagement}
+                onChange={(e) => setCurrentEngagement(parseInt(e.target.value))}
+                className="absolute inset-0 w-full h-10 opacity-0 cursor-pointer z-30"
+              />
+            </div>
+            
+            {/* Etiketler */}
+            <div className="flex justify-between text-sm font-medium px-1">
+              <div className="flex flex-col items-center">
+                <span className="text-blue-600 font-semibold">Düşük</span>
+                <span className="text-xs text-gray-500">5-20%</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-indigo-600 font-semibold">Orta</span>
+                <span className="text-xs text-gray-500">20-35%</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <span className="text-purple-600 font-semibold">Yüksek</span>
+                <span className="text-xs text-gray-500">35-50%</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Büyüme Hedefi Seçimi */}
+          <div className="mb-8">
+            <label className="text-gray-700 font-medium block mb-3 flex items-center">
+              <svg className="w-4 h-4 text-purple-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+              Hedeflediğiniz Büyüme
+            </label>
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                { id: 'conservative', label: 'Istikrarlı', description: '%20-40 artış', color: 'from-green-500 to-teal-500', bg: 'bg-green-50', border: 'border-green-200' },
+                { id: 'moderate', label: 'Dengeli', description: '%40-70 artış', color: 'from-blue-500 to-indigo-500', bg: 'bg-blue-50', border: 'border-blue-200' },
+                { id: 'aggressive', label: 'Agresif', description: '%70-100+ artış', color: 'from-purple-500 to-pink-500', bg: 'bg-purple-50', border: 'border-purple-200' }
+              ].map((option) => (
+                <div 
+                  key={option.id}
+                  onClick={() => setGrowthGoal(option.id)}
+                  className={`border rounded-lg p-3 cursor-pointer transition-all duration-200 ${growthGoal === option.id ? 
+                    `${option.border} ${option.bg} shadow-md transform scale-105` : 
+                    'border-gray-200 bg-white hover:border-blue-300'}`}
+                >
+                  <div className={`font-medium ${growthGoal === option.id ? 'bg-gradient-to-r ' + option.color + ' text-transparent bg-clip-text' : 'text-gray-800'}`}>{option.label}</div>
+                  <div className="text-xs text-gray-500 mt-1">{option.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Sektör Seçimi */}
+          <div className="mb-8">
+            <label className="text-gray-700 font-medium block mb-3 flex items-center">
+              <svg className="w-4 h-4 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              Sektörünüz
+            </label>
+            <select 
+              value={industryType}
+              onChange={(e) => setIndustryType(e.target.value)}
+              className="w-full p-3 border border-blue-200 bg-white text-gray-800 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all shadow-sm"
+              style={{ color: '#1f2937' }} // Metin rengini koyu gri yaparak görünürlüğü artırıyoruz
+            >
+              <option value="retail" className="text-gray-800">Perakende & E-Ticaret</option>
+              <option value="services" className="text-gray-800">Hizmet Sektörü</option>
+              <option value="tech" className="text-gray-800">Teknoloji & Yazılım</option>
+              <option value="food" className="text-gray-800">Gıda & Restoran</option>
+              <option value="other" className="text-gray-800">Diğer</option>
+            </select>
+          </div>
+          
+          {/* Hesaplama Butonu */}
+          {!showResults ? (
+            <button 
+              onClick={handleCalculate}
+              className="w-full py-4 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              Potansiyelinizi Hesaplayın
+            </button>
+          ) : (
+            <button 
+              onClick={handleReset}
+              className="w-full py-4 px-6 bg-white hover:bg-gray-100 text-gray-700 font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              Yeniden Hesapla
+            </button>
+          )}
+        </div>
+        
+        {/* Sağ Taraf - Sonuçlar */}
+        <div className={`transition-all duration-500 ${!showResults ? 'opacity-50' : 'opacity-100'}`}>
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">Karasu Medya ile Potansiyeliniz</h3>
+          
+          {/* Potansiyel Göstergesi */}
+          <div className="relative h-64 mb-8">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative w-48 h-48">
+                {/* Arka plan daire */}
+                <div className="absolute inset-0 rounded-full border-8 border-gray-100"></div>
+                
+                {/* Doluluk dairesi - animasyonlu */}
+                <svg className="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                  <circle 
+                    cx="50" cy="50" r="45" 
+                    fill="none" 
+                    stroke="#f3f4f6" 
+                    strokeWidth="8"
+                  />
+                  <circle 
+                    cx="50" cy="50" r="45" 
+                    fill="none" 
+                    stroke="url(#potentialGradient)" 
+                    strokeWidth="8"
+                    strokeDasharray="283"
+                    strokeDashoffset={283 - (283 * animateValue / 100)}
+                    className="transition-all duration-1000 ease-out"
+                  />
+                  <defs>
+                    <linearGradient id="potentialGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="100%" stopColor="#8b5cf6" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                
+                {/* Merkez değer */}
+                <div className="absolute inset-0 flex items-center justify-center flex-col">
+                  <span className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    {animateValue}%
+                  </span>
+                  <span className="text-sm text-gray-500 mt-1">Potansiyel</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Sonuç Mesajı */}
+          <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 mb-6">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 bg-blue-100 rounded-lg p-2">
+                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div className="ml-4">
+                <h4 className="text-lg font-semibold text-gray-800">
+                  {animateValue < 40 ? 'Büyük Potansiyel!' : 
+                   animateValue < 70 ? 'Etkileyici Potansiyel!' : 
+                   'Olağanüstü Potansiyel!'}
+                </h4>
+                <p className="text-gray-600 mt-1">
+                  {animateValue < 40 ? 
+                    'Markanızın sosyal medya potansiyeli henüz tam olarak kullanılmamış. Karasu Medya ile bu potansiyeli açığa çıkarabilirsiniz.' : 
+                   animateValue < 70 ? 
+                    'Markanız iyi bir temele sahip, ancak Karasu Medya ile çok daha fazlasını başarabilirsiniz.' : 
+                    'Markanız zaten güçlü bir performans gösteriyor. Karasu Medya ile bu başarıyı sürdürülebilir kılabilir ve daha da ileriye taşıyabilirsiniz.'}
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* CTA Butonu */}
+          <Link 
+            href="/iletisim"
+            className="block w-full py-3 px-6 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 text-center transform hover:-translate-y-1"
+          >
+            Ücretsiz Danışmanlık Alın
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -8,14 +340,18 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden">
         {/* Background Image with Parallax Effect */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <Image 
-            src="https://villaqrmenu.b-cdn.net/IMG_5221.JPG"
-            alt="Karasu Hero Background"
-            layout="fill"
-            objectFit="cover"
-            className="scale-110"
-            priority
-          />
+          <div className="relative w-full h-full">
+            <div className="absolute inset-0 w-full h-full overflow-hidden sm:scale-110 scale-100">
+              <Image 
+                src="https://villaqrmenu.b-cdn.net/IMG_5221.JPG"
+                alt="Karasu Hero Background"
+                fill
+                sizes="100vw"
+                priority
+                className="object-cover sm:object-center object-[center_15%] transform sm:translate-y-0 -translate-y-[5%]"
+              />
+            </div>
+          </div>
           {/* Premium Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-black/50 to-indigo-900/80 z-10"></div>
           
@@ -340,6 +676,13 @@ export default function Home() {
               <p className="text-gray-600 text-sm">Kartvizit, Broşür ve Katalog</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Dijital Potansiyelinizi Keşfedin Bölümü */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
+        <div className="container mx-auto px-4 relative">
+          <PotentialSimulator />
         </div>
       </section>
 
@@ -919,6 +1262,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* CSS Styles */}
+      <style jsx global>{`
+        @keyframes blob {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          25% { transform: translate(20px, -20px) scale(1.1); }
+          50% { transform: translate(0, 20px) scale(0.9); }
+          75% { transform: translate(-20px, -10px) scale(1.05); }
+        }
+        
+        .animate-blob {
+          animation: blob 10s infinite ease-in-out;
+        }
+        
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+        
+        .bg-grid-pattern {
+          background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+                           linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+          background-size: 20px 20px;
+        }
+      `}</style>
     </div>
   );
 }
