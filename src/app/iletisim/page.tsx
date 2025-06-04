@@ -75,8 +75,8 @@ export default function Iletisim() {
         </svg>
       ),
       title: "Adres",
-      content: "Bağdat Caddesi No:123, Kadıköy, İstanbul",
-      link: "https://maps.google.com/?q=Bağdat Caddesi 123 Kadıköy İstanbul"
+      content: "Yalova Merkez",
+      link: "https://maps.google.com/?q=Yalova Merkez"
     }
   ];
 
@@ -359,7 +359,7 @@ export default function Iletisim() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Bizi Ziyaret Edin</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Ofisimiz İstanbul&apos;un merkezi konumunda, Kadıköy&apos;de yer almaktadır. Bize ulaşmak için haritayı kullanabilir veya direkt olarak iletişime geçebilirsiniz.
+                Ofisimiz Yalova&apos;nın merkezi konumunda yer almaktadır. Bize ulaşmak için haritayı kullanabilir veya direkt olarak iletişime geçebilirsiniz.
               </p>
             </div>
             
