@@ -341,13 +341,23 @@ export default function Home() {
         <div className="absolute inset-0 w-full h-full z-0">
           <div className="relative w-full h-full">
             <div className="absolute inset-0 w-full h-full overflow-hidden sm:scale-110 scale-100">
+              {/* Desktop Image */}
               <Image 
-                src="https://villaqrmenu.b-cdn.net/IMG_5221.JPG"
+                src="https://villaqrmenu.b-cdn.net/karasuekip/Gemini_Generated_Image_ixdns2ixdns2ixdn.png"
                 alt="Karasu Hero Background"
                 fill
                 sizes="100vw"
                 priority
-                className="object-cover sm:object-center object-[center_15%] transform sm:translate-y-0 -translate-y-[5%]"
+                className="hidden sm:block object-cover sm:object-center object-[center_15%] transform sm:translate-y-0 -translate-y-[5%]"
+              />
+              {/* Mobile Image */}
+              <Image 
+                src="https://villaqrmenu.b-cdn.net/karasuekip/Gemini_Generated_Image_2h802n2h802n2h80.png"
+                alt="Karasu Hero Background - Mobil"
+                fill
+                sizes="100vw"
+                priority
+                className="block sm:hidden object-cover sm:object-center object-[center_15%] transform sm:translate-y-0 -translate-y-[5%]"
               />
             </div>
           </div>
@@ -775,7 +785,7 @@ export default function Home() {
                 <div className="flex items-center p-4 border-b border-gray-100">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-3 ring-2 ring-purple-500/20">
                     <Image 
-                      src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                      src="https://villaqrmenu.b-cdn.net/karasuekip/karasu_medya.jpg" 
                       alt="Karasu Medya"
                       width={48}
                       height={48}
@@ -815,7 +825,7 @@ export default function Home() {
                 <div className="flex items-center p-4 border-b border-gray-100">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-3 ring-2 ring-teal-500/20">
                     <Image 
-                      src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                      src="https://villaqrmenu.b-cdn.net/karasuekip/karasumatbaa.jpg" 
                       alt="Karasu Matbaa Hizmetleri"
                       width={48}
                       height={48}
@@ -855,7 +865,7 @@ export default function Home() {
                 <div className="flex items-center p-4 border-b border-gray-100">
                   <div className="w-12 h-12 rounded-full overflow-hidden mr-3 ring-2 ring-amber-500/20">
                     <Image 
-                      src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                      src="https://villaqrmenu.b-cdn.net/karasuekip/karasuorganizasyon.jpg" 
                       alt="Karasu Organizasyon"
                       width={48}
                       height={48}
