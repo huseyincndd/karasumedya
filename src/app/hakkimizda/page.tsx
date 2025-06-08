@@ -148,19 +148,14 @@ export default function Hakkimizda() {
 
   const milestones = [
     {
-      year: "2015",
-      title: "Karasu Medya'nın Kuruluşu",
+      year: "2018",
+      title: "Karasu Medya'nın Mehmet Enes Karasu tarafından Kuruluşu",
       description: "Dijital pazarlama alanında kaliteli ve sonuç odaklı hizmet vermek amacıyla kurulduk."
     },
     {
-      year: "2017",
-      title: "Ekip Genişlemesi",
-      description: "Artan müşteri talebini karşılamak için ekibimizi genişlettik ve yeni ofisimize taşındık."
-    },
-    {
       year: "2019",
-      title: "Yeni Hizmetler",
-      description: "Hizmet yelpazamizi genişleterek grafik tasarım ve içerik üretimi alanlarında da çözümler sunmaya başladık."
+      title: "Ekip Genişlemesi ve Yeni Hizmetler",
+      description: "Artan müşteri talebini karşılamak için ekibimizi genişlettik ve hizmet yelpazamizi genişleterek grafik tasarım ve içerik üretimi alanlarında da çözümler sunmaya başladık."
     },
     {
       year: "2021",
@@ -219,13 +214,13 @@ export default function Hakkimizda() {
                   Biz Kimiz?
                 </h2>
                 <p className="text-gray-600 mb-6">
-                  Karasu Medya, 2015 yılında dijital pazarlama alanında kaliteli ve sonuç odaklı hizmet vermek amacıyla kurulmuş bir dijital pazarlama ajansıdır. Kurulduğumuz günden bu yana, markaların dijital dünyada başarılı olmalarını sağlamak için yaratıcı ve stratejik çözümler üretiyoruz.
+                  Karasu Medya, dijital pazarlama ve reklamın gücünü kullanarak markanızı yeni bir seviyeye taşıyan bir partnerdir. Markanızı en uygun kanallarda hedef kitlenize ulaştırmanıza yardımcı olmak için yenilikçi stratejiler ve yaratıcı çözümler sunuyoruz.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  Sosyal medya yönetiminden dijital reklam kampanyalarına, içerik üretiminden grafik tasarıma kadar geniş bir hizmet yelpazesine sahibiz. Her projede müşterilerimizin ihtiyaçlarını ve hedeflerini ön planda tutarak, onların başarısı için çalışıyoruz.
+                  Deneyimli ekibimiz, markanızın ihtiyaçlarını anlamak ve hedeflerinize ulaşmak için size özel bir yaklaşım geliştirir. Dijital reklamcılıktan sosyal medya yönetimine, web tasarımından içerik üretimine kadar geniş bir yelpazede hizmet sunuyoruz.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  Ekibimiz, dijital pazarlama alanında deneyimli ve uzman profesyonellerden oluşmaktadır. Yaratıcılığı, teknolojiyi ve veri analizini bir araya getirerek, her marka için özgün ve etkili çözümler üretiyoruz.
+                  Karasu Medya olarak, müşterilerimizin başarısı bizim önceliğimizdir. Her adımda size rehberlik eder, stratejik danışmanlık sağlar ve markanızın potansiyelini maksimize etmek için çalışırız.
                 </p>
                 <div className="flex items-center gap-4 text-gray-700">
                   <span className="flex items-center gap-2 text-sm">
@@ -299,7 +294,7 @@ export default function Hakkimizda() {
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{ceo.name}</h3>
                     <p className="text-blue-600 font-medium mb-4">{ceo.position}</p>
                     <div className="flex gap-3">
-                      <a href="#" className="text-pink-600 hover:text-pink-800">
+                      <a href="https://www.instagram.com/mehmeteneskarasu/" className="text-pink-600 hover:text-pink-800">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg>
@@ -374,8 +369,6 @@ export default function Hakkimizda() {
           </div>
         </div>
       </section>
-
-
 
       {/* Stats Section */}
       <section className="py-16 bg-white">

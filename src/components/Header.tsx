@@ -91,6 +91,7 @@ export default function Header() {
             
             <NavLink href="/hakkimizda" text="Hakkımızda" scrolled={scrolled} />
             <NavLink href="/referanslar" text="Referanslar" scrolled={scrolled} />
+            <NavLink href="/basin" text="Basın" scrolled={scrolled} />
             <NavLink href="/iletisim" text="İletişim" scrolled={scrolled} />
           </nav>
 
@@ -137,6 +138,7 @@ export default function Header() {
               </div>
               <MobileNavLink href="/hakkimizda" text="Hakkımızda" onClick={() => setIsMenuOpen(false)} special={true} />
               <MobileNavLink href="/referanslar" text="Referanslar" onClick={() => setIsMenuOpen(false)} special={true} />
+              <MobileNavLink href="/basin" text="Basın" onClick={() => setIsMenuOpen(false)} special={true} />
               <MobileNavLink href="/iletisim" text="İletişim" onClick={() => setIsMenuOpen(false)} special={true} />
               
               {/* Mobile Call to Action Button Removed */}

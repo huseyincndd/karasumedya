@@ -383,10 +383,15 @@ export default function Home() {
             </div>
             
             {/* Dynamic Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight animate-text-reveal">
-              Sosyal Medyada <span className="relative inline-block">
-                <span className="absolute -inset-1 w-full h-full bg-gradient-to-r from-blue-400 to-violet-500 rounded-lg blur-lg opacity-50"></span>
-                <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">Sınırları Aşın</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight animate-text-reveal sm:block invisible sm:visible">
+              <span className="hidden sm:inline">
+                Sosyal Medyada <span className="relative inline-block">
+                  <span className="absolute -inset-1 w-full h-full bg-gradient-to-r from-blue-400 to-violet-500 rounded-lg blur-lg opacity-50"></span>
+                  <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">Sınırları Aşın</span>
+                </span>
+              </span>
+              <span className="sm:hidden">
+                <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">Karasu Medya</span>
               </span>
             </h1>
             
@@ -1182,7 +1187,7 @@ export default function Home() {
             />
             <AboutCard 
               title="Misyonumuz"
-              description="İşletmenizin dijital varlığını güçlendirerek, hedef kitlenizle anlamlı ve sürdürülebilir ilişkiler kurmanızı sağlamak."
+              description="Müşterilerimize en iyi hizmeti sunarak onların başarılarını maksimize etmektir. Markaların ihtiyaçlarına özel çözümler geliştirerek, hedef kitleleriyle güçlü bir bağ kurmalarına ve etkileşimi artırmalarına yardımcı oluyoruz. Müşteri memnuniyeti ve güveni odaklı bir yaklaşımla, her projeye kararlılıkla ve yaratıcılıkla yaklaşıyoruz."
               icon={
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -1191,7 +1196,7 @@ export default function Home() {
             />
             <AboutCard 
               title="Vizyonumuz"
-              description="Türkiye'nin lider dijital pazarlama ajansı olarak, global standartlarda yenilikçi çözümler sunarak sektöre öncülük etmek."
+              description="Karasu Medya olarak vizyonumuz, markaların dijital dünyada varlık göstermeleri için etkili ve yenilikçi çözümler sunarak dünya çapında tanınan bir dijital pazarlama ajansı olmaktır. Müşterilerimize değer katarken, teknolojinin gücünü kullanarak sınırları aşan başarılar elde etmeyi hedefliyoruz."
               icon={
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -1310,12 +1315,27 @@ function AboutCard({ title, description, icon }: {
   icon: React.ReactNode;
 }) {
   return (
-    <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/15 transition-colors duration-300">
-      <div className="bg-white/20 p-4 rounded-xl inline-block mb-6">
+    <div className="group relative bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20 hover:bg-white/20 hover:scale-105 transform transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20">
+      {/* Gradient border on hover */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10"></div>
+      
+      {/* Icon container with enhanced effects */}
+      <div className="bg-white/20 group-hover:bg-white/30 p-4 rounded-xl inline-block mb-6 transform group-hover:scale-110 transition-all duration-300">
         {icon}
       </div>
-      <h3 className="text-2xl font-bold mb-4">{title}</h3>
-      <p className="text-blue-100 leading-relaxed">{description}</p>
+      
+      {/* Title with gradient text on hover */}
+      <h3 className="text-2xl font-bold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-200 group-hover:to-white transition-all duration-300">
+        {title}
+      </h3>
+      
+      {/* Description with enhanced readability */}
+      <p className="text-blue-100 group-hover:text-blue-50 leading-relaxed transition-colors duration-300">
+        {description}
+      </p>
+      
+      {/* Decorative corner element */}
+      <div className="absolute top-0 right-0 w-8 h-8 bg-gradient-to-br from-blue-400/20 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </div>
   );
 }
