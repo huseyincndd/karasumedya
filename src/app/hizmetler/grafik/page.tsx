@@ -131,24 +131,24 @@ export default function GrafikTasarim() {
 
   const portfolioItems = [
     {
-      title: "Modern Logo Tasarımı",
-      category: "Logo Tasarımı",
-      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      title: "Sünnet ve Yemek",
+      category: "Organizasyon",
+      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7349.PNG"
     },
     {
-      title: "E-Ticaret Arayüz Tasarımı",
-      category: "Web Arayüzü",
-      image: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      title: "Düğün",
+      category: "Organizasyon",
+      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7350.PNG"
     },
     {
-      title: "Sosyal Medya Kampanyası",
-      category: "Sosyal Medya",
-      image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      title: "Cinsiyet Partisi",
+      category: "Organizasyon",
+      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7351.PNG"
     },
     {
-      title: "Ürün Ambalajı Tasarımı",
-      category: "Ambalaj",
-      image: "https://images.unsplash.com/photo-1636622433525-127afdf3662d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      title: "Balayı Tatili",
+      category: "Organizasyon",
+      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7352.PNG"
     }
   ];
 

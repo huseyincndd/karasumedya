@@ -45,26 +45,6 @@ export default function BasinPage() {
     {
       image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_3319.PNG",
       caption: "A Haber'de yayınlanan özel röportaj"
-    },
-    {
-      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7349.PNG",
-      caption: "Star Gazetesi'nde çıkan şirket haberi"
-    },
-    {
-      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7350.PNG",
-      caption: "Fox TV Ana Haber'de yer alan haberimiz"
-    },
-    {
-      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7351.PNG",
-      caption: "Türkiye Gazetesi'nde yayınlanan röportajımız"
-    },
-    {
-      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7352.PNG",
-      caption: "Habertürk'te çıkan başarı hikayemiz"
-    },
-    {
-      image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_7354.PNG",
-      caption: "ATV Ana Haber'de şirketimizle ilgili özel haber"
     }
   ];
 
