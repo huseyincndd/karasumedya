@@ -223,15 +223,15 @@ export default function GrafikTasarim() {
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute -inset-4 bg-pink-100 rounded-2xl transform rotate-3"></div>
-                <div className="absolute -inset-4 bg-pink-200 rounded-2xl transform -rotate-3 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                    alt="Grafik Tasarım" 
-                    layout="fill" 
-                    objectFit="cover"
-                  />
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96 bg-gradient-to-br from-pink-100 to-pink-200 p-2">
+                  <div className="rounded-lg overflow-hidden h-full">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1613909207039-6b173b755cc1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                      alt="Grafik Tasarım" 
+                      layout="fill" 
+                      objectFit="cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

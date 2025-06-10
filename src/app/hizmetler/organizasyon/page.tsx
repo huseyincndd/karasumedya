@@ -159,7 +159,7 @@ export default function Organizasyon() {
               <div>
                 <div className="bg-amber-50 rounded-lg p-2 inline-block mb-4">
                   <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                   </svg>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -193,16 +193,16 @@ export default function Organizasyon() {
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute -inset-4 bg-amber-100 rounded-2xl transform rotate-2"></div>
-                <div className="absolute -inset-4 bg-amber-200 rounded-2xl transform -rotate-2 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
-                  <Image 
-                    src="https://www.veraevent.com/media/vera/services/ceremony.jpg" 
-                    alt="Organizasyon Hizmetleri" 
-                    layout="fill" 
-                    objectFit="cover" 
-                    className="transform transition-transform duration-500 hover:scale-105"
-                  />
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96 bg-gradient-to-br from-amber-100 to-amber-200 p-2">
+                  <div className="rounded-lg overflow-hidden h-full">
+                    <Image 
+                      src="https://www.veraevent.com/media/vera/services/ceremony.jpg" 
+                      alt="Organizasyon Hizmetleri" 
+                      layout="fill" 
+                      objectFit="cover" 
+                      className="transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -297,7 +297,192 @@ export default function Organizasyon() {
         </div>
       </section>
 
-      {/* Galeri bölümü kaldırıldı */}
+      {/* Portfolio Section - Çalışmalarımızdan Örnekler */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-amber-100 text-amber-800 mb-6">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span className="font-medium">Organizasyon Hizmetlerimiz</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent mb-6">
+                Gerçekleştirdiğimiz Organizasyonlar
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Özel anlarınızı unutulmaz kılmak için profesyonel organizasyon hizmetleri sunuyoruz.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* 1. Düğün */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="relative overflow-hidden" style={{ height: '480px' }}>
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/karasubasin/IMG_7350.PNG" 
+                    alt="Düğün Organizasyonu" 
+                    width={1170}
+                    height={1437}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Düğün
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Düğün Organizasyonu
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Hayatınızın en özel günü için mükemmel bir düğün organizasyonu. Her detay özenle planlanır.
+                  </p>
+                </div>
+              </div>
+
+              {/* 2. Balayı Tatili */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="relative overflow-hidden" style={{ height: '480px' }}>
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/karasubasin/IMG_7352.PNG" 
+                    alt="Balayı Tatili Organizasyonu" 
+                    width={1170}
+                    height={1437}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Balayı
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Balayı Tatili
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Evliliğinizin ilk günlerini unutulmaz kılacak romantik balayı tatili organizasyonları.
+                  </p>
+                </div>
+              </div>
+
+              {/* 3. Tekne Turu ve Doğum Günü */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="relative overflow-hidden" style={{ height: '480px' }}>
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/karasubasin/IMG_7354.PNG" 
+                    alt="Tekne Turu ve Doğum Günü" 
+                    width={1170}
+                    height={1437}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Tekne & Doğum Günü
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Tekne Turu & Doğum Günü
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Denizde unutulmaz anlar yaşayın. Tekne turları ve özel doğum günü kutlamaları.
+                  </p>
+                </div>
+              </div>
+
+              {/* 4. Sünnet Yemek */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="relative overflow-hidden" style={{ height: '480px' }}>
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/karasubasin/IMG_7349.PNG" 
+                    alt="Sünnet Yemek Organizasyonu" 
+                    width={1170}
+                    height={1437}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Sünnet
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Sünnet Yemek Organizasyonu
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Çocuğunuzun özel günü için geleneksel sünnet yemek organizasyonları düzenliyoruz.
+                  </p>
+                </div>
+              </div>
+
+              {/* 5. Cinsiyet Partisi */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="relative overflow-hidden" style={{ height: '480px' }}>
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/karasubasin/IMG_7351.PNG" 
+                    alt="Cinsiyet Partisi Organizasyonu" 
+                    width={1170}
+                    height={1437}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    Cinsiyet Partisi
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Cinsiyet Partisi
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Bebeğinizin cinsiyetini sevdiklerinizle öğrenmenin en eğlenceli yolu.
+                  </p>
+                </div>
+              </div>
+
+              {/* 6. Toplantı Organizasyonları */}
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <div className="relative overflow-hidden" style={{ height: '480px' }}>
+                  <Image 
+                    src="https://villaqrmenu.b-cdn.net/karasuekip/IMG_7353.PNG" 
+                    alt="Toplantı Organizasyonu" 
+                    width={1170}
+                    height={1437}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4 bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    İş Toplantısı
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    Toplantı Organizasyonları
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Profesyonel iş toplantıları ve kurumsal etkinlik organizasyonları.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tüm Hizmetlerimiz Butonu */}
+            <div className="text-center mt-12">
+              <Link 
+                href="/iletisim" 
+                className="px-8 py-4 bg-gradient-to-r from-amber-600 to-orange-600 text-white font-medium rounded-lg hover:from-amber-700 hover:to-orange-700 transition-colors duration-300 inline-flex items-center shadow-lg hover:shadow-amber-200/50"
+              >
+                <span>Tüm Organizasyon Hizmetlerimizi İnceleyin</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-amber-600">

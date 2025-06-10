@@ -7,10 +7,6 @@ export default function BasinPage() {
   const [selectedImage, setSelectedImage] = useState<null | { image: string; caption: string }>(null);
   const pressImages = [
     {
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/IMG_7353.PNG",
-      caption: "Karasu Reklam ekibi TRT Haber'de röportaj verirken"
-    },
-    {
       image: "https://villaqrmenu.b-cdn.net/karasubasin/IMG_3299.PNG",
       caption: "Show TV Ana Haber Bülteni'nde şirketimizle ilgili haber"
     },

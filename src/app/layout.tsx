@@ -1,38 +1,32 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import './globals.css'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Karasu - Reklam ve Sosyal Medya Hizmetleri",
-  description: "Profesyonel reklam hizmetleri ve sosyal medya yönetimi ile markanızı bir adım öne taşıyın.",
-};
+  title: 'Karasu Medya - Dijital Pazarlama ve Reklam Ajansı',
+  description: 'Sosyal medya yönetimi, içerik üretimi, grafik tasarım ve organizasyon hizmetleri ile markanızı güçlendirin.',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="tr">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
-      >
+      <body className={inter.className}>
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main>
+          {children}
+        </main>
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
-  );
+  )
 }

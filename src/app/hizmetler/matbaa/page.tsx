@@ -193,16 +193,16 @@ export default function Matbaa() {
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute -inset-4 bg-teal-100 rounded-2xl transform rotate-2"></div>
-                <div className="absolute -inset-4 bg-teal-200 rounded-2xl transform -rotate-2 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
-                  <Image 
-                    src="https://berkmatbaa.com.tr/assets/uploads/66544393001fd171679835555.jpg" 
-                    alt="Matbaa Hizmetleri" 
-                    layout="fill" 
-                    objectFit="cover" 
-                    className="transform transition-transform duration-500 hover:scale-105"
-                  />
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96 bg-gradient-to-br from-teal-100 to-teal-200 p-2">
+                  <div className="rounded-lg overflow-hidden h-full">
+                    <Image 
+                      src="https://berkmatbaa.com.tr/assets/uploads/66544393001fd171679835555.jpg" 
+                      alt="Matbaa Hizmetleri" 
+                      layout="fill" 
+                      objectFit="cover" 
+                      className="transform transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

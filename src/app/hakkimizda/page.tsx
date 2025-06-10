@@ -244,15 +244,15 @@ export default function Hakkimizda() {
                 </div>
               </div>
               <div className="relative">
-                <div className="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-2"></div>
-                <div className="absolute -inset-4 bg-blue-200 rounded-2xl transform -rotate-2 opacity-70"></div>
-                <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
-                  <Image 
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
-                    alt="Karasu Medya Ekibi" 
-                    layout="fill" 
-                    objectFit="cover"
-                  />
+                <div className="relative rounded-xl overflow-hidden shadow-xl h-96 bg-gradient-to-br from-blue-100 to-blue-200 p-2">
+                  <div className="rounded-lg overflow-hidden h-full">
+                    <Image 
+                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+                      alt="Karasu Medya Ekibi" 
+                      layout="fill" 
+                      objectFit="cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
