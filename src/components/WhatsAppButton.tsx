@@ -23,7 +23,7 @@ export default function WhatsAppButton() {
         {/* Mesaj Balonu */}
         <div className="absolute bottom-20 right-0 bg-white shadow-xl rounded-lg px-4 py-3 mb-2 transform translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
           <div className="text-gray-800 font-medium text-sm">
-            WhatsApp'tan Bize Ulaşın
+            WhatsApp&apos;tan Bize Ulaşın
           </div>
           <div className="text-gray-600 text-xs mt-1">
             Hemen mesaj gönderin!
