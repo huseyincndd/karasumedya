@@ -539,7 +539,7 @@ export default function Home() {
                 className="relative bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full font-medium overflow-hidden group focus:outline-none focus:ring-4 focus:ring-blue-300 w-full sm:w-auto"
               >
                 <span className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-600 to-indigo-700"></span>
-                <span className="relative flex items-center justify-center text-white px-8 py-3.5 min-w-[400px] min-h-[56px] md:min-w-[280px]">
+                <span className="relative flex items-center justify-center text-white px-8 py-3.5 min-w-[360px] min-h-[56px] md:min-w-[280px]">
                   Hizmetlerimizi Keşfedin
                 </span>
               </Link>
