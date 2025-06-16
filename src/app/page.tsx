@@ -359,7 +359,7 @@ export default function Home() {
   
   // Typewriter Animation
   useEffect(() => {
-    let timeouts: NodeJS.Timeout[] = [];
+    const timeouts: NodeJS.Timeout[] = [];
     
     const startTypewriter = () => {
       if (isMobile) {
