@@ -357,18 +357,9 @@ export default function Home() {
     // Start typing animation after component mounts
     const startAnimation = () => {
       if (isMobile) {
-        // Mobile: Only description
-        setCurrentPhase('description');
-        let descIndex = 0;
-        const descTimer = setInterval(() => {
-          if (descIndex < fullDescription.length) {
-            setDescriptionText(fullDescription.slice(0, descIndex + 1));
-            descIndex++;
-          } else {
-            clearInterval(descTimer);
-            setTimeout(() => setShowCursor(false), 2000);
-          }
-        }, 30);
+        // Mobile: Show full text immediately, no animation
+        setDescriptionText(fullDescription);
+        setShowCursor(false);
       } else {
         // Desktop: Title part 1, then part 2, then description
         let title1Index = 0;
@@ -488,7 +479,7 @@ export default function Home() {
               </div>
             </h1>
             
-            {/* Enhanced Description with Typewriter Animation - Positioned lower to avoid background text overlap */}
+            {/* Enhanced Description - Mobile: Static text, Desktop: Typewriter Animation */}
             <div className="mt-50 sm:mt-12 md:mt-16">
               <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed font-light min-h-[4.8em] sm:min-h-[2.4em]">
                 {descriptionText && (
@@ -501,7 +492,7 @@ export default function Home() {
                     ) : (
                       descriptionText
                     )}
-                    {currentPhase === 'description' && showCursor && (
+                    {!isMobile && currentPhase === 'description' && showCursor && (
                       <span className="animate-pulse text-blue-300">|</span>
                     )}
                   </>
