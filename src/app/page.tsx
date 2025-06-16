@@ -333,6 +333,97 @@ function PotentialSimulator() {
 }
 
 export default function Home() {
+  // Typewriter Animation States
+  const [titlePart1, setTitlePart1] = useState('');
+  const [titlePart2, setTitlePart2] = useState('');
+  const [descriptionText, setDescriptionText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+  const [currentPhase, setCurrentPhase] = useState('title1'); // 'title1', 'title2', 'description'
+  const [isMobile, setIsMobile] = useState(false);
+  
+  const desktopTitlePart1 = "Sosyal Medyada";
+  const desktopTitlePart2 = "Sınırları Aşın";
+  const fullDescription = "Karasu ile markanızın dijital izini güçlendirin. Veri odaklı stratejiler ve yaratıcı içeriklerle rakiplerinizden öne geçin.";
+  
+  useEffect(() => {
+    // Check if mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    // Start typing animation after component mounts
+    const startAnimation = () => {
+      if (isMobile) {
+        // Mobile: Only description
+        setCurrentPhase('description');
+        let descIndex = 0;
+        const descTimer = setInterval(() => {
+          if (descIndex < fullDescription.length) {
+            setDescriptionText(fullDescription.slice(0, descIndex + 1));
+            descIndex++;
+          } else {
+            clearInterval(descTimer);
+            setTimeout(() => setShowCursor(false), 2000);
+          }
+        }, 30);
+      } else {
+        // Desktop: Title part 1, then part 2, then description
+        let title1Index = 0;
+        const title1Timer = setInterval(() => {
+          if (title1Index < desktopTitlePart1.length) {
+            setTitlePart1(desktopTitlePart1.slice(0, title1Index + 1));
+            title1Index++;
+          } else {
+            clearInterval(title1Timer);
+            setCurrentPhase('title2');
+            // Start second line after delay
+            setTimeout(() => {
+              let title2Index = 0;
+              const title2Timer = setInterval(() => {
+                if (title2Index < desktopTitlePart2.length) {
+                  setTitlePart2(desktopTitlePart2.slice(0, title2Index + 1));
+                  title2Index++;
+                } else {
+                  clearInterval(title2Timer);
+                  setCurrentPhase('description');
+                  // Start description after delay
+                  setTimeout(() => {
+                    let descIndex = 0;
+                    const descTimer = setInterval(() => {
+                      if (descIndex < fullDescription.length) {
+                        setDescriptionText(fullDescription.slice(0, descIndex + 1));
+                        descIndex++;
+                      } else {
+                        clearInterval(descTimer);
+                        setTimeout(() => setShowCursor(false), 2000);
+                      }
+                    }, 30);
+                  }, 500);
+                }
+              }, 80);
+            }, 300);
+          }
+        }, 80);
+      }
+    };
+    
+    // Delay initial animation start
+    setTimeout(startAnimation, 1000);
+    
+    // Cursor blinking animation
+    const cursorTimer = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 530);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      clearInterval(cursorTimer);
+    };
+  }, [isMobile]);
+
   return (
     <div className="w-full">
       {/* 1. Hero Section */}
@@ -377,38 +468,55 @@ export default function Home() {
         <div className="relative container mx-auto px-4 h-screen z-30 flex flex-col justify-center items-center text-center md:text-left md:items-start pt-20 md:pt-0">
           <div className="max-w-4xl">
             {/* Premium Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white mb-4 animate-fade-in">
+            <div className="hidden sm:inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white mb-4 animate-fade-in">
               <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse mr-2"></span>
               <span className="text-sm font-medium uppercase tracking-wider">Dijital Pazarlamanın Lideri</span>
             </div>
             
-            {/* Dynamic Headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight animate-text-reveal sm:block invisible sm:visible">
-              <span className="hidden sm:inline">
-                Sosyal Medyada <span className="relative inline-block">
-                  <span className="absolute -inset-1 w-full h-full bg-gradient-to-r from-blue-400 to-violet-500 rounded-lg blur-lg opacity-50"></span>
-                  <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">Sınırları Aşın</span>
+            {/* Dynamic Headline with Typewriter Animation */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight min-h-[2.4em] hidden sm:block">
+              <div>
+                {titlePart1}
+                {currentPhase === 'title1' && showCursor && <span className="animate-pulse">|</span>}
+              </div>
+              <div className="relative inline-block">
+                <span className="absolute -inset-1 w-full h-full bg-gradient-to-r from-blue-400 to-violet-500 rounded-lg blur-lg opacity-50"></span>
+                <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">
+                  {titlePart2}
+                  {currentPhase === 'title2' && showCursor && <span className="animate-pulse">|</span>}
                 </span>
-              </span>
-              <span className="sm:hidden">
-                <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">Karasu Medya</span>
-              </span>
+              </div>
             </h1>
             
-            {/* Enhanced Description */}
-            <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed font-light animate-fade-in">
-              <span className="font-semibold text-blue-300">Karasu</span> ile markanızın dijital izini güçlendirin. 
-              Veri odaklı stratejiler ve yaratıcı içeriklerle rakiplerinizden öne geçin.
-            </p>
+            {/* Enhanced Description with Typewriter Animation - Positioned lower to avoid background text overlap */}
+            <div className="mt-50 sm:mt-12 md:mt-16">
+              <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed font-light min-h-[4.8em] sm:min-h-[2.4em]">
+                {descriptionText && (
+                  <>
+                    {descriptionText.includes("Karasu") ? (
+                      <>
+                        <span className="font-semibold text-blue-300">Karasu</span>
+                        {descriptionText.replace("Karasu", "")}
+                      </>
+                    ) : (
+                      descriptionText
+                    )}
+                    {currentPhase === 'description' && showCursor && (
+                      <span className="animate-pulse text-blue-300">|</span>
+                    )}
+                  </>
+                )}
+              </p>
+            </div>
             
-            {/* Premium CTA Buttons */}
+            {/* Premium CTA Buttons - Fixed size button to prevent layout shift */}
             <div className="flex flex-col sm:flex-row gap-5 mb-12 animate-slide-up">
               <Link
                 href="/hizmetler"
-                className="relative bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full font-medium overflow-hidden group focus:outline-none focus:ring-4 focus:ring-blue-300"
+                className="relative bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full font-medium overflow-hidden group focus:outline-none focus:ring-4 focus:ring-blue-300 w-full sm:w-auto"
               >
                 <span className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-600 to-indigo-700"></span>
-                <span className="relative flex items-center justify-center text-white px-8 py-3.5">
+                <span className="relative flex items-center justify-center text-white px-8 py-3.5 min-w-[400px] min-h-[56px] md:min-w-[280px]">
                   Hizmetlerimizi Keşfedin
                 </span>
               </Link>

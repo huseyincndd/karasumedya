@@ -325,24 +325,28 @@ export default function Iletisim() {
 
                 {/* Social Media */}
                 <div className="bg-gradient-to-r from-indigo-600 to-blue-600 p-8 rounded-2xl shadow-lg text-white">
-                  <h3 className="text-xl font-semibold mb-6">Sosyal Medyada Bizi Takip Edin</h3>
-                  <div className="flex flex-wrap gap-4">
+                  <h3 className="text-xl font-semibold mb-6 text-center">Sosyal Medyada Bizi Takip Edin</h3>
+                  <div className="flex justify-center">
                     {socialLinks.map((social, index) => (
                       <a 
                         key={index} 
                         href={social.url} 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
+                        className="group relative bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center space-x-3"
                         aria-label={social.name}
                       >
-                        {social.icon}
+                        <div className="w-8 h-8">
+                          {social.icon}
+                        </div>
+                        <span className="font-medium text-lg">@karasumedya_</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </a>
                     ))}
                   </div>
-                  <div className="mt-8 p-4 bg-white/10 backdrop-blur-sm rounded-xl">
+                  <div className="mt-8 p-4 bg-white/10 backdrop-blur-sm rounded-xl text-center">
                     <p className="text-sm text-blue-100">
-                      Güncel projeleri ve dijital pazarlama ipuçlarını görmek için sosyal medya hesaplarımızı takip etmeyi unutmayın.
+                      Güncel projeleri ve dijital pazarlama ipuçlarını görmek için Instagram hesabımızı takip etmeyi unutmayın.
                     </p>
                   </div>
                 </div>
@@ -439,10 +443,10 @@ export default function Iletisim() {
                 Hizmetlerimizi İnceleyin
               </Link>
               <a 
-                href="tel:+902121234567" 
+                href="tel:+905314732377" 
                 className="px-8 py-4 bg-transparent text-white border border-white font-medium rounded-xl hover:bg-white/10 transition-colors duration-300"
               >
-                Hemen Arayın
+                +90 (531) 473 23 77
               </a>
             </div>
           </div>
