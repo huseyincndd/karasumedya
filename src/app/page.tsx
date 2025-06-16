@@ -334,84 +334,116 @@ function PotentialSimulator() {
 
 export default function Home() {
   // Typewriter Animation States
-  const [titlePart1, setTitlePart1] = useState('');
-  const [titlePart2, setTitlePart2] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+  const [desktopTitle1, setDesktopTitle1] = useState('');
+  const [desktopTitle2, setDesktopTitle2] = useState('');
   const [descriptionText, setDescriptionText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const [currentPhase, setCurrentPhase] = useState('title1'); // 'title1', 'title2', 'description'
-  const [isMobile, setIsMobile] = useState(false);
+  const [currentStep, setCurrentStep] = useState('waiting'); // 'waiting', 'title1', 'title2', 'description', 'finished'
   
-  const desktopTitlePart1 = "Sosyal Medyada";
-  const desktopTitlePart2 = "Sınırları Aşın";
-  const fullDescription = "Karasu ile markanızın dijital izini güçlendirin. Veri odaklı stratejiler ve yaratıcı içeriklerle rakiplerinizden öne geçin.";
+  const title1Text = "Sosyal Medyada";
+  const title2Text = "Sınırları Aşın";
+  const descriptionFullText = "Karasu ile markanızın dijital izini güçlendirin. Veri odaklı stratejiler ve yaratıcı içeriklerle rakiplerinizden öne geçin.";
   
+  // Mobile/Desktop detection
   useEffect(() => {
-    // Check if mobile
-    const checkMobile = () => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
     };
     
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+    handleResize();
+    window.addEventListener('resize', handleResize);
     
-    // Start typing animation after component mounts
-    const startAnimation = () => {
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  // Typewriter Animation
+  useEffect(() => {
+    let timeouts: NodeJS.Timeout[] = [];
+    
+    const startTypewriter = () => {
       if (isMobile) {
-        // Mobile: Show full text immediately, no animation
-        setDescriptionText(fullDescription);
-        setShowCursor(false);
-      } else {
-        // Desktop: Title part 1, then part 2, then description
-        let title1Index = 0;
-        const title1Timer = setInterval(() => {
-          if (title1Index < desktopTitlePart1.length) {
-            setTitlePart1(desktopTitlePart1.slice(0, title1Index + 1));
-            title1Index++;
+        // MOBILE: Only description typewriter
+        setCurrentStep('description');
+        let index = 0;
+        
+        const typeDescription = () => {
+          if (index < descriptionFullText.length) {
+            setDescriptionText(descriptionFullText.slice(0, index + 1));
+            index++;
+            timeouts.push(setTimeout(typeDescription, 30));
           } else {
-            clearInterval(title1Timer);
-            setCurrentPhase('title2');
-            // Start second line after delay
-            setTimeout(() => {
-              let title2Index = 0;
-              const title2Timer = setInterval(() => {
-                if (title2Index < desktopTitlePart2.length) {
-                  setTitlePart2(desktopTitlePart2.slice(0, title2Index + 1));
-                  title2Index++;
-                } else {
-                  clearInterval(title2Timer);
-                  setCurrentPhase('description');
-                  // Start description after delay
-                  setTimeout(() => {
-                    let descIndex = 0;
-                    const descTimer = setInterval(() => {
-                      if (descIndex < fullDescription.length) {
-                        setDescriptionText(fullDescription.slice(0, descIndex + 1));
-                        descIndex++;
-                      } else {
-                        clearInterval(descTimer);
-                        setTimeout(() => setShowCursor(false), 2000);
-                      }
-                    }, 30);
-                  }, 500);
-                }
-              }, 80);
-            }, 300);
+            setCurrentStep('finished');
+            timeouts.push(setTimeout(() => setShowCursor(false), 2000));
           }
-        }, 80);
+        };
+        
+        timeouts.push(setTimeout(typeDescription, 1000));
+        
+      } else {
+        // DESKTOP: Title1 → Title2 → Description
+        setCurrentStep('title1');
+        let index1 = 0;
+        
+        const typeTitle1 = () => {
+          if (index1 < title1Text.length) {
+            setDesktopTitle1(title1Text.slice(0, index1 + 1));
+            index1++;
+            timeouts.push(setTimeout(typeTitle1, 80));
+          } else {
+            // Start Title2 after delay
+            timeouts.push(setTimeout(() => {
+              setCurrentStep('title2');
+              let index2 = 0;
+              
+              const typeTitle2 = () => {
+                if (index2 < title2Text.length) {
+                  setDesktopTitle2(title2Text.slice(0, index2 + 1));
+                  index2++;
+                  timeouts.push(setTimeout(typeTitle2, 80));
+                } else {
+                  // Start Description after delay
+                  timeouts.push(setTimeout(() => {
+                    setCurrentStep('description');
+                    let index3 = 0;
+                    
+                    const typeDescription = () => {
+                      if (index3 < descriptionFullText.length) {
+                        setDescriptionText(descriptionFullText.slice(0, index3 + 1));
+                        index3++;
+                        timeouts.push(setTimeout(typeDescription, 30));
+                      } else {
+                        setCurrentStep('finished');
+                        timeouts.push(setTimeout(() => setShowCursor(false), 2000));
+                      }
+                    };
+                    
+                    typeDescription();
+                  }, 500));
+                }
+              };
+              
+              typeTitle2();
+            }, 300));
+          }
+        };
+        
+        timeouts.push(setTimeout(typeTitle1, 1000));
       }
     };
     
-    // Delay initial animation start
-    setTimeout(startAnimation, 1000);
+    // Start animation when component mounts
+    startTypewriter();
     
-    // Cursor blinking animation
-    const cursorTimer = setInterval(() => {
+    // Cursor blinking
+    const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
     }, 530);
     
+    // Cleanup
     return () => {
-      window.removeEventListener('resize', checkMobile);
-      clearInterval(cursorTimer);
+      timeouts.forEach(timeout => clearTimeout(timeout));
+      clearInterval(cursorInterval);
     };
   }, [isMobile]);
 
@@ -464,22 +496,22 @@ export default function Home() {
               <span className="text-sm font-medium uppercase tracking-wider">Dijital Pazarlamanın Lideri</span>
             </div>
             
-            {/* Dynamic Headline with Typewriter Animation */}
+            {/* Desktop Title with Typewriter Animation */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 text-white leading-tight min-h-[2.4em] hidden sm:block">
               <div>
-                {titlePart1}
-                {currentPhase === 'title1' && showCursor && <span className="animate-pulse">|</span>}
+                {desktopTitle1}
+                {currentStep === 'title1' && showCursor && <span className="animate-pulse">|</span>}
               </div>
               <div className="relative inline-block">
                 <span className="absolute -inset-1 w-full h-full bg-gradient-to-r from-blue-400 to-violet-500 rounded-lg blur-lg opacity-50"></span>
                 <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-indigo-100">
-                  {titlePart2}
-                  {currentPhase === 'title2' && showCursor && <span className="animate-pulse">|</span>}
+                  {desktopTitle2}
+                  {currentStep === 'title2' && showCursor && <span className="animate-pulse">|</span>}
                 </span>
               </div>
             </h1>
             
-            {/* Enhanced Description - Mobile: Static text, Desktop: Typewriter Animation */}
+            {/* Description with Typewriter Animation */}
             <div className="mt-50 sm:mt-12 md:mt-16">
               <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed font-light min-h-[4.8em] sm:min-h-[2.4em]">
                 {descriptionText && (
@@ -492,7 +524,7 @@ export default function Home() {
                     ) : (
                       descriptionText
                     )}
-                    {!isMobile && currentPhase === 'description' && showCursor && (
+                    {currentStep === 'description' && showCursor && (
                       <span className="animate-pulse text-blue-300">|</span>
                     )}
                   </>
