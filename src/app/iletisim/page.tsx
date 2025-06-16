@@ -25,25 +25,39 @@ export default function Iletisim() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
     
-    // Form gönderme simülasyonu
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      // Form verilerini sıfırla
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-        service: ''
+    try {
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
       });
-    }, 1500);
+
+      if (response.ok) {
+        setSubmitted(true);
+        // Form verilerini sıfırla
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+          service: ''
+        });
+      } else {
+        throw new Error('Form gönderilemedi');
+      }
+    } catch (error) {
+      setError('Mesaj gönderilemedi. Lütfen tekrar deneyin.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -187,6 +201,14 @@ export default function Iletisim() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Web3Forms Required Fields */}
+                      <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "1f10b6ba-14c1-4400-a2a2-25134742da99"} />
+                      <input type="hidden" name="subject" value="Yeni İletişim Formu Mesajı - Karasu Medya" />
+                      <input type="hidden" name="from_name" value="Karasu Medya Website" />
+                      
+                      {/* Honeypot Spam Protection */}
+                      <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}} />
+                      
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">İsim Soyisim *</label>
@@ -197,7 +219,7 @@ export default function Iletisim() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder:text-gray-500"
                             placeholder="İsim Soyisim"
                           />
                         </div>
@@ -210,7 +232,7 @@ export default function Iletisim() {
                             value={formData.email}
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder:text-gray-500"
                             placeholder="ornek@mail.com"
                           />
                         </div>
@@ -224,7 +246,7 @@ export default function Iletisim() {
                             name="phone"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder:text-gray-500"
                             placeholder="0555 555 55 55"
                           />
                         </div>
@@ -236,7 +258,7 @@ export default function Iletisim() {
                             name="company"
                             value={formData.company}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder:text-gray-500"
                             placeholder="Şirket Adı"
                           />
                         </div>
@@ -248,7 +270,7 @@ export default function Iletisim() {
                           name="service"
                           value={formData.service}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900"
                         >
                           <option value="">Hizmet Seçin</option>
                           {services.map((service, index) => (
@@ -265,7 +287,7 @@ export default function Iletisim() {
                           onChange={handleChange}
                           required
                           rows={4}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder:text-gray-500"
                           placeholder="Nasıl yardımcı olabiliriz?"
                         ></textarea>
                       </div>

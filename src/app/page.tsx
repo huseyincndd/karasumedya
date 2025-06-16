@@ -344,7 +344,6 @@ export default function Home() {
   const title1Text = "Sosyal Medyada";
   const title2Text = "Sınırları Aşın";
   const descriptionFullText = "Karasu ile markanızın dijital izini güçlendirin. Veri odaklı stratejiler ve yaratıcı içeriklerle rakiplerinizden öne geçin.";
-  const mobileDescriptionText = "Karasu ile markanızın dijital izini güçlendirin. Veri odaklı stratejiler ve yaratıcı içeriklerle öne geçin.";
   
   // Mobile/Desktop detection
   useEffect(() => {
@@ -364,13 +363,13 @@ export default function Home() {
     
     const startTypewriter = () => {
       if (isMobile) {
-        // MOBILE: Only description typewriter with shorter text
+        // MOBILE: Only description typewriter
         setCurrentStep('description');
         let index = 0;
         
         const typeDescription = () => {
-          if (index < mobileDescriptionText.length) {
-            setDescriptionText(mobileDescriptionText.slice(0, index + 1));
+          if (index < descriptionFullText.length) {
+            setDescriptionText(descriptionFullText.slice(0, index + 1));
             index++;
             timeouts.push(setTimeout(typeDescription, 30));
           } else {
@@ -513,8 +512,8 @@ export default function Home() {
             </h1>
             
             {/* Description with Typewriter Animation */}
-            <div className="mt-50 sm:mt-12 md:mt-16">
-              <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl leading-relaxed font-light min-h-[4.8em] sm:min-h-[2.4em] break-words hyphens-auto">
+            <div className="mt-50 sm:mt-12 md:mt-16 px-8 sm:px-0">
+              <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-[280px] sm:max-w-3xl leading-relaxed font-light min-h-[4.8em] sm:min-h-[2.4em] break-words hyphens-auto">
                 {descriptionText && (
                   <>
                     {descriptionText.includes("Karasu") ? (
@@ -1080,8 +1079,8 @@ export default function Home() {
                 <div className="relative overflow-hidden" style={{ paddingBottom: "100%" }}>
                   <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gray-100">
                     <iframe 
-                      src="https://www.instagram.com/p/C7tylsANLfb/embed" 
-                      className="absolute inset-0 w-full h-[170%] -top-[15%] scale-[1.1]" 
+                      src="https://www.instagram.com/p/DHi6FkrIxN8/embed" 
+                      className="absolute inset-0 w-full h-[170%] -top-[35%]" 
                       frameBorder="0" 
                       scrolling="no" 
                       
