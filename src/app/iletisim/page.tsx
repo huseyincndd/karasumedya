@@ -53,7 +53,7 @@ export default function Iletisim() {
       } else {
         throw new Error('Form gönderilemedi');
       }
-    } catch (error) {
+    } catch {
       setError('Mesaj gönderilemedi. Lütfen tekrar deneyin.');
     } finally {
       setIsSubmitting(false);
