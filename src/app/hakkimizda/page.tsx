@@ -8,7 +8,7 @@ export default function Hakkimizda() {
     // Patron - CEO
     {
       name: "Mehmet Enes Karasu",
-      position: "Kurucu ve CEO",
+      position: "Kurucu",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/ceo.png",
       description: "Dijital pazarlama alanında 15 yıllık deneyime sahip olan Ahmet, sektördeki bilgi birikimi ve vizyoner yaklaşımıyla Karasu Medya'yı kurumuştur.",
       isCEO: true

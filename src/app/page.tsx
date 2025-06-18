@@ -637,7 +637,7 @@ export default function Home() {
                   </svg>
                 ),
                 tags: ["Metin Yazarlığı", "Görsel İçerik", "Video Prodüksiyon"],
-                link: "/hizmetler/icerik-uretimi",
+                link: "/hizmetler/icerik",
                 bgGradient: "from-purple-900/80",
                 iconBg: "bg-purple-100",
                 iconColor: "text-purple-600",
