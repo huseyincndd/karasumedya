@@ -457,7 +457,7 @@ export default function Home() {
             <div className="absolute inset-0 w-full h-full overflow-hidden sm:scale-110 scale-100">
               {/* Desktop Image */}
               <Image 
-                src="https://villaqrmenu.b-cdn.net/karasuekip/Gemini_Generated_Image_ixdns2ixdns2ixdn.png"
+                src="https://villaqrmenu.b-cdn.net/karasubasin/KARASU%20BANNER.png"
                 alt="Karasu Hero Background"
                 fill
                 sizes="100vw"
@@ -466,12 +466,12 @@ export default function Home() {
               />
               {/* Mobile Image */}
               <Image 
-                src="https://villaqrmenu.b-cdn.net/karasuekip/Gemini_Generated_Image_2h802n2h802n2h80.png"
+                src="https://villaqrmenu.b-cdn.net/karasubasin/KARASUBANNERMB3.jpeg"
                 alt="Karasu Hero Background - Mobil"
                 fill
                 sizes="100vw"
                 priority
-                className="block sm:hidden object-cover sm:object-center object-[center_15%] transform sm:translate-y-0 -translate-y-[5%]"
+                className="block sm:hidden object-cover sm:object-center object-[center_15%] transform sm:translate-y-0 -translate-y-[0%]"
               />
             </div>
           </div>
@@ -543,13 +543,12 @@ export default function Home() {
                   Hizmetlerimizi Keşfedin
                 </span>
               </Link>
-              {/* Ücretsiz Analiz Buton Removed */}
             </div>
           </div>
           
           {/* Floating elements for visual interest */}
-          <div className="absolute right-10 top-1/3 hidden lg:block">
-            <div className="w-72 h-72 relative opacity-80">
+          <div className="absolute right-16 top-9/24 hidden lg:block">
+            <div className="w-80 h-80 relative opacity-80">
               <div className="absolute inset-0 rounded-full border border-white/20 animate-spin-slow"></div>
               <div className="absolute inset-[15px] rounded-full border border-white/20 animate-spin-slow animation-delay-1000 animation-reverse"></div>
               <div className="absolute inset-[30px] rounded-full border border-white/20 animate-spin-slow animation-delay-2000"></div>
