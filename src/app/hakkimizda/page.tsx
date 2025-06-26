@@ -69,12 +69,7 @@ export default function Hakkimizda() {
       image: "https://villaqrmenu.b-cdn.net/karasuekip/10.png",
       description: ""
     },
-    {
-      name: "Yusuf Emir Kara",
-      position: "Sosyal Medya Yöneticisi",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/11.png",
-      description: ""
-    },
+
     {
       name: "Gürol Akpıbar",
       position: "Sosyal Medya Yöneticisi",
@@ -99,12 +94,7 @@ export default function Hakkimizda() {
       image: "https://villaqrmenu.b-cdn.net/karasuekip/16.png",
       description: ""
     },
-    {
-      name: "Azatcan Köroğlu",
-      position: "Videographer",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/13.png",
-      description: ""
-    }
+
   ];
 
   const values = [

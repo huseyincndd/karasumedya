@@ -466,7 +466,7 @@ export default function Home() {
               />
               {/* Mobile Image */}
               <Image 
-                src="https://villaqrmenu.b-cdn.net/karasubasin/KARASUBANNERMB3.jpeg"
+                src="https://villaqrmenu.b-cdn.net/karasubasin/KARASUBANNERMB.png"
                 alt="Karasu Hero Background - Mobil"
                 fill
                 sizes="100vw"
