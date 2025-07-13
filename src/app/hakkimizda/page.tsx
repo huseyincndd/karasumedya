@@ -58,12 +58,6 @@ export default function Hakkimizda() {
       description: ""
     },
     {
-      name: "Mehmet Bekin",
-      position: "Fotoğrafçı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/9.png",
-      description: ""
-    },
-    {
       name: "Eren Ünlüfıstıkçı",
       position: "Grafik Tasarım Uzmanı",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/10.png",
