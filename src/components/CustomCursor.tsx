@@ -49,8 +49,8 @@ export default function CustomCursor(): JSX.Element | null {
     window.addEventListener("mouseout", handleLeave, { passive: true });
 
     return () => {
-      window.removeEventListener("mousemove", handleMove as any);
-      window.removeEventListener("mouseout", handleLeave as any);
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("mouseout", handleLeave);
       document.documentElement.removeAttribute("data-has-custom-cursor");
     };
   }, []);

@@ -151,7 +151,7 @@ export default function DijitalReklam() {
                   Doğru Hedef Kitleye Doğru Mesajla Ulaşın
                 </h2>
                 <p className="text-gray-600 mb-6 leading-relaxed text-lg">
-                  Dijital reklam yönetimi, markanızın doğru zamanda, doğru yerde ve doğru kişilere görünmesini sağlar. Karasu Medya olarak, veri odaklı stratejilerle reklam kampanyalarınızı yönetiyor, ROI'nizi maksimize ediyoruz.
+                  Dijital reklam yönetimi, markanızın doğru zamanda, doğru yerde ve doğru kişilere görünmesini sağlar. Karasu Medya olarak, veri odaklı stratejilerle reklam kampanyalarınızı yönetiyor, ROI&apos;nizi maksimize ediyoruz.
                 </p>
                 <p className="text-gray-600 mb-8 leading-relaxed text-lg">
                   Her markanın ihtiyaçları ve hedefleri farklıdır. Bu nedenle size özel reklam stratejileri geliştiriyor, bütçenizi en verimli şekilde kullanmanızı sağlıyoruz. Google Ads, sosyal medya reklamları ve diğer platformlarda uzmanlaşmış ekibimizle yanınızdayız.
