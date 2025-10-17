@@ -111,42 +111,32 @@ export default function Organizasyon() {
 
   return (
     <main className="min-h-screen pb-16">
-      {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80')",
-              backgroundSize: "cover",
-              backgroundPosition: "center"
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-amber-900/80 via-amber-800/70 to-amber-900/80"></div>
+      {/* Hero Section - Modern */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-700 to-red-800">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-amber-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+            <div className="absolute top-0 -right-4 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-red-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          </div>
         </div>
         
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 pt-16">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white mb-6 shadow-lg">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+              </svg>
+              <span className="font-medium">Etkinlik Çözümleri</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Organizasyon Hizmetleri
             </h1>
-            <p className="text-base md:text-lg text-amber-100 mb-6">
+            <p className="text-lg md:text-xl text-amber-100 mb-8 leading-relaxed">
               Özel anlarınızı unutulmaz kılacak, profesyonel organizasyon hizmetleri ile 
               hayallerinizi gerçeğe dönüştürüyoruz.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/iletisim" 
-                className="px-5 py-2.5 bg-white text-amber-700 font-medium rounded-lg hover:bg-amber-50 transition-colors duration-300 inline-flex items-center shadow-lg"
-              >
-                <span>Organizasyon Planla</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -484,23 +474,30 @@ export default function Organizasyon() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-amber-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+      {/* CTA Section - Modern */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-700 to-red-800">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Hayalinizdeki Organizasyonu Gerçekleştirelim
             </h2>
-            <p className="text-amber-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-amber-100 mb-10 leading-relaxed">
               Özel anlarınızı unutulmaz kılmak için profesyonel ekibimizle yanınızdayız.
               Hemen iletişime geçin, hayalinizdeki organizasyonu birlikte planlayalım.
             </p>
             <Link 
               href="/iletisim" 
-              className="px-8 py-3 bg-white text-amber-700 font-medium rounded-lg hover:bg-amber-50 transition-colors duration-300 inline-flex items-center shadow-lg"
+              className="px-10 py-5 bg-white text-amber-700 font-bold rounded-2xl hover:bg-amber-50 transition-all duration-300 inline-flex items-center shadow-2xl hover:shadow-amber-200/50 hover:scale-105 text-lg"
             >
-              <span>Organizasyon Planla</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>Hemen İletişime Geçin</span>
+              <svg className="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>

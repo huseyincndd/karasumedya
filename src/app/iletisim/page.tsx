@@ -122,50 +122,54 @@ export default function Iletisim() {
 
   return (
     <main className="min-h-screen pb-16">
-      {/* Hero Section */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage: "url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-              backgroundSize: "cover",
-              backgroundPosition: "center"
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/90 via-blue-800/80 to-indigo-900/90"></div>
+      {/* Hero Section - Modern */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+            <div className="absolute top-0 -right-4 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          </div>
         </div>
         
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 pt-16">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white mb-6 shadow-lg">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span className="font-medium">Bizimle İletişime Geçin</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               İletişim
             </h1>
-            <p className="text-base md:text-lg text-blue-100 mb-6">
+            <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
               Dijital pazarlama ihtiyaçlarınız için bizimle iletişime geçin. Size özel çözümler sunmak için buradayız.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Info Cards */}
-      <section className="py-12 bg-white relative z-10">
-        <div className="container mx-auto px-4">
+      {/* Contact Info Cards - Modern */}
+      <section className="py-16 bg-white relative z-10 -mt-20">
+        <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {contactInfo.map((info, index) => (
                 <a 
                   key={index} 
                   href={info.link}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center group"
+                  className="group relative"
                 >
-                  <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                    {info.icon}
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-500"></div>
+                  <div className="relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center h-full">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      {info.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">{info.title}</h3>
+                    <p className="text-gray-600 font-medium">{info.content}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{info.title}</h3>
-                  <p className="text-gray-600">{info.content}</p>
                 </a>
               ))}
             </div>
@@ -447,27 +451,40 @@ export default function Iletisim() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="container mx-auto px-4">
+      {/* CTA Section - Modern */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Hemen Başlamak İster misiniz?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-100 mb-10 leading-relaxed">
               Dijital dünyada markanızı bir adım öne çıkarmak için ilk adımı atın.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6">
               <Link 
                 href="/hizmetler" 
-                className="px-8 py-4 bg-white text-blue-700 font-medium rounded-xl hover:bg-blue-50 transition-colors duration-300"
+                className="px-10 py-5 bg-white text-blue-700 font-bold rounded-2xl hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-blue-200/50 hover:scale-105 text-lg inline-flex items-center"
               >
                 Hizmetlerimizi İnceleyin
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
               <a 
                 href="tel:+905314732377" 
-                className="px-8 py-4 bg-transparent text-white border border-white font-medium rounded-xl hover:bg-white/10 transition-colors duration-300"
+                className="px-10 py-5 bg-white/10 backdrop-blur-md text-white border-2 border-white/50 font-bold rounded-2xl hover:bg-white/20 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 text-lg inline-flex items-center"
               >
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
                 +90 (531) 473 23 77
               </a>
             </div>

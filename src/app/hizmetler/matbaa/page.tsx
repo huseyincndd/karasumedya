@@ -111,42 +111,32 @@ export default function Matbaa() {
 
   return (
     <main className="min-h-screen pb-16">
-      {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div 
-            className="absolute inset-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage: "url('https://berkmatbaa.com.tr/assets/uploads/66544393001fd171679835555.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center"
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-teal-900/80 via-teal-800/70 to-teal-900/80"></div>
+      {/* Hero Section - Modern */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-teal-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+            <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+          </div>
         </div>
         
-        {/* Content */}
-        <div className="container mx-auto px-4 relative z-10 pt-16">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10 pt-32 pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white mb-6 shadow-lg">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+              </svg>
+              <span className="font-medium">Baskı Çözümleri</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Matbaa Hizmetleri
             </h1>
-            <p className="text-base md:text-lg text-teal-100 mb-6">
+            <p className="text-lg md:text-xl text-teal-100 mb-8 leading-relaxed">
               Markanızın fiziksel materyallerini en yüksek kalitede üretiyor, 
               profesyonel görünümünüzü güçlendiriyoruz.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/iletisim" 
-                className="px-5 py-2.5 bg-white text-teal-700 font-medium rounded-lg hover:bg-teal-50 transition-colors duration-300 inline-flex items-center shadow-lg"
-              >
-                <span>Teklif Alın</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -297,23 +287,30 @@ export default function Matbaa() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-teal-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+      {/* CTA Section - Modern */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-cyan-700 to-blue-800">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+          </div>
+        </div>
+        
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Matbaa İhtiyaçlarınız İçin Hemen Bizimle İletişime Geçin
             </h2>
-            <p className="text-teal-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-teal-100 mb-10 leading-relaxed">
               Profesyonel ekibimiz, ihtiyaçlarınızı dinleyerek size özel çözümler sunmak için hazır.
               Hemen teklif alın, markanızı güçlendirecek materyalleri birlikte tasarlayalım.
             </p>
             <Link 
               href="/iletisim" 
-              className="px-8 py-3 bg-white text-teal-700 font-medium rounded-lg hover:bg-teal-50 transition-colors duration-300 inline-flex items-center shadow-lg"
+              className="px-10 py-5 bg-white text-teal-700 font-bold rounded-2xl hover:bg-teal-50 transition-all duration-300 inline-flex items-center shadow-2xl hover:shadow-teal-200/50 hover:scale-105 text-lg"
             >
-              <span>Hemen Teklif Alın</span>
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <span>Hemen İletişime Geçin</span>
+              <svg className="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>

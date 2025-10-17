@@ -21,6 +21,18 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+/* Custom Cursor: hide default cursor on desktop when our cursor is active */
+html[data-has-custom-cursor="true"] body {
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  /* Keep native cursor on touch devices */
+  html[data-has-custom-cursor="true"] body {
+    cursor: auto;
+  }
+}
+
 /* Animation for blob effects */
 @keyframes wave {
   0% {
