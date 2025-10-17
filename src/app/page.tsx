@@ -405,7 +405,7 @@ function PotentialSimulator() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
-            Ücretsiz Danışmanlık Alın
+            İletişime Geç
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -782,20 +782,20 @@ export default function Home() {
             <p className="text-gray-600 text-xl mb-8 max-w-4xl mx-auto leading-relaxed">
               Karasu Medya olarak, markanızın dijital dünyada parlayan bir yıldız olması için çalışıyoruz. Modern pazarlama stratejileri ve yaratıcı içerik üretimi ile işletmenizi bir üst seviyeye taşıyoruz.
             </p>
-            <div className="flex items-center justify-center gap-8 mt-8">
-              <div className="text-center">
-                <div className="text-4xl font-black bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent mb-1">500+</div>
-                <div className="text-sm text-gray-500 font-medium">Mutlu Müşteri</div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8 mt-8 px-4">
+              <div className="text-center flex-1 min-w-0">
+                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent mb-1">500+</div>
+                <div className="text-xs sm:text-sm text-gray-500 font-medium">Mutlu Müşteri</div>
               </div>
-              <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-              <div className="text-center">
-                <div className="text-4xl font-black bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-1">10+</div>
-                <div className="text-sm text-gray-500 font-medium">Yıllık Tecrübe</div>
+              <div className="hidden sm:block w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+              <div className="text-center flex-1 min-w-0">
+                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-1">10+</div>
+                <div className="text-xs sm:text-sm text-gray-500 font-medium">Yıllık Tecrübe</div>
               </div>
-              <div className="w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
-              <div className="text-center">
-                <div className="text-4xl font-black bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent mb-1">1000+</div>
-                <div className="text-sm text-gray-500 font-medium">Tamamlanan Proje</div>
+              <div className="hidden sm:block w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
+              <div className="text-center flex-1 min-w-0">
+                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent mb-1">1000+</div>
+                <div className="text-xs sm:text-sm text-gray-500 font-medium">Tamamlanan Proje</div>
               </div>
             </div>
           </div>
