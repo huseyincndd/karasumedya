@@ -14,7 +14,7 @@ const prefersReducedMotion = () => {
   return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 };
 
-export default function CustomCursor(): JSX.Element | null {
+export default function CustomCursor(): React.JSX.Element | null {
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const ringRef = useRef<HTMLDivElement | null>(null);
 
