@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 
 type Point = { x: number; y: number };
 
@@ -14,6 +14,24 @@ const prefersReducedMotion = () => {
   return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 };
 
+// Performance check for low-end devices
+const isLowEndDevice = () => {
+  if (typeof window === "undefined") return false;
+  return navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2;
+};
+
+// Throttle function to limit mouse event frequency
+const throttle = (func: Function, limit: number) => {
+  let inThrottle: boolean;
+  return function(this: any, ...args: any[]) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+};
+
 export default function CustomCursor(): React.JSX.Element | null {
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const ringRef = useRef<HTMLDivElement | null>(null);
@@ -22,43 +40,51 @@ export default function CustomCursor(): React.JSX.Element | null {
   const currentRef = useRef<Point>({ x: 0, y: 0 });
   const hoveringRef = useRef<boolean>(false);
   const visibleRef = useRef<boolean>(false);
+  const animationRef = useRef<number | null>(null);
+  const lastUpdateRef = useRef<number>(0);
 
-  useEffect(() => {
-    if (typeof document === "undefined") return;
-    if (isTouchDevice() || prefersReducedMotion()) return;
+  // Throttled mouse move handler
+  const handleMove = useCallback((e: MouseEvent) => {
+    targetRef.current.x = e.clientX;
+    targetRef.current.y = e.clientY;
+    visibleRef.current = true;
 
-    document.documentElement.setAttribute("data-has-custom-cursor", "true");
+    const el = e.target as HTMLElement | null;
+    const interactive = el?.closest(
+      'a, button, input, textarea, select, [role="button"], .cursor-pointer'
+    );
+    hoveringRef.current = Boolean(interactive);
+  }, []);
 
-    const handleMove = (e: MouseEvent) => {
-      targetRef.current.x = e.clientX;
-      targetRef.current.y = e.clientY;
-      visibleRef.current = true;
-
-      const el = e.target as HTMLElement | null;
-      const interactive = el?.closest(
-        'a, button, input, textarea, select, [role="button"], .cursor-pointer'
-      );
-      hoveringRef.current = Boolean(interactive);
-    };
-
-    const handleLeave = () => {
-      visibleRef.current = false;
-    };
-
-    window.addEventListener("mousemove", handleMove, { passive: true });
-    window.addEventListener("mouseout", handleLeave, { passive: true });
-
-    return () => {
-      window.removeEventListener("mousemove", handleMove);
-      window.removeEventListener("mouseout", handleLeave);
-      document.documentElement.removeAttribute("data-has-custom-cursor");
-    };
+  const handleLeave = useCallback(() => {
+    visibleRef.current = false;
   }, []);
 
   useEffect(() => {
-    if (isTouchDevice() || prefersReducedMotion()) return;
-    let raf = 0;
+    if (typeof document === "undefined") return;
+    if (isTouchDevice() || prefersReducedMotion() || isLowEndDevice()) return;
+
+    document.documentElement.setAttribute("data-has-custom-cursor", "true");
+
+    // Throttle mouse events to 60fps max
+    const throttledHandleMove = throttle(handleMove, 16);
+
+    window.addEventListener("mousemove", throttledHandleMove, { passive: true });
+    window.addEventListener("mouseout", handleLeave, { passive: true });
+
+    return () => {
+      window.removeEventListener("mousemove", throttledHandleMove);
+      window.removeEventListener("mouseout", handleLeave);
+      document.documentElement.removeAttribute("data-has-custom-cursor");
+    };
+  }, [handleMove, handleLeave]);
+
+  useEffect(() => {
+    if (isTouchDevice() || prefersReducedMotion() || isLowEndDevice()) return;
+    
     const stiffness = 0.22; // smoothing factor
+    const targetFPS = 60;
+    const frameInterval = 1000 / targetFPS;
 
     // cache last applied values to avoid redundant style writes
     let last = {
@@ -70,7 +96,14 @@ export default function CustomCursor(): React.JSX.Element | null {
       hovering: false,
     };
 
-    const animate = () => {
+    const animate = (timestamp: number) => {
+      // Limit animation to target FPS
+      if (timestamp - lastUpdateRef.current < frameInterval) {
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
+      lastUpdateRef.current = timestamp;
+
       const tx = targetRef.current.x;
       const ty = targetRef.current.y;
       const cx = currentRef.current.x + (tx - currentRef.current.x) * stiffness;
@@ -84,8 +117,9 @@ export default function CustomCursor(): React.JSX.Element | null {
       const ringSize = hovering ? 44 : 32;
       const opacity = visible ? 1 : 0;
 
+      // Only update cursor if values changed
       if (cursorRef.current) {
-        if (cx !== last.x || cy !== last.y) {
+        if (Math.abs(cx - last.x) > 0.1 || Math.abs(cy - last.y) > 0.1) {
           cursorRef.current.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
         }
         if (size !== last.size) {
@@ -95,7 +129,7 @@ export default function CustomCursor(): React.JSX.Element | null {
           cursorRef.current.style.marginTop = `${-size / 2}px`;
           cursorRef.current.style.borderRadius = `${size}px`;
         }
-        if (opacity !== last.opacity) {
+        if (Math.abs(opacity - last.opacity) > 0.01) {
           cursorRef.current.style.opacity = String(opacity);
         }
         if (hovering !== last.hovering) {
@@ -108,8 +142,9 @@ export default function CustomCursor(): React.JSX.Element | null {
         }
       }
 
+      // Only update ring if values changed
       if (ringRef.current) {
-        if (cx !== last.x || cy !== last.y) {
+        if (Math.abs(cx - last.x) > 0.1 || Math.abs(cy - last.y) > 0.1) {
           ringRef.current.style.transform = `translate3d(${cx}px, ${cy}px, 0)`;
         }
         if (ringSize !== last.ringSize) {
@@ -119,20 +154,24 @@ export default function CustomCursor(): React.JSX.Element | null {
           ringRef.current.style.marginTop = `${-ringSize / 2}px`;
           ringRef.current.style.borderRadius = `${ringSize}px`;
         }
-        if (opacity !== last.opacity) {
+        if (Math.abs(opacity - last.opacity) > 0.01) {
           ringRef.current.style.opacity = String(opacity);
         }
       }
 
       last = { x: cx, y: cy, size, ringSize, opacity, hovering };
-      raf = requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     };
 
-    raf = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(raf);
+    animationRef.current = requestAnimationFrame(animate);
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
   }, []);
 
-  if (isTouchDevice() || prefersReducedMotion()) return null;
+  if (isTouchDevice() || prefersReducedMotion() || isLowEndDevice()) return null;
 
   // Static elements; styles are updated imperatively in rAF loop
   return (
@@ -149,7 +188,7 @@ export default function CustomCursor(): React.JSX.Element | null {
           borderRadius: 12,
           background: "radial-gradient(circle at 30% 30%, #2563eb, #7c3aed)",
           boxShadow: "0 0 14px rgba(37, 99, 235, 0.22)",
-          transition: "opacity 200ms ease",
+          transition: "opacity 200ms ease, width 150ms ease, height 150ms ease, background 150ms ease, box-shadow 150ms ease",
         }}
       />
       <div
@@ -166,8 +205,7 @@ export default function CustomCursor(): React.JSX.Element | null {
             "conic-gradient(from 0deg, rgba(99,102,241,0.0), rgba(99,102,241,0.35), rgba(147,51,234,0.35), rgba(99,102,241,0.0))",
           boxShadow: "0 0 24px rgba(99, 102, 241, 0.22)",
           mixBlendMode: "screen",
-          // Removed backdrop-filter for better performance
-          transition: "opacity 200ms ease",
+          transition: "opacity 200ms ease, width 150ms ease, height 150ms ease",
         }}
       />
     </>

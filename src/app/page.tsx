@@ -202,9 +202,9 @@ function PotentialSimulator() {
               </svg>
               Büyüme Hedefi
             </label>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
-                { id: 'conservative', label: 'Istikrarlı', description: '%20-40', gradient: 'from-green-500 to-teal-500', bgGradient: 'from-green-50 to-teal-50' },
+                { id: 'conservative', label: 'İstikrarlı', description: '%20-40', gradient: 'from-green-500 to-teal-500', bgGradient: 'from-green-50 to-teal-50' },
                 { id: 'moderate', label: 'Dengeli', description: '%40-70', gradient: 'from-blue-500 to-violet-500', bgGradient: 'from-blue-50 to-violet-50' },
                 { id: 'aggressive', label: 'Agresif', description: '%70-100+', gradient: 'from-purple-500 to-fuchsia-500', bgGradient: 'from-purple-50 to-fuchsia-50' }
               ].map((option) => (
@@ -221,19 +221,19 @@ function PotentialSimulator() {
                   )}
                   
                   {/* Card */}
-                  <div className={`relative rounded-2xl p-4 border-2 transition-all duration-300 ${
+                  <div className={`relative rounded-2xl p-3 sm:p-4 border-2 transition-all duration-300 ${
                     growthGoal === option.id 
                       ? `bg-gradient-to-br ${option.bgGradient} border-transparent shadow-lg` 
                       : 'bg-white border-gray-200 hover:border-gray-300'
                   }`}>
-                    <div className={`font-black text-sm mb-1 ${
+                    <div className={`font-black text-sm sm:text-base mb-1 ${
                       growthGoal === option.id 
                         ? `bg-gradient-to-r ${option.gradient} bg-clip-text text-transparent` 
                         : 'text-gray-700'
                     }`}>
                       {option.label}
                     </div>
-                    <div className="text-xs text-gray-600 font-medium">{option.description}</div>
+                    <div className="text-xs sm:text-sm text-gray-600 font-medium">{option.description}</div>
                   </div>
                 </div>
               ))}
@@ -1479,7 +1479,7 @@ export default function Home() {
                 <div className="relative overflow-hidden" style={{ paddingBottom: "100%" }}>
                   <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-gray-100">
                     <iframe 
-                      src="https://www.instagram.com/p/DHi6FkrIxN8/embed" 
+                      src="https://www.instagram.com/p/DPEjnuZjIMn/embed" 
                       className="absolute inset-0 w-full h-[170%] -top-[35%]" 
                       frameBorder="0" 
                       scrolling="no" 

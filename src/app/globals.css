@@ -26,10 +26,18 @@ html[data-has-custom-cursor="true"] body {
   cursor: none;
 }
 
+/* Ensure clickable elements don't override the cursor (e.g., cursor:pointer) */
+html[data-has-custom-cursor="true"] * {
+  cursor: none !important;
+}
+
 @media (pointer: coarse) {
   /* Keep native cursor on touch devices */
   html[data-has-custom-cursor="true"] body {
     cursor: auto;
+  }
+  html[data-has-custom-cursor="true"] * {
+    cursor: auto !important;
   }
 }
 
