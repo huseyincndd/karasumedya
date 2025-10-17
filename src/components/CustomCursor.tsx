@@ -21,13 +21,23 @@ const isLowEndDevice = () => {
 };
 
 // Throttle function to limit mouse event frequency
-const throttle = (func: Function, limit: number) => {
-  let inThrottle: boolean;
-  return function(this: any, ...args: any[]) {
+const throttle = <T extends unknown[]>(fn: (...args: T) => void, limit: number): ((...args: T) => void) => {
+  let inThrottle = false;
+  let pendingArgs: T | null = null;
+
+  return (...args: T) => {
     if (!inThrottle) {
-      func.apply(this, args);
+      fn(...args);
       inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      setTimeout(() => {
+        inThrottle = false;
+        if (pendingArgs) {
+          fn(...pendingArgs);
+          pendingArgs = null;
+        }
+      }, limit);
+    } else {
+      pendingArgs = args;
     }
   };
 };
