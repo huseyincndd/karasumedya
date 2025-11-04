@@ -784,7 +784,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8 mt-8 px-4">
               <div className="text-center flex-1 min-w-0">
-                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent mb-1">500+</div>
+                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent mb-1">33+</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-medium">Mutlu Müşteri</div>
               </div>
               <div className="hidden sm:block w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
@@ -794,7 +794,7 @@ export default function Home() {
               </div>
               <div className="hidden sm:block w-px h-12 bg-gradient-to-b from-transparent via-gray-300 to-transparent"></div>
               <div className="text-center flex-1 min-w-0">
-                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent mb-1">1000+</div>
+                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-fuchsia-600 to-pink-600 bg-clip-text text-transparent mb-1">250+</div>
                 <div className="text-xs sm:text-sm text-gray-500 font-medium">Tamamlanan Proje</div>
               </div>
             </div>

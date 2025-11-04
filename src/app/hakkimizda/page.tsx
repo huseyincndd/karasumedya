@@ -8,7 +8,7 @@ export default function Hakkimizda() {
     // Patron - CEO
     {
       name: "Mehmet Enes Karasu",
-      position: "Kurucu",
+      position: "Ajans Başkanı",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/ceo.png",
       description: "Dijital pazarlama alanında 15 yıllık deneyime sahip olan Ahmet, sektördeki bilgi birikimi ve vizyoner yaklaşımıyla Karasu Medya'yı kurumuştur.",
       isCEO: true
@@ -47,7 +47,7 @@ export default function Hakkimizda() {
     },
     {
       name: "Gürol",
-      position: "Sosyal Medya Yöneticisi",
+      position: "Meta Business Uzmanı",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/12.png",
       description: ""
     },
@@ -71,44 +71,44 @@ export default function Hakkimizda() {
     },
     {
       name: "Can",
-      position: "Ekip Üyesi",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
+      position: "Videographer",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/can.jpg",
       description: ""
     },
     {
       name: "Esra",
-      position: "Ekip Üyesi",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
+      position: "Çağrı Merkezi Sorumlusu",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/esra.jpg",
       description: ""
     },
     {
       name: "Noyan",
-      position: "Ekip Üyesi",
+      position: "WPden Resim Videographer",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
     {
       name: "Deniz",
-      position: "Ekip Üyesi",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
+      position: "Model",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/deniz.jpg",
       description: ""
     },
     {
       name: "Abdulaziz",
-      position: "Ekip Üyesi",
+      position: "Videographer",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
     {
       name: "Mustafa",
-      position: "Ekip Üyesi",
+      position: "Meta Business Uzmanı",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
     {
       name: "Zeynep",
-      position: "Ekip Üyesi",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
+      position: "Grafik Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/zeynep.jpg",
       description: ""
     },
 
@@ -348,12 +348,12 @@ export default function Hakkimizda() {
                         {/* Decorative Stats */}
                         <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
                           <div className="text-center">
-                            <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 inline-block text-transparent bg-clip-text">8+</p>
+                            <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 inline-block text-transparent bg-clip-text">10+</p>
                             <p className="text-sm text-gray-600">Yıl Deneyim</p>
                           </div>
                           <div className="text-center">
-                            <p className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">100+</p>
-                            <p className="text-sm text-gray-600">Proje</p>
+                            <p className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 inline-block text-transparent bg-clip-text">10+</p>
+                            <p className="text-sm text-gray-600">Yıl Sektör Deneyimi</p>
                           </div>
                           <div className="text-center">
                             <p className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 inline-block text-transparent bg-clip-text">50+</p>
@@ -462,7 +462,7 @@ export default function Hakkimizda() {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-blue-100">
-                <p className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 inline-block text-transparent bg-clip-text mb-2">100+</p>
+                <p className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 inline-block text-transparent bg-clip-text mb-2">33+</p>
                 <p className="text-gray-700 font-semibold">Mutlu Müşteri</p>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-purple-100">
