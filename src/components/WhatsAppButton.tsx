@@ -28,8 +28,12 @@ export default function WhatsAppButton() {
   // Bildirim sesi fonksiyonu - Web Audio API ile WhatsApp benzeri ses
   const playNotificationSound = () => {
     try {
-      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
-      const audioContext = new AudioContext();
+      // Type-safe AudioContext tanımı
+      const AudioContextClass = window.AudioContext || (window as typeof window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      if (!AudioContextClass) {
+        return;
+      }
+      const audioContext = new AudioContextClass();
       
       // Ses çalmak için kullanıcı etkileşimi gerekiyor olabilir, bu yüzden önce resume edelim
       if (audioContext.state === 'suspended') {
