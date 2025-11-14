@@ -83,7 +83,7 @@ export default function Hakkimizda() {
     },
     {
       name: "Noyan",
-      position: "WPden Resim Videographer",
+      position: "Videographer",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
@@ -96,12 +96,6 @@ export default function Hakkimizda() {
     {
       name: "Abdulaziz",
       position: "Videographer",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
-      description: ""
-    },
-    {
-      name: "Mustafa",
-      position: "Meta Business Uzmanı",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
