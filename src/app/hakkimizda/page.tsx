@@ -70,21 +70,9 @@ export default function Hakkimizda() {
       description: ""
     },
     {
-      name: "Can",
-      position: "Videographer",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/can.jpg",
-      description: ""
-    },
-    {
       name: "Esra",
       position: "Çağrı Merkezi Sorumlusu",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/esra.jpg",
-      description: ""
-    },
-    {
-      name: "Noyan",
-      position: "Videographer",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
     {
