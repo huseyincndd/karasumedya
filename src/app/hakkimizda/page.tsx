@@ -26,12 +26,6 @@ export default function Hakkimizda() {
       image: "https://villaqrmenu.b-cdn.net/karasuekip/3.png",
       description: ""
     },
-    {
-      name: "Samiye",
-      position: "Yapay Zeka Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/4.png",
-      description: ""
-    },
     // Uzman Ekip
     {
       name: "Metehan",
@@ -49,12 +43,6 @@ export default function Hakkimizda() {
       name: "Gürol",
       position: "Meta Business Uzmanı",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/12.png",
-      description: ""
-    },
-    {
-      name: "Serkan",
-      position: "Yapay Zeka Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/14.png",
       description: ""
     },
     {
@@ -79,12 +67,6 @@ export default function Hakkimizda() {
       name: "Deniz",
       position: "Model",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/deniz.jpg",
-      description: ""
-    },
-    {
-      name: "Abdulaziz",
-      position: "Videographer",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/placeholder.png",
       description: ""
     },
     {
