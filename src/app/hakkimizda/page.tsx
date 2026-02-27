@@ -13,66 +13,81 @@ export default function Hakkimizda() {
       description: "Dijital pazarlama alanında 15 yıllık deneyime sahip olan Ahmet, sektördeki bilgi birikimi ve vizyoner yaklaşımıyla Karasu Medya'yı kurumuştur.",
       isCEO: true
     },
-    // Yönetim Ekibi
+
+    // Yönetim Ekibi (Kızlar üstte)
     {
-      name: "Kader Karasu",
-      position: "Muhasabe Sorumlusu",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/2.png",
+      name: "Zeliha",
+      position: "Yönetim Sorumlusu",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/zeliha.webp",
       description: ""
     },
     {
-      name: "İlayda Sarı",
-      position: "Takım Lider Yardımcısı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/3.png",
-      description: ""
-    },
-    // Uzman Ekip
-    {
-      name: "Metehan",
-      position: "Grafik Tasarım Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/8.png",
-      description: ""
-    },
-    {
-      name: "Eren",
-      position: "Grafik Tasarım Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/10.png",
-      description: ""
-    },
-    {
-      name: "Gürol",
-      position: "Meta Business Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/12.png",
-      description: ""
-    },
-    {
-      name: "Baran",
-      position: "Kameraman Destek Personeli",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/15.png",
-      description: ""
-    },
-    {
-      name: "Hüseyin",
-      position: "Web Tasarım Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/16.png",
+      name: "İlayda",
+      position: "Takım Lider Yardımcısı ve Grafik Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/ilayda.JPG.webp",
       description: ""
     },
     {
       name: "Esra",
-      position: "Çağrı Merkezi Sorumlusu",
+      position: "Sosyal Medya Yöneticisi",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/esra.jpg",
       description: ""
     },
     {
-      name: "Deniz",
-      position: "Model",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/deniz.jpg",
+      name: "Kader",
+      position: "Sosyal Medya Yöneticisi",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/2.png",
       description: ""
     },
     {
-      name: "Zeynep",
-      position: "Grafik Tasarım Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/zeynep.jpg",
+      name: "Sena",
+      position: "Meta Reklam Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/sena.webp",
+      description: ""
+    },
+
+    // Reklam / Video Ekibi
+    {
+      name: "Gürol",
+      position: "Meta Reklam Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/12.png",
+      description: ""
+    },
+    {
+      name: "Ahmet",
+      position: "Reels Video Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/ahmet.jpeg",
+      description: ""
+    },
+    {
+      name: "Eren",
+      position: "Reels Video Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/eren.webp",
+      description: ""
+    },
+    {
+      name: "Muhammet",
+      position: "Reels Video Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/muhammet.webp",
+      description: ""
+    },
+    {
+      name: "Eyüp",
+      position: "Reels Video Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/ey%C3%BCp.webp",
+      description: ""
+    },
+    {
+      name: "Berhan",
+      position: "Reels Video",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/berhan.webp",
+      description: ""
+    },
+    // Ek olarak (elleme)
+    {
+      name: "Hüseyin",
+      position: "Web Tasarım Uzmanı",
+      image: "https://villaqrmenu.b-cdn.net/karasuekip/16.png",
       description: ""
     },
 
