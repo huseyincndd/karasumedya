@@ -35,25 +35,17 @@ export default function Header() {
           scrolled ? 'py-3' : 'py-5'
         }`}>
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 z-10 group">
-            <div className={`relative overflow-hidden rounded-2xl transition-all duration-500 shadow-lg group-hover:shadow-xl ${
-              scrolled ? 'w-14 h-14' : 'w-16 h-16'
+          <Link href="/" className="flex items-center justify-center z-10 group">
+            <div className={`relative overflow-hidden rounded-2xl transition-all duration-500 shadow-lg group-hover:shadow-xl flex items-center justify-center ${
+              scrolled ? 'w-32 h-14' : 'w-40 h-16'
             }`}>
               <Image 
-                src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg"
+                src="https://villaqrmenu.b-cdn.net/IMG_5221.JPG"
                 alt="Karasu Logo"
-                width={64}
+                width={160}
                 height={64}
-                className="object-cover transform group-hover:scale-110 transition-transform duration-500"
+                className="object-contain transform scale-110 group-hover:scale-110 transition-transform duration-500"
               />
-            </div>
-            <div>
-              <h1 className={`font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 inline-block text-transparent bg-clip-text transition-all duration-500 ${
-                scrolled ? 'text-2xl' : 'text-3xl'
-              }`}>KARASU</h1>
-              <p className={`text-xs font-medium tracking-widest -mt-1 transition-all duration-500 ${
-                scrolled ? 'text-gray-600' : 'text-white drop-shadow-lg'
-              }`}>REKLAM & TANITIM</p>
             </div>
           </Link>
 
