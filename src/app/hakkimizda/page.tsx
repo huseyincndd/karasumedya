@@ -72,12 +72,6 @@ export default function Hakkimizda() {
       description: ""
     },
     {
-      name: "Eyüp",
-      position: "Reels Video Uzmanı",
-      image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/ey%C3%BCp.webp",
-      description: ""
-    },
-    {
       name: "Berhan",
       position: "Reels Video",
       image: "https://villaqrmenu.b-cdn.net/karasuekip/karasucrm/berhan.webp",
