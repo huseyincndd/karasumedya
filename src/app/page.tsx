@@ -786,25 +786,27 @@ export default function Home() {
                   </div>
 
                   {/* Reels Bottom Author & Caption Info (Anchored to Bottom-Left) */}
-                  <div className="relative z-20 p-3 pb-2 pr-14 text-white text-left space-y-1.5">
-                    {/* User Profile & Follow */}
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-6 h-6 rounded-full p-[1px] bg-gradient-to-tr from-amber-400 to-rose-600 shadow-md overflow-hidden flex-shrink-0">
+                  <div className="relative z-20 p-2.5 sm:p-3 pb-2 text-white text-left space-y-1.5 max-w-[calc(100%-42px)]">
+                    {/* User Profile & Follow - 100% Full Visibility */}
+                    <div className="flex items-center gap-1.5 whitespace-nowrap">
+                      <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full p-[1px] bg-gradient-to-tr from-amber-400 to-rose-600 shadow-md overflow-hidden flex-shrink-0">
                         <img 
                           src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
                           alt="Karasu Reklam Ajansı"
                           className="w-full h-full rounded-full object-cover"
                         />
                       </div>
-                      <span className="text-[11px] font-black flex items-center gap-1 drop-shadow">
-                        karasureklamajansi
-                        <svg className="w-3 h-3 text-blue-400 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                      <span className="text-[10px] sm:text-[11px] font-black flex items-center gap-0.5 drop-shadow tracking-tight whitespace-nowrap flex-shrink-0">
+                        <span>karasureklamajansi</span>
+                        <svg className="w-3 h-3 text-blue-400 fill-current flex-shrink-0" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                       </span>
-                      <span className="text-[9px] font-bold px-1.5 py-0.5 bg-white/20 backdrop-blur-md rounded-full border border-white/25">Takip Et</span>
+                      <button className="text-[8.5px] sm:text-[9px] font-bold px-2 py-0.5 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full border border-white/25 whitespace-nowrap flex-shrink-0 transition-colors">
+                        Takip Et
+                      </button>
                     </div>
                     
                     {/* Caption */}
-                    <p className="text-[10px] text-stone-100 line-clamp-2 leading-tight drop-shadow font-normal">
+                    <p className="text-[9.5px] sm:text-[10px] text-stone-100 line-clamp-2 leading-tight drop-shadow font-normal">
                       Sosyal medyada markanızı anahtar teslim yönetiyoruz ✨ <span className="text-blue-300 font-bold">#karasureklamajansi</span>
                     </p>
 
