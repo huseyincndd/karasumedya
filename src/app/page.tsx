@@ -584,7 +584,7 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
                 <span className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-stone-800">
-                  7/24 Aktif Çağrı Merkezi
+                  24 Saat Aktif Çağrı Merkezi
                 </span>
                 <span className="text-stone-300">|</span>
                 <a 
@@ -602,14 +602,14 @@ export default function Home() {
               <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-stone-900">
                 Sosyal Medyada Markanızı{' '}
                 <span className="relative inline-block font-serif italic font-normal bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-700 bg-clip-text text-transparent">
-                  Fenomene
+                  Anahtar Teslim
                 </span>{' '}
-                Dönüştürün
+                Yönetiyoruz
               </h1>
 
               {/* Description */}
               <p className="text-sm sm:text-base md:text-lg text-stone-600 max-w-2xl font-normal leading-relaxed">
-                <span className="text-stone-900 font-bold">Karasu Medya</span>; veri odaklı sosyal medya yönetimi, viral prodüksiyon ve <span className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-4">24 saat aktif canlı çağrı merkezi</span> desteğiyle markanızı dijitalde büyütür.
+                <span className="text-stone-900 font-bold">Karasu Reklam Ajansı</span>; profesyonel sosyal medya yönetimi, viral prodüksiyon ve <span className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-4">24 saat aktif canlı çağrı merkezi</span> desteğiyle markanızı anahtar teslim büyütür.
               </p>
 
               {/* Action Buttons */}
@@ -637,7 +637,7 @@ export default function Home() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     </div>
-                    <span>Hemen Arayın: <strong className="text-blue-600 font-black">0226 911 0526</strong></span>
+                    <span>24 Saat Aktif Destek: <strong className="text-blue-600 font-black">0226 911 0526</strong></span>
                   </span>
                 </a>
               </div>
@@ -776,8 +776,12 @@ export default function Home() {
                     </div>
 
                     {/* Rotating Audio Disc */}
-                    <div className="w-7 h-7 rounded-full border border-white/80 bg-gradient-to-tr from-amber-400 via-rose-500 to-indigo-600 flex items-center justify-center animate-spin shadow-md shadow-rose-500/30" style={{ animationDuration: '5s' }}>
-                      <div className="w-2 h-2 rounded-full bg-black"></div>
+                    <div className="w-7 h-7 rounded-full border border-white/80 bg-gradient-to-tr from-amber-400 via-rose-500 to-indigo-600 flex items-center justify-center animate-spin shadow-md shadow-rose-500/30 overflow-hidden" style={{ animationDuration: '5s' }}>
+                      <img 
+                        src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                        alt="Logo"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
 
@@ -785,13 +789,15 @@ export default function Home() {
                   <div className="relative z-20 p-3 pb-2 pr-14 text-white text-left space-y-1.5">
                     {/* User Profile & Follow */}
                     <div className="flex items-center gap-1.5">
-                      <div className="w-6 h-6 rounded-full p-[1px] bg-gradient-to-tr from-amber-400 to-rose-600 shadow-md">
-                        <div className="w-full h-full rounded-full bg-stone-900 flex items-center justify-center font-bold text-[9px] text-white">
-                          K
-                        </div>
+                      <div className="w-6 h-6 rounded-full p-[1px] bg-gradient-to-tr from-amber-400 to-rose-600 shadow-md overflow-hidden flex-shrink-0">
+                        <img 
+                          src="https://villaqrmenu.b-cdn.net/447297083_1488295202123950_879512158476665056_n.jpg" 
+                          alt="Karasu Reklam Ajansı"
+                          className="w-full h-full rounded-full object-cover"
+                        />
                       </div>
                       <span className="text-[11px] font-black flex items-center gap-1 drop-shadow">
-                        karasumedya
+                        karasureklamajansi
                         <svg className="w-3 h-3 text-blue-400 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                       </span>
                       <span className="text-[9px] font-bold px-1.5 py-0.5 bg-white/20 backdrop-blur-md rounded-full border border-white/25">Takip Et</span>
@@ -799,7 +805,7 @@ export default function Home() {
                     
                     {/* Caption */}
                     <p className="text-[10px] text-stone-100 line-clamp-2 leading-tight drop-shadow font-normal">
-                      Markanızı sosyal medyada fenomene dönüştürüyoruz ✨ <span className="text-blue-300 font-bold">#karasumedya</span>
+                      Sosyal medyada markanızı anahtar teslim yönetiyoruz ✨ <span className="text-blue-300 font-bold">#karasureklamajansi</span>
                     </p>
 
                     {/* Audio track pill */}
@@ -807,7 +813,7 @@ export default function Home() {
                       <svg className="w-2.5 h-2.5 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                       </svg>
-                      <span className="truncate font-medium">Karasu Medya • Orijinal Ses</span>
+                      <span className="truncate font-medium">Karasu Reklam Ajansı • Orijinal Ses</span>
                     </div>
                   </div>
 
@@ -830,7 +836,7 @@ export default function Home() {
                   <div className="text-left">
                     <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-emerald-700 font-extrabold flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
-                      7/24 Canlı Destek
+                      24 Saat Aktif Çağrı Merkezi
                     </div>
                     <a href="tel:+902269110526" className="text-xs sm:text-sm font-black text-stone-900 hover:text-blue-600 transition-colors block">
                       0226 911 0526
@@ -1437,7 +1443,7 @@ export default function Home() {
             </a>
             
             {/* Instagram Account 2 */}
-            <a href="https://www.instagram.com/karasumedya_" target="_blank" rel="noopener noreferrer" className="group relative h-full">
+            <a href="https://www.instagram.com/karasureklamajansi" target="_blank" rel="noopener noreferrer" className="group relative h-full">
               <div className="absolute -inset-1 bg-gradient-to-br from-purple-500 to-purple-600 rounded-[2rem] blur-lg opacity-0 group-hover:opacity-25 transition-all duration-500"></div>
               
               <div className="relative h-full bg-gradient-to-br from-white to-purple-50/20 rounded-[2rem] shadow-xl border-2 border-white hover:border-purple-100/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
@@ -1447,14 +1453,14 @@ export default function Home() {
                   <div className="relative w-14 h-14 rounded-full overflow-hidden mr-3 ring-2 ring-purple-500/30 group-hover:ring-purple-500/50 transition-all duration-300">
                     <Image 
                       src="https://villaqrmenu.b-cdn.net/karasuekip/karasu_medya.jpg" 
-                      alt="Karasu Medya"
+                      alt="Karasu Reklam Ajansı"
                       width={56}
                       height={56}
                       className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <div className="flex-1">
-                    <p className="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">karasumedya_</p>
+                    <p className="font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">karasureklamajansi</p>
                     <p className="text-xs text-gray-500 font-medium">Sosyal Medya Yönetimi</p>
                   </div>
                   <div className="text-purple-500 transform group-hover:scale-110 transition-transform duration-300">
