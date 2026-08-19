@@ -537,217 +537,345 @@ export default function Home() {
 
   return (
     <div className="w-full overflow-hidden">
-      {/* 1. Hero Section - Modernized */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        {/* Background Image with Enhanced Overlay */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <div className="relative w-full h-full">
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-              {/* Desktop Image */}
-              <Image 
-                src="https://villaqrmenu.b-cdn.net/karasubasin/KARASU%20BANNER.png"
-                alt="Karasu Hero Background"
-                fill
-                sizes="100vw"
-                priority
-                className="hidden sm:block object-cover object-center"
-              />
-              {/* Mobile Image */}
-              <Image 
-                src="https://villaqrmenu.b-cdn.net/karasubasin/KARASUBANNERMB.png"
-                alt="Karasu Hero Background - Mobil"
-                fill
-                sizes="100vw"
-                priority
-                className="block sm:hidden object-cover object-center"
-              />
-            </div>
-          </div>
-          {/* Modern Gradient Overlay with Mesh Effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-950/95 via-indigo-900/90 to-violet-900/95 z-10"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%)] z-10"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.1),transparent_50%)] z-10"></div>
-          
-          {/* Modern Animated Particles with Glassmorphism */}
-          <div className="absolute inset-0 z-20">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/30 rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
-            <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-violet-500/30 rounded-full mix-blend-overlay filter blur-3xl animate-float animation-delay-2000"></div>
-            <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-overlay filter blur-3xl animate-float animation-delay-4000"></div>
-            <div className="absolute bottom-1/3 right-1/3 w-56 h-56 bg-fuchsia-500/30 rounded-full mix-blend-overlay filter blur-3xl animate-float animation-delay-3000"></div>
-          </div>
-          
-          {/* Grid Pattern Overlay */}
-          <div className="absolute inset-0 z-15 opacity-[0.02]">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-                               linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }}></div>
-          </div>
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 h-screen z-30 flex flex-col justify-center items-center text-center md:text-left md:items-start">
-          <div className="w-full max-w-5xl">
-            {/* Mobile Premium Badge - Visible on Mobile */}
-            <div className="sm:hidden inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 text-white mb-6 shadow-xl">
-              <span className="flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
-              </span>
-              <span className="text-xs font-bold uppercase tracking-wider text-white">Dijital Lider</span>
-            </div>
-            
-            {/* Desktop Premium Badge */}
-            <div className="hidden sm:inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 text-white mb-8 shadow-2xl shadow-blue-500/10 hover:bg-white/15 transition-all duration-300 group">
-              <div className="relative">
-                <span className="flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-gradient-to-r from-blue-400 to-violet-400"></span>
-                </span>
-              </div>
-              <span className="text-sm font-semibold uppercase tracking-widest bg-gradient-to-r from-blue-200 to-violet-200 bg-clip-text text-transparent">Dijital Pazarlamanın Lideri</span>
-              <svg className="w-4 h-4 text-blue-300 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
-            </div>
-            
-            {/* Mobile Title - Optimized */}
-            <div className="sm:hidden mb-8">
-              <h1 className="text-4xl font-black leading-tight text-white mb-4 drop-shadow-2xl">
-                Sosyal Medyada
-              </h1>
-              <div className="relative inline-block">
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-violet-400 rounded-xl blur-lg opacity-50"></div>
-                <h1 className="relative text-4xl font-black bg-gradient-to-r from-blue-300 via-violet-300 to-fuchsia-200 bg-clip-text text-transparent drop-shadow-lg">
-                  Sınırları Aşın
-                </h1>
-              </div>
-            </div>
-            
-            {/* Desktop Title with Typewriter */}
-            <h1 className="text-5xl md:text-6xl lg:text-8xl font-black mb-10 leading-[1.1] min-h-[2.4em] hidden sm:block">
-              <div className="mb-2">
-                <span className="text-white drop-shadow-2xl">
-                {desktopTitle1}
-                </span>
-                {currentStep === 'title1' && showCursor && <span className="text-blue-400 animate-pulse">|</span>}
-              </div>
-              <div className="relative inline-block">
-                <span className="absolute -inset-2 bg-gradient-to-r from-blue-400 via-violet-400 to-fuchsia-400 rounded-2xl blur-2xl opacity-40 animate-pulse"></span>
-                <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-violet-300 to-fuchsia-200 drop-shadow-lg">
-                  {desktopTitle2}
-                  {currentStep === 'title2' && showCursor && <span className="text-blue-300 animate-pulse">|</span>}
-                </span>
-              </div>
-            </h1>
-            
-            {/* Modern Description - Mobile Optimized */}
-            <div className="mt-6 sm:mt-12">
-              {/* Mobile Description - Simplified */}
-              <div className="sm:hidden bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-5 shadow-xl">
-                <p className="text-base text-blue-50/90 leading-relaxed">
-                  <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-300">Karasu</span> ile markanızın dijital izini güçlendirin.
-                </p>
-              </div>
-              
-              {/* Desktop Description - Full */}
-              <div className="hidden sm:block bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 sm:p-8 max-w-3xl shadow-2xl shadow-blue-500/5">
-                <p className="text-lg md:text-xl text-blue-50/90 leading-relaxed font-normal min-h-[2.4em]">
-                {descriptionText && (
-                  <>
-                    {descriptionText.includes("Karasu") ? (
-                      <>
-                          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-violet-300">Karasu</span>
-                        {descriptionText.replace("Karasu", "")}
-                      </>
-                    ) : (
-                      descriptionText
-                    )}
-                    {currentStep === 'description' && showCursor && (
-                        <span className="text-blue-400 animate-pulse ml-0.5">|</span>
-                    )}
-                  </>
-                )}
-              </p>
-              </div>
-            </div>
-            
-            {/* Modern CTA Buttons - Mobile Optimized */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 sm:mt-12 mb-8 sm:mb-12 w-full sm:w-auto">
-              {/* Primary Button */}
-              <Link
-                href="/hizmetler"
-                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 font-bold text-white transition-all duration-300 bg-gradient-to-r from-blue-600 via-violet-600 to-fuchsia-600 rounded-xl sm:rounded-2xl hover:shadow-2xl hover:shadow-blue-500/50 sm:hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-400/50 overflow-hidden"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 via-violet-500 to-fuchsia-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                <span className="absolute inset-0 w-full h-full">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                </span>
-                <span className="relative flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  <span className="font-black">Hizmetleri Keşfet</span>
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-              </Link>
-              
-              {/* Secondary Button */}
-              <Link
-                href="/iletisim"
-                className="group relative inline-flex items-center justify-center px-6 sm:px-8 py-3.5 sm:py-4 font-semibold text-white transition-all duration-300 bg-white/10 backdrop-blur-xl border-2 border-white/20 rounded-xl sm:rounded-2xl hover:bg-white/20 hover:border-white/30 hover:shadow-xl hover:shadow-white/10 sm:hover:scale-105 focus:outline-none focus:ring-4 focus:ring-white/30"
-              >
-                <span className="relative flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                  </svg>
-                  <span className="font-bold">İletişim</span>
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-              </Link>
-            </div>
-          </div>
-          
-          {/* Floating elements for visual interest */}
-          <div className="absolute right-16 top-9/24 hidden lg:block">
-            <div className="w-80 h-80 relative opacity-80">
-              <div className="absolute inset-0 rounded-full border border-white/20 animate-spin-slow"></div>
-              <div className="absolute inset-[15px] rounded-full border border-white/20 animate-spin-slow animation-delay-1000 animation-reverse"></div>
-              <div className="absolute inset-[30px] rounded-full border border-white/20 animate-spin-slow animation-delay-2000"></div>
-              <div className="w-2 h-2 absolute top-0 left-1/2 -translate-x-1/2 rounded-full bg-blue-400"></div>
-              <div className="w-2 h-2 absolute bottom-0 left-1/2 -translate-x-1/2 rounded-full bg-indigo-400"></div>
-              <div className="w-2 h-2 absolute top-1/2 -translate-y-1/2 left-0 rounded-full bg-purple-400"></div>
-              <div className="w-2 h-2 absolute top-1/2 -translate-y-1/2 right-0 rounded-full bg-pink-400"></div>
-            </div>
-          </div>
-        </div>
+      {/* 1. Hero Section - Vibrant Animated Mesh Gradient & Studio Luxe */}
+      <section className="relative min-h-[90vh] lg:min-h-screen bg-[#F8F7F4] text-slate-900 flex flex-col justify-between overflow-hidden pt-28 sm:pt-36 lg:pt-36 pb-8">
         
-        {/* Scroll down indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center">
-          <span className="text-white text-xs font-light mb-2 opacity-80">Daha Fazlası</span>
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2 bg-white rounded-full animate-scroll-down"></div>
+        {/* Clearly Visible Vivid Animated Mesh Gradient (Apple & Stripe Vibe) */}
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          {/* Saturated Warm Amber / Sunset Peach Orb */}
+          <div 
+            className="absolute -top-10 left-[10%] w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full blur-[70px] sm:blur-[90px] opacity-70 animate-mesh-1"
+            style={{ background: 'radial-gradient(circle, rgba(255, 180, 120, 0.85) 0%, rgba(255, 215, 160, 0.5) 50%, transparent 75%)' }}
+          />
+          
+          {/* Saturated Electric Violet / Lavender Orb */}
+          <div 
+            className="absolute top-[15%] right-[-5%] w-[450px] sm:w-[600px] h-[450px] sm:h-[600px] rounded-full blur-[80px] sm:blur-[100px] opacity-65 animate-mesh-2"
+            style={{ background: 'radial-gradient(circle, rgba(170, 150, 255, 0.8) 0%, rgba(210, 190, 255, 0.45) 50%, transparent 75%)' }}
+          />
+          
+          {/* Saturated Rose Pink Orb */}
+          <div 
+            className="absolute -bottom-10 left-[-5%] w-[450px] sm:w-[550px] h-[450px] sm:h-[550px] rounded-full blur-[70px] sm:blur-[90px] opacity-65 animate-mesh-3"
+            style={{ background: 'radial-gradient(circle, rgba(255, 150, 180, 0.8) 0%, rgba(255, 200, 215, 0.4) 50%, transparent 75%)' }}
+          />
+          
+          {/* Saturated Cyan / Aquamarine Orb */}
+          <div 
+            className="absolute top-1/2 left-1/3 w-[400px] sm:w-[500px] h-[400px] sm:h-[500px] rounded-full blur-[70px] sm:blur-[90px] opacity-55 animate-mesh-rotate"
+            style={{ background: 'radial-gradient(circle, rgba(120, 220, 240, 0.75) 0%, rgba(180, 240, 255, 0.35) 50%, transparent 75%)' }}
+          />
+          
+          {/* Soft Center Lighting Vignette */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/70 via-transparent to-transparent"></div>
+        </div>
+
+        {/* Main Content Container */}
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 my-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* LEFT COLUMN: Punchy Copy & Call to Action */}
+            <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left space-y-5 sm:space-y-6">
+              
+              {/* 24/7 Call Center Luxury Pill */}
+              <div className="inline-flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-stone-200 shadow-sm shadow-stone-900/5 transition-transform hover:scale-[1.02]">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span className="text-[11px] sm:text-xs md:text-sm font-bold uppercase tracking-wider text-stone-800">
+                  7/24 Aktif Çağrı Merkezi
+                </span>
+                <span className="text-stone-300">|</span>
+                <a 
+                  href="tel:+902269110526" 
+                  className="text-[11px] sm:text-xs md:text-sm font-extrabold text-blue-600 hover:text-blue-700 transition-colors flex items-center gap-1.5"
+                >
+                  <svg className="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  0226 911 0526
+                </a>
+              </div>
+
+              {/* Main Headline */}
+              <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-stone-900">
+                Sosyal Medyada Markanızı{' '}
+                <span className="relative inline-block font-serif italic font-normal bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-700 bg-clip-text text-transparent">
+                  Fenomene
+                </span>{' '}
+                Dönüştürün
+              </h1>
+
+              {/* Description */}
+              <p className="text-sm sm:text-base md:text-lg text-stone-600 max-w-2xl font-normal leading-relaxed">
+                <span className="text-stone-900 font-bold">Karasu Medya</span>; veri odaklı sosyal medya yönetimi, viral prodüksiyon ve <span className="text-blue-700 font-bold underline decoration-blue-300 underline-offset-4">24 saat aktif canlı çağrı merkezi</span> desteğiyle markanızı dijitalde büyütür.
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto pt-1 sm:pt-2">
+                <Link
+                  href="/hizmetler"
+                  className="group relative w-full sm:w-auto inline-flex items-center justify-center px-7 sm:px-8 py-3.5 sm:py-4 rounded-2xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-sm sm:text-base shadow-lg shadow-stone-950/15 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 overflow-hidden"
+                >
+                  <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+                  <span className="relative flex items-center gap-2.5">
+                    Hizmetlerimizi İnceleyin
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </span>
+                </Link>
+
+                <a
+                  href="tel:+902269110526"
+                  className="group w-full sm:w-auto inline-flex items-center justify-center px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-white hover:bg-stone-50 border border-stone-200 shadow-sm text-stone-900 font-bold text-sm sm:text-base transition-all duration-300 hover:border-emerald-500/50"
+                >
+                  <span className="flex items-center gap-2.5">
+                    <div className="w-7 h-7 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <span>Hemen Arayın: <strong className="text-blue-600 font-black">0226 911 0526</strong></span>
+                  </span>
+                </a>
+              </div>
+
+              {/* Social Proof Badges */}
+              <div className="pt-1 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-stone-400 mr-1">Platformlar:</span>
+                {[
+                  { name: 'Instagram', bg: 'bg-rose-50/80 text-rose-700 border-rose-200/70' },
+                  { name: 'TikTok', bg: 'bg-stone-100 text-stone-900 border-stone-200' },
+                  { name: 'YouTube', bg: 'bg-red-50/80 text-red-700 border-red-200/70' },
+                  { name: 'Meta & Google Ads', bg: 'bg-blue-50/80 text-blue-700 border-blue-200/70' },
+                ].map((item, i) => (
+                  <span key={i} className={`px-2.5 py-0.5 rounded-lg border text-[11px] font-semibold ${item.bg}`}>
+                    {item.name}
+                  </span>
+                ))}
+              </div>
+
+            </div>
+
+            {/* RIGHT COLUMN: Realistic iPhone 16 Pro & Floating Badges */}
+            <div className="lg:col-span-5 relative flex justify-center items-center py-4 lg:py-6">
+              
+              {/* Soft Ambient Depth Glow */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-amber-200/40 via-rose-200/20 to-blue-200/30 rounded-full blur-[80px] -z-10 scale-95"></div>
+
+              {/* Secondary Layer Behind: Analytics Depth Card (Desktop only) */}
+              <div className="absolute -right-4 lg:-right-6 top-8 w-48 sm:w-52 p-3.5 rounded-2xl bg-gradient-to-br from-indigo-950 to-slate-900 text-white shadow-xl border border-white/10 rotate-6 transform hidden sm:block opacity-85 backdrop-blur-xl">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="text-[9px] uppercase font-bold tracking-wider text-indigo-300">Aylık Rapor</div>
+                  <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-bold">▲ 94.2%</span>
+                </div>
+                <div className="text-lg font-black mb-0.5">1.450.000+</div>
+                <div className="text-[9px] text-slate-300 mb-2">Organik Video Erişimi</div>
+                <div className="flex items-end gap-1 h-8 pt-1">
+                  <div className="w-1/6 bg-indigo-500/40 rounded-t h-3"></div>
+                  <div className="w-1/6 bg-indigo-500/50 rounded-t h-5"></div>
+                  <div className="w-1/6 bg-indigo-500/60 rounded-t h-4"></div>
+                  <div className="w-1/6 bg-indigo-500/70 rounded-t h-6"></div>
+                  <div className="w-1/6 bg-indigo-500/90 rounded-t h-5"></div>
+                  <div className="w-1/6 bg-emerald-400 rounded-t h-8 shadow-md shadow-emerald-400/50"></div>
+                </div>
+              </div>
+
+              {/* Main Ultra-Realistic iPhone 16 Pro Frame */}
+              <div className="relative z-20 w-full max-w-[270px] sm:max-w-[300px] lg:max-w-[315px] rounded-[2.8rem] sm:rounded-[3.2rem] p-2.5 sm:p-3 bg-gradient-to-b from-[#3a393e] via-[#242328] to-[#141416] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.3),0_0_0_1px_rgba(255,255,255,0.2)] ring-1 ring-black/40">
+                
+                {/* Metallic Physical Buttons */}
+                <div className="absolute -left-[4px] top-24 w-[3px] h-8 bg-[#38373d] rounded-l-sm"></div>
+                <div className="absolute -left-[4px] top-36 w-[3px] h-10 bg-[#38373d] rounded-l-sm"></div>
+                <div className="absolute -left-[4px] top-48 w-[3px] h-10 bg-[#38373d] rounded-l-sm"></div>
+                <div className="absolute -right-[4px] top-32 w-[3px] h-14 bg-[#38373d] rounded-r-sm"></div>
+
+                {/* Screen Bezel & Canvas */}
+                <div className="relative rounded-[2.3rem] sm:rounded-[2.6rem] overflow-hidden bg-black aspect-[9/18.5] flex flex-col justify-between border border-white/[0.08] shadow-inner select-none">
+                  
+                  {/* Real Photo / Video Background */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" 
+                    alt="Sosyal Medya Prodüksiyon" 
+                    className="absolute inset-0 w-full h-full object-cover object-center transform scale-105"
+                  />
+                  
+                  {/* Cinematic Vignette Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/95"></div>
+
+                  {/* Glass Sheen / Reflection */}
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.03] to-white/[0.07] pointer-events-none"></div>
+
+                  {/* Dynamic Island: Precisely Centered at the Top */}
+                  <div className="absolute top-2.5 left-1/2 -translate-x-1/2 z-40 w-24 h-5 bg-black rounded-full flex items-center justify-between px-2.5 shadow-md border border-white/10">
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#08080c] border border-white/10 flex items-center justify-center">
+                      <div className="w-1 h-1 rounded-full bg-blue-900"></div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-[7px] text-emerald-400 font-extrabold tracking-tighter">REC</span>
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></div>
+                    </div>
+                  </div>
+
+                  {/* iOS Status Bar & Dynamic Island */}
+                  <div className="relative z-30 pt-2.5 px-6 flex items-center justify-between text-white text-[10px] font-semibold">
+                    <span>09:41</span>
+                    <div className="flex items-center gap-1 text-[9px]">
+                      <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 20.3c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.69-.62C9.93 21.26 11.88 22 14 22c4.97 0 9-4.03 9-9s-4.03-9-9-9z"/></svg>
+                      <svg className="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                    </div>
+                  </div>
+
+                  {/* Real Instagram Reels Top Header Bar */}
+                  <div className="relative z-20 px-5 pt-3 flex items-center justify-between text-white">
+                    <span className="text-sm font-extrabold tracking-tight drop-shadow-md">Reels</span>
+                    <div className="flex items-center gap-3">
+                      <div className="w-7 h-7 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center border border-white/10">
+                        <svg className="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Center Area is Kept Clear for the Creative Photo/Video */}
+                  <div className="flex-1"></div>
+
+                  {/* Reels Right Sidebar Actions (Aligned to Bottom-Right like real Instagram) */}
+                  <div className="absolute right-2.5 bottom-6 z-20 flex flex-col items-center gap-3 text-white">
+                    {/* Like */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-rose-500 border border-white/15 shadow-lg">
+                        <svg className="w-4 h-4 fill-current animate-pulse" viewBox="0 0 24 24">
+                          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                      </div>
+                      <span className="text-[9px] font-bold mt-0.5 text-white drop-shadow">48.2K</span>
+                    </div>
+
+                    {/* Comment */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/15 shadow-lg">
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                      </div>
+                      <span className="text-[9px] font-bold mt-0.5 text-white drop-shadow">1.840</span>
+                    </div>
+
+                    {/* Share */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white border border-white/15 shadow-lg">
+                        <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                      </div>
+                      <span className="text-[9px] font-bold mt-0.5 text-white drop-shadow">12.6K</span>
+                    </div>
+
+                    {/* Rotating Audio Disc */}
+                    <div className="w-7 h-7 rounded-full border border-white/80 bg-gradient-to-tr from-amber-400 via-rose-500 to-indigo-600 flex items-center justify-center animate-spin shadow-md shadow-rose-500/30" style={{ animationDuration: '5s' }}>
+                      <div className="w-2 h-2 rounded-full bg-black"></div>
+                    </div>
+                  </div>
+
+                  {/* Reels Bottom Author & Caption Info (Anchored to Bottom-Left) */}
+                  <div className="relative z-20 p-3 pb-2 pr-14 text-white text-left space-y-1.5">
+                    {/* User Profile & Follow */}
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-6 h-6 rounded-full p-[1px] bg-gradient-to-tr from-amber-400 to-rose-600 shadow-md">
+                        <div className="w-full h-full rounded-full bg-stone-900 flex items-center justify-center font-bold text-[9px] text-white">
+                          K
+                        </div>
+                      </div>
+                      <span className="text-[11px] font-black flex items-center gap-1 drop-shadow">
+                        karasumedya
+                        <svg className="w-3 h-3 text-blue-400 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                      </span>
+                      <span className="text-[9px] font-bold px-1.5 py-0.5 bg-white/20 backdrop-blur-md rounded-full border border-white/25">Takip Et</span>
+                    </div>
+                    
+                    {/* Caption */}
+                    <p className="text-[10px] text-stone-100 line-clamp-2 leading-tight drop-shadow font-normal">
+                      Markanızı sosyal medyada fenomene dönüştürüyoruz ✨ <span className="text-blue-300 font-bold">#karasumedya</span>
+                    </p>
+
+                    {/* Audio track pill */}
+                    <div className="flex items-center gap-1 text-[9px] text-stone-300 bg-black/40 backdrop-blur-sm px-2 py-0.5 rounded-full w-fit border border-white/10">
+                      <svg className="w-2.5 h-2.5 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                      </svg>
+                      <span className="truncate font-medium">Karasu Medya • Orijinal Ses</span>
+                    </div>
+                  </div>
+
+                  {/* iOS Home Indicator Bar */}
+                  <div className="relative z-30 pb-1.5 flex justify-center">
+                    <div className="w-24 h-1 bg-white/80 rounded-full"></div>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* Floating VIP 24/7 Çağrı Merkezi Kartı */}
+              <div className="absolute -bottom-4 -left-2 sm:-left-6 bg-white/95 border border-stone-200 rounded-2xl p-3 sm:p-3.5 shadow-xl shadow-stone-900/10 backdrop-blur-xl z-30 max-w-[210px] sm:max-w-[230px] hover:scale-105 transition-transform duration-300">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shadow-md shadow-emerald-500/30 flex-shrink-0">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-emerald-700 font-extrabold flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                      7/24 Canlı Destek
+                    </div>
+                    <a href="tel:+902269110526" className="text-xs sm:text-sm font-black text-stone-900 hover:text-blue-600 transition-colors block">
+                      0226 911 0526
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating Performance ROI Badge */}
+              <div className="absolute -top-3 -right-2 sm:-right-4 bg-white/95 border border-stone-200 rounded-2xl py-2 px-3 sm:px-3.5 shadow-lg shadow-stone-900/10 backdrop-blur-xl z-30 flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                <div className="w-6 h-6 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xs">
+                  🚀
+                </div>
+                <div className="text-left">
+                  <div className="text-[9px] text-stone-500 font-semibold">Viral Büyüme</div>
+                  <div className="text-xs font-black text-stone-900">+480% Etkileşim</div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
 
-        {/* Wave Transition - Fixed positioning for all screen sizes */}
-        <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden z-20">
-          <div className="w-[200%] relative">
-            <div className="w-full animate-wave">
-              <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-20 md:h-24 lg:h-32">
-                <path d="M0,0 L0,120 L1200,120 L1200,0 C1050,60 900,100 750,80 C600,60 450,20 300,40 C150,60 100,80 0,0 Z" className="fill-white"></path>
-              </svg>
-            </div>
-            <div className="w-full absolute top-0 left-0 animate-wave-slow opacity-60">
-              <svg viewBox="0 0 1400 120" preserveAspectRatio="none" className="w-[120%] h-24 md:h-32 lg:h-40" style={{marginLeft: '-10%'}}>
-                <path d="M0,0 L0,120 L1400,120 L1400,30 C1300,10 1200,50 1100,70 C1000,90 900,40 800,20 C700,0 600,40 500,60 C400,80 300,30 200,10 C100,0 50,20 0,0 Z" className="fill-white"></path>
-              </svg>
-            </div>
+        {/* Seamless Continuous Infinite Marquee Slider */}
+        <div className="relative z-20 mt-10 sm:mt-12 border-t border-stone-200/80 bg-white/80 backdrop-blur-md py-3.5 overflow-hidden">
+          <div className="animate-marquee flex items-center gap-8 text-xs sm:text-sm font-bold uppercase tracking-widest text-stone-500">
+            {/* Set 1 */}
+            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Aktif Çağrı Merkezi: 0226 911 0526</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sosyal Medya Yönetimi</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sinematik Video & Reels Prodüksiyonu</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Meta & Google Reklam Yönetimi</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Kurumsal Kimlik & Grafik Tasarım</span>
+            
+            {/* Set 2 for seamless loop */}
+            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Aktif Çağrı Merkezi: 0226 911 0526</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sosyal Medya Yönetimi</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sinematik Video & Reels Prodüksiyonu</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Meta & Google Reklam Yönetimi</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Kurumsal Kimlik & Grafik Tasarım</span>
+
+            {/* Set 3 for extra wide screens */}
+            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Aktif Çağrı Merkezi: 0226 911 0526</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sosyal Medya Yönetimi</span>
+            <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sinematik Video & Reels Prodüksiyonu</span>
           </div>
         </div>
       </section>
