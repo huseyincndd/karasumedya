@@ -5,7 +5,6 @@ import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
-import CustomCursor from '@/components/CustomCursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,7 +35,6 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={inter.className}>
-        <CustomCursor />
         <Header />
         <main>
           {children}
