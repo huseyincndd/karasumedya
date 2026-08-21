@@ -827,26 +827,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating VIP 24/7 Çağrı Merkezi Kartı */}
-              <div className="absolute -bottom-4 -left-2 sm:-left-6 bg-white/95 border border-stone-200 rounded-2xl p-3 sm:p-3.5 shadow-xl shadow-stone-900/10 backdrop-blur-xl z-30 max-w-[210px] sm:max-w-[230px] hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center gap-2.5 sm:gap-3">
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shadow-md shadow-emerald-500/30 flex-shrink-0">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-[9px] sm:text-[10px] uppercase tracking-wider text-emerald-700 font-extrabold flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
-                      24 Saat Aktif Çağrı Merkezi
-                    </div>
-                    <a href="tel:+902269110526" className="text-xs sm:text-sm font-black text-stone-900 hover:text-blue-600 transition-colors block">
-                      0226 911 0526
-                    </a>
-                  </div>
-                </div>
-              </div>
-
               {/* Floating Performance ROI Badge */}
               <div className="absolute -top-3 -right-2 sm:-right-4 bg-white/95 border border-stone-200 rounded-2xl py-2 px-3 sm:px-3.5 shadow-lg shadow-stone-900/10 backdrop-blur-xl z-30 flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <div className="w-6 h-6 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xs">
@@ -867,21 +847,21 @@ export default function Home() {
         <div className="relative z-20 mt-10 sm:mt-12 border-t border-stone-200/80 bg-white/80 backdrop-blur-md py-3.5 overflow-hidden">
           <div className="animate-marquee flex items-center gap-8 text-xs sm:text-sm font-bold uppercase tracking-widest text-stone-500">
             {/* Set 1 */}
-            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Aktif Çağrı Merkezi: 0226 911 0526</span>
+            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Kesintisiz Çağrı Merkezi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sosyal Medya Yönetimi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sinematik Video & Reels Prodüksiyonu</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Meta & Google Reklam Yönetimi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Kurumsal Kimlik & Grafik Tasarım</span>
             
             {/* Set 2 for seamless loop */}
-            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Aktif Çağrı Merkezi: 0226 911 0526</span>
+            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Kesintisiz Çağrı Merkezi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sosyal Medya Yönetimi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sinematik Video & Reels Prodüksiyonu</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Meta & Google Reklam Yönetimi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Kurumsal Kimlik & Grafik Tasarım</span>
 
             {/* Set 3 for extra wide screens */}
-            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Aktif Çağrı Merkezi: 0226 911 0526</span>
+            <span className="inline-flex items-center gap-2 text-stone-900 font-black flex-shrink-0"><span className="w-2 h-2 rounded-full bg-emerald-500"></span> 24 Saat Kesintisiz Çağrı Merkezi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sosyal Medya Yönetimi</span>
             <span className="inline-flex items-center gap-2 flex-shrink-0">✦ Sinematik Video & Reels Prodüksiyonu</span>
           </div>
